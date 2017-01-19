@@ -58,7 +58,7 @@ class RaiseErrorTestDetector(BaseDetector):
         self.dectector = 'RaiseErrorDetector'
     def execute(self):
         BaseDetector.execute(self)
-        return -1
+        raise Exception('Error Raiser for ErrorRaiserDetector')
 
 def main():
     # myDetector = SilentTestDetector()
