@@ -10,6 +10,7 @@ The principal file for this detectors is `DetectorType1.py`. Additionally, You c
 * **AlertingTest.py :** Alerting Detector Test. Always Detect.
 * **HaltingTest.py :** Halting Detector Test. Never Return.
 * **RaiseErrorTest.py :** Raise Error Detector Test. Always fails with error code, it returns -1.
+
 ### Detector Type 2
 
 ### Detector Type 3
