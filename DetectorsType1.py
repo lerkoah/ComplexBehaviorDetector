@@ -1,17 +1,5 @@
 import threading
 import time
-import socket
-
-def clientSocket(alarmType, detectorName, alarmReport):
-    HOST = ''  # Symbolic name meaning all available interfaces
-    PORT = 8889  # Arbitrary non-privileged port
-
-    s = socket.socket()
-    s.connect((HOST, PORT))
-    msg = alarmType + ':::' + detectorName+ ':::' + alarmReport
-    s.send(msg)
-
-    s.close()
 
 class BaseDetector(object):
     def __init__(self):
@@ -28,10 +16,7 @@ class BaseDetector(object):
             return 0
 
     def sendAlarm(self):
-        clientSocket(self.alarmType, self.dectector ,self.report)
-        # print 'ERROR '+ time.asctime( time.localtime(time.time()) )
-        # time.sleep(10)
-        # print 'ERROR2 ' + time.asctime(time.localtime(time.time()))
+        print 'ERROR '+ time.asctime( time.localtime(time.time()) )
 
     def executeTruePositive(self):
         self.params = 0
@@ -82,10 +67,6 @@ def main():
     # myDetector = RaiseErrorTestDetector()
 
     myDetector.execute()
-
-
-
-
 
 
 if __name__ == '__main__':
