@@ -56,7 +56,7 @@ set logfile syslog
 #                backup.bar.baz port 10025,  # backup mailserver on port 10025
 #                localhost                   # fallback relay
  set mailserver smtp.gmail.com port 587 
-    username "complex.behavior.mailer@gmail.com" password "new2menew2me"
+    username "lerko.araya@ug.uchile.cl" password "pqDVZMbN7"
     using tlsv12
 #
 #
@@ -283,43 +283,12 @@ include /etc/monit.d/*
 ## Programs monitored
 ###############################################################################
 ##
-check program AlertTest with path /home/lerko/Desktop/Detector/bash/handlerAlertTest.sh
-  with timeout 180 seconds
-  every "* * * * *"
-  if status != 0 then alert 
-
-check file AlertTestLog with path /home/lerko/Desktop/Detector/log/AlertingTest.log
-  if does not exist then exec "/bin/touch /home/lerko/Desktop/Detector/log/AlertingTest.log"
-  if match "ERROR" then exec "/home/lerko/Desktop/Detector/cleanLog.sh /home/lerko/Desktop/Detector/log/AlertingTest.log"
-  alert aheit.s.a@gmail.com
-
-check program SilentTest with path /home/lerko/Desktop/Detector/bash/handlerSilentTest.sh
-  with timeout 180 seconds
+check program AlertTest with path /home/lerko/Desktop/Detector/bash/handleAlertTest.sh
   every "* * * * *"
   if status != 0 then alert
- 
+  alert lerko.araya@ug.uchile.cl 
 
-check file SilentTestLog with path /home/lerko/Desktop/Detector/log/SilentTest.log
-  if does not exist then exec "/bin/touch /home/lerko/Desktop/Detector/log/SilentTest.log"
-  if match "ERROR" then exec "/home/lerko/Desktop/Detector/cleanLog.sh /home/lerko/Desktop/Detector/log/SilentTest.log"
-  alert aheit.s.a@gmail.com
-
-check program HaltingTest with path /home/lerko/Desktop/Detector/bash/handlerHaltingTest.sh
-  with timeout 180 seconds
-  every "* * * * *"
-  if status != 0 then alert
-
-check file HaltingTestLog with path /home/lerko/Desktop/Detector/log/HaltingTest.log
-  if does not exist then exec "/bin/touch /home/lerko/Desktop/Detector/log/HaltingTest.log"
-  if match "ERROR" then exec "/home/lerko/Desktop/Detector/cleanLog.sh /home/lerko/Desktop/Detector/log/HaltingTest.log"
-  alert aheit.s.a@gmail.com
-
-check program RaiseErrorTest with path /home/lerko/Desktop/Detector/bash/handlerRaiseErrorTest.sh
-  with timeout 180 seconds
-  every "* * * * *"
-  if status != 0 then alert
-
-check file RaiseErrorTestLog with path /home/lerko/Desktop/Detector/log/RaiseErrorTest.log
-  if does not exist then exec "/bin/touch /home/lerko/Desktop/Detector/log/RaiseErrorTest.log"
-  if match "ERROR" then exec "/home/lerko/Desktop/Detector/cleanLog.sh /home/lerko/Desktop/Detector/log/RaiseErrorTest.log"
-  alert aheit.s.a@gmail.com
+check file AlertTestLog with path /home/lerko/Desktop/Detector/AlertTest.log
+  if content = "^ERROR" then alert
+  if content = "^ERROR" then restart
+  alert lerko.araya@ug.uchile.cl 
