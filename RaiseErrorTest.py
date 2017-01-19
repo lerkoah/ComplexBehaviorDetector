@@ -6,7 +6,10 @@ def main():
     # myDetector = HaltingTestDetector()
     myDetector = RaiseErrorTestDetector()
 
-    detection = myDetector.execute()
+    try:
+        myDetector.execute()
+    except:
+        return -1
 
 if __name__ == '__main__':
     main()
