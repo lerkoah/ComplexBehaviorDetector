@@ -1,4 +1,4 @@
-# ComplexBehaviorDetector
+# Complex Behavior Detector - ALMA Summer Job
 This is the repository for the project Complex Behavior Detector from alma. This is the Lerko's Summer Job. In this repository I'm going to save the principal scripts and instructions for running the framework in your computer.
 
 ## Detectors Classes
