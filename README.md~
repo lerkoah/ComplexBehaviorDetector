@@ -16,7 +16,7 @@ The argument ``Priority`` can be ommit. For example, if we want to execute Alert
 python python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py AlertingDetector CRITICAL
 ```
 
-The possible alarms levels are:
+The possible alarms level are:
 
 * DEBUG
 * INFO
