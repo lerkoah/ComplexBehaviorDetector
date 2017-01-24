@@ -1,0 +1,31 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/SilentTest
+[SilentTest] $ cmd /c call /tmp/hudson7586451290361938697.bat
+FATAL: command execution failed
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.io.IOException: Cannot run program "cmd" (in directory "/var/lib/jenkins/workspace/SilentTest"): error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at hudson.Proc$LocalProc.<init>(Proc.java:245)
+	at hudson.Proc$LocalProc.<init>(Proc.java:214)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:846)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:384)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:108)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:65)
+	at hudson.plugins.build_timeout.BuildStepWithTimeout.perform(BuildStepWithTimeout.java:95)
+	at hudson.plugins.build_timeout.BuildStepWithTimeout.perform(BuildStepWithTimeout.java:72)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:779)
+	at hudson.model.Build$BuildExecution.build(Build.java:205)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:162)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:534)
+	at hudson.model.Run.execute(Run.java:1728)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:404)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 17 more
+Build step 'Run with timeout' marked build as failure
+Finished: FAILURE

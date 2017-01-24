@@ -1,0 +1,7 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/SilentTest
+No emails were triggered.
+[SilentTest] $ /bin/sh -xe /tmp/hudson1267779715170851744.sh
++ python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py SilentDetector
+No emails were triggered.
+Finished: SUCCESS

@@ -1,0 +1,10 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlertingTest
+No emails were triggered.
+[AlertingTest] $ /bin/sh -xe /tmp/hudson1106256571604431365.sh
++ python -u /home/lerko/Desktop/Detector/AlertingTest.py
+ERROR Thu Jan 19 11:28:18 2017
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com
+Finished: SUCCESS

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.build__timeout.BuildStepWithTimeout plugin="build-timeout@1.18">
+      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+        <timeoutMinutes>3</timeoutMinutes>
+      </strategy>
+      <buildStep class="hudson.tasks.Shell">
+        <command>python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py RaiseErrorDetector</command>
+      </buildStep>
+      <operationList class="empty-list"/>
+    </hudson.plugins.build__timeout.BuildStepWithTimeout>
+  </builders>
+  <publishers>
+    <org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher plugin="emailext-template@1.0">
+      <templateIds>
+        <org.jenkinsci.plugins.emailext__template.TemplateId>
+          <templateId>emailext-template-1484838137325</templateId>
+        </org.jenkinsci.plugins.emailext__template.TemplateId>
+      </templateIds>
+    </org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

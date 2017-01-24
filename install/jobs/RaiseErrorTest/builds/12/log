@@ -1,0 +1,16 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/RaiseErrorTest
+No emails were triggered.
+[RaiseErrorTest] $ /bin/sh -xe /tmp/hudson7575530032805587914.sh
++ python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py RaiseErrorDetector
+Traceback (most recent call last):
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 109, in <module>
+    main(sys.argv[1:])
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 104, in main
+    myDetector.execute()
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 84, in execute
+    BaseDetector.execute(self)
+NameError: global name 'self' is not defined
+Build step 'Run with timeout' marked build as failure
+No emails were triggered.
+Finished: FAILURE

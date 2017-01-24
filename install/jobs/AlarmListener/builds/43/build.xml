@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>AlarmListener</upstreamProject>
+            <upstreamUrl>job/AlarmListener/</upstreamUrl>
+            <upstreamBuild>42</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>AlarmListener</upstreamProject>
+                <upstreamUrl>job/AlarmListener/</upstreamUrl>
+                <upstreamBuild>41</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-UpstreamCause>
+                    <upstreamProject>AlarmListener</upstreamProject>
+                    <upstreamUrl>job/AlarmListener/</upstreamUrl>
+                    <upstreamBuild>40</upstreamBuild>
+                    <upstreamCauses>
+                      <hudson.model.Cause_-UserIdCause>
+                        <userId>lerko</userId>
+                      </hudson.model.Cause_-UserIdCause>
+                    </upstreamCauses>
+                  </hudson.model.Cause_-UpstreamCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.tasks.MailMessageIdAction plugin="mailer@1.18">
+      <messageId>&lt;1425048647.3.1485201533992.JavaMail.root@localhost.localdomain&gt;</messageId>
+    </hudson.tasks.MailMessageIdAction>
+  </actions>
+  <queueId>50</queueId>
+  <timestamp>1485201532509</timestamp>
+  <startTime>1485201532510</startTime>
+  <result>SUCCESS</result>
+  <duration>2205</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/AlarmListener</workspace>
+  <hudsonVersion>2.32.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

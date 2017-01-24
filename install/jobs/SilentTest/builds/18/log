@@ -1,0 +1,18 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/SilentTest
+No emails were triggered.
+[SilentTest] $ /bin/sh -xe /tmp/hudson6249902179645090460.sh
++ python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py SilentDetector
+Traceback (most recent call last):
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 110, in <module>
+    main(sys.argv[1:])
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 97, in main
+    myDetector = SilentTestDetector()
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 47, in __init__
+    BaseDetector.__init__(self)
+  File "/home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py", line 14, in __init__
+    self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
+NameError: global name 'os' is not defined
+Build step 'Run with timeout' marked build as failure
+No emails were triggered.
+Finished: FAILURE

@@ -1,0 +1,6 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/SilentTest
+[SilentTest] $ /bin/sh -xe /tmp/hudson2452914622109335210.sh
++ chmod 755 /home/lerko/Desktop/Detector/silentTest.py
++ python /home/lerko/Desktop/Detector/silentTest.py
+Finished: SUCCESS

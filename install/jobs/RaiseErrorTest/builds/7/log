@@ -1,0 +1,14 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZu/dLi1CL9nNSi7HwATSuZe8AAAAA=[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/RaiseErrorTest
+No emails were triggered.
+[RaiseErrorTest] $ /bin/sh -xe /tmp/hudson2043124114313762106.sh
++ python -u /home/lerko/Desktop/Detector/RaiseErrorTest.py
+Traceback (most recent call last):
+  File "/home/lerko/Desktop/Detector/RaiseErrorTest.py", line 16, in <module>
+    main()
+  File "/home/lerko/Desktop/Detector/RaiseErrorTest.py", line 11, in main
+    except e:
+NameError: global name 'e' is not defined
+Build step 'Run with timeout' marked build as failure
+No emails were triggered.
+Finished: FAILURE

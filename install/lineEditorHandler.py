@@ -1,0 +1,31 @@
+import sys
+
+def lineEditor(filePath, oldLine, newLine):
+    backupFile = filePath+'.backup'
+
+    print 'Reading lines...',
+    with open(filePath, 'r') as file:
+        data = file.readlines()
+    print 'done.'
+
+    print 'Making the backup...',
+    with open(backupFile, 'w') as file:
+        file.writelines(data)
+    print 'done. [Backup is in %s]' % backupFile
+    print 'Please, if you have any problem, replace\n%s by %s' % (filePath, backupFile)
+
+    for i, line in enumerate(data):
+        if 'JENKINS_USER="jenkins"\n' == line:
+            print 'Line found'
+            data[i] = 'JENKINS_USER="root"\n'
+            break
+    print 'Rewriting file...',
+    with open(filePath, 'w') as file:
+        file.writelines(data)
+    print 'done.'
+
+if __name__ == '__main__':
+    pathToEdit = sys.argv[1]
+    oldLine = sys.argv[2]
+    newLine = sys.argv[3]
+    lineEditor(pathToEdit, oldLine, newLine)
