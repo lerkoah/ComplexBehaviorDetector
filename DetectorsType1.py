@@ -1,6 +1,5 @@
-import threading
+import os
 import sys
-import time
 from datetime import datetime
 
 class BaseDetector(object):
@@ -10,7 +9,8 @@ class BaseDetector(object):
         self.report = 'Reporting alarm'
         self.priority = priority
         self.lastError = None
-        self.errorLogPath = '/home/lerko/Desktop/Detector/log/historical.log'
+        ## error log path
+        self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
 
     def configure(self,params):
         self.params = params

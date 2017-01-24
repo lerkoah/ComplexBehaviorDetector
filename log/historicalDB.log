@@ -1,0 +1,14 @@
+=== START ERROR: CRITICAL ===
+timestamp: 2017-01-24 13:37:43.267
+Unique ID: 2017-01-24 13:37:43.267
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+timestamp: 2017-01-24 13:39:28.876
+Unique ID: 2017-01-24 13:39:28.876
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
