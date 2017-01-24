@@ -1,12 +1,17 @@
 import threading
+import sys
 import time
+from datetime import datetime
 
 class BaseDetector(object):
-    def __init__(self):
-        self.dectector = None
+    def __init__(self,priority = 'DEBUG'):
+        self.dectectorName = None
         self.params = None
         self.report = 'Reporting alarm'
-        self.alarmType = 'Normal'
+        self.priority = priority
+        self.lastError = None
+        self.errorLogPath = '/home/lerko/Desktop/Detector/log/historical.log'
+
     def configure(self,params):
         self.params = params
     def execute(self):
@@ -15,8 +20,20 @@ class BaseDetector(object):
         elif self.params == 0:
             return 0
 
-    def sendAlarm(self):
-        print 'ERROR '+ time.asctime( time.localtime(time.time()) )
+    def sendAlarm(self, timestamp, uniqueID, name, priority, body):
+        self.lastError= '=== START ERROR: ' + priority + ' ===\n' \
+                        'timestamp: ' + timestamp + '\n' \
+                        'Unique ID: '+ uniqueID + '\n' \
+                        'Name: '+ name+ '\n' \
+                        'Priority: '+ priority + '\n' \
+                        'Body: '+ body + '\n' \
+                        '=== END ERROR ===\n'
+        ## Writting in editable file
+        handler = open(self.errorLogPath, 'a')
+        handler.write(self.lastError)
+        handler.close()
+
+        print self.lastError
 
     def executeTruePositive(self):
         self.params = 0
@@ -27,25 +44,31 @@ class BaseDetector(object):
 class SilentTestDetector(BaseDetector):
     def __init__(self):
         BaseDetector.__init__(self)
-        self.dectector = 'SilentDetector'
+        self.detectorName = 'SilentDetector'
 
     def execute(self):
         BaseDetector.execute(self)
 
 # AlertingTestDetector always detect
 class AlertingTestDetector(BaseDetector):
-    def __init__(self):
-        BaseDetector.__init__(self)
-        self.dectector = 'AlertingDetector'
+    def __init__(self, priority = 'DEBUG'):
+        BaseDetector.__init__(self, priority)
+        self.detectorName = 'AlertingDetector'
     def execute(self):
         BaseDetector.execute(self)
-        BaseDetector.sendAlarm(self)
+        timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+        uniqueID = timestamp
+        name = self.detectorName
+        priority = self.priority
+        body = ''
+
+        BaseDetector.sendAlarm(self,timestamp, uniqueID, name, priority,body)
 
 # HaltingTestDetector never returns
 class HaltingTestDetector(BaseDetector):
     def __init__(self):
         BaseDetector.__init__(self)
-        self.dectector = 'HaltingDetector'
+        self.detectorName = 'HaltingDetector'
     def execute(self):
         BaseDetector.execute(self)
         while True:
@@ -55,19 +78,32 @@ class HaltingTestDetector(BaseDetector):
 class RaiseErrorTestDetector(BaseDetector):
     def __init__(self):
         BaseDetector.__init__(self)
-        self.dectector = 'RaiseErrorDetector'
-    def execute(self):
+        self.detectorName = 'RaiseErrorDetector'
+
+    def execute(priorityself):
         BaseDetector.execute(self)
         raise Exception('Error Raiser for ErrorRaiserDetector')
 
-def main():
-    # myDetector = SilentTestDetector()
-    myDetector = AlertingTestDetector()
-    # myDetector = HaltingTestDetector()
-    # myDetector = RaiseErrorTestDetector()
+def main(args):
+    detectorName = args[0]
+    # print detectorName
+
+    priority = None
+    if len(args) > 1:
+        priority = args[1]
+
+    if detectorName == 'SilentDetector':
+        myDetector = SilentTestDetector()
+    elif detectorName == 'AlertingDetector':
+        myDetector = AlertingTestDetector(priority)
+    elif detectorName == 'HaltingDetector':
+        myDetector = HaltingTestDetector()
+    elif detectorName == 'RaiseErrorDetector':
+        myDetector = RaiseErrorTestDetector()
 
     myDetector.execute()
 
 
 if __name__ == '__main__':
-    main()
+    # print sys.argv[1:]
+    main(sys.argv[1:])
