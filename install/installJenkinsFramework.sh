@@ -22,13 +22,14 @@ chown -R root:root /var/cache/jenkins;
 chown -R root:root /var/log/jenkins;
 echo 'done.';
 
+service jenkins start
+
 echo "##########################################################"
 echo "Please, go to jenkins, set your jenkins user and password."
 echo "After default configuration, enter your jenkins user and"
 echo "password here, we need them for the plugins configuration"
 echo "##########################################################"
 
-firefox http://localhost:8080
 
 echo -n "User > ";
 read JENKINS_USER;
@@ -38,10 +39,10 @@ read JENKINS_PASS;
 
 echo '## Installing Jenkins Plugins'
 for req in $(cat requirements.txt);
-do java -jar jenkins-cli.jar -s http://localhost:8080/ install-plugin $req --username $JENKINS_USER --password $JENKINS_PASS;
+do java -jar jenkins-cli.jar -s http://10.195.5.192:8080/ install-plugin $req --username $JENKINS_USER --password $JENKINS_PASS;
 done
 
-cp /jobs/* /var/lib/jenkins/jobs
+cp -a /jobs/* /var/lib/jenkins/jobs
 cd /var/lib/jenkins/jobs
 
 python lineEditorHandler.py /var/lib/jenkins/jobs/AlertingTest/config.xml "python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py AlertingDetector CRITICAL\n" "$PYTHON_FILE_DETECTOR_TEST AlertingDetector CRITICAL\n"

@@ -51,4 +51,6 @@ python lineEditorHandler.py /var/lib/jenkins/jobs/SilentTest/config.xml "python 
 
 python lineEditorHandler.py /var/lib/jenkins/jobs/AlarmListener/config.xml "python /home/lerko/Desktop/ComplexBehaviorDetector/log/JobAlarmListener.py" "$PYTHON_FILE_DETECTOR_TEST SilentDetector\n"
 
+cp $MAIN_FILE/install/org.jenkinsci.plugins.emailext_template.ExtendedEmailTemplatePublisher.xml /var/lib/jenkins/
+
 exit 0 
