@@ -1,7 +1,7 @@
 import sys
 
 def lineEditor(filePath, oldLine, newLine):
-    print '#####################################'
+    print '##########################################################'
     print 'Starting to edit lines from %s' %filePath
 
     backupFile = filePath+'.backup'
@@ -20,14 +20,14 @@ def lineEditor(filePath, oldLine, newLine):
     for i, line in enumerate(data):
         if oldLine in line:
             print 'Line found'
-            data[i].replace(oldLine,newLine)
+            data[i] = data[i].replace(oldLine,newLine)
             print data[i]
             break
     print 'Rewriting file...',
     with open(filePath, 'w') as file:
         file.writelines(data)
     print 'done.'
-    print '#####################################'
+    print '##########################################################'
 
 
 
