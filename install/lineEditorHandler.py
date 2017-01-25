@@ -15,9 +15,9 @@ def lineEditor(filePath, oldLine, newLine):
     print 'Please, if you have any problem, replace\n%s by %s' % (filePath, backupFile)
 
     for i, line in enumerate(data):
-        if 'JENKINS_USER="jenkins"\n' == line:
+        if oldLine in line:
             print 'Line found'
-            data[i] = 'JENKINS_USER="root"\n'
+            data[i].replace(oldLine,newLine)
             break
     print 'Rewriting file...',
     with open(filePath, 'w') as file:
