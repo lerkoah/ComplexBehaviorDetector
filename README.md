@@ -8,7 +8,7 @@ For install de framework you have to run the installJenkinsFramework.sh as root 
 ```sh
 ./installJenkinsFramework.sh
 ```
-.
+
 ## Detectors Classes
 
 ### Detectors Type 1
