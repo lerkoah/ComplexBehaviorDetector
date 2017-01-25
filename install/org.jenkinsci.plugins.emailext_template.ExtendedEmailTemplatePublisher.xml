@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl plugin="emailext-template@1.0">
+  <templates>
+    <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+      <id>emailext-template-1484838137325</id>
+      <name>Critical Alarm</name>
+      <description>This is a template for High Prioriry Alarm System</description>
+      <publisher plugin="email-ext@2.53">
+        <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+        <configuredTriggers>
+          <hudson.plugins.emailext.plugins.trigger.ScriptTrigger>
+            <email>
+              <recipientList>aheit.s.a@gmail.com</recipientList>
+              <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+              <body>$PROJECT_DEFAULT_CONTENT</body>
+              <recipientProviders>
+                <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+              </recipientProviders>
+              <attachmentsPattern></attachmentsPattern>
+              <attachBuildLog>false</attachBuildLog>
+              <compressBuildLog>false</compressBuildLog>
+              <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+              <contentType>project</contentType>
+            </email>
+            <triggerScript>build.logFile.text.readLines().any { it =~ /.*=== START ERROR: CRITICAL ===.*/ }</triggerScript>
+          </hudson.plugins.emailext.plugins.trigger.ScriptTrigger>
+        </configuredTriggers>
+        <contentType>default</contentType>
+        <defaultSubject>Critical Alarm</defaultSubject>
+        <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - Build Error:
+
+
+${BUILD_LOG_EXCERPT, start=&quot;(=== START ERROR: CRITICAL ===)&quot;, end=&quot;(=== END ERROR ===)&quot;}</defaultContent>
+        <attachmentsPattern></attachmentsPattern>
+        <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+        <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
+        <attachBuildLog>false</attachBuildLog>
+        <compressBuildLog>false</compressBuildLog>
+        <replyTo>$DEFAULT_REPLYTO</replyTo>
+        <saveOutput>false</saveOutput>
+        <disabled>false</disabled>
+      </publisher>
+    </org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+    <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+      <id>emailext-template-1485195838333</id>
+      <name>Warning Alarm</name>
+      <description>template for warning errors</description>
+      <publisher plugin="email-ext@2.53">
+        <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+        <configuredTriggers>
+          <hudson.plugins.emailext.plugins.trigger.ScriptTrigger>
+            <email>
+              <recipientList>aheit.s.a@gmail.com</recipientList>
+              <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+              <body>$PROJECT_NAME - Build # $BUILD_NUMBER - Build Error:
+
+
+${BUILD_LOG_EXCERPT, start=&quot;(=== START ERROR: WARNING ===)&quot;, end=&quot;(=== END ERROR ===)&quot;}</body>
+              <recipientProviders>
+                <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+              </recipientProviders>
+              <attachmentsPattern></attachmentsPattern>
+              <attachBuildLog>false</attachBuildLog>
+              <compressBuildLog>false</compressBuildLog>
+              <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+              <contentType>project</contentType>
+            </email>
+            <triggerScript>build.logFile.text.readLines().any { it =~ /.*=== START ERROR: WARNING ===.*/ }</triggerScript>
+          </hudson.plugins.emailext.plugins.trigger.ScriptTrigger>
+        </configuredTriggers>
+        <contentType>default</contentType>
+        <defaultSubject>Warning Alarm</defaultSubject>
+        <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - Build Error:
+
+
+${BUILD_LOG_EXCERPT, start=&quot;(=== START ERROR: WARNING ===)&quot;, end=&quot;(=== END ERROR ===)&quot;}</defaultContent>
+        <attachmentsPattern></attachmentsPattern>
+        <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+        <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
+        <attachBuildLog>false</attachBuildLog>
+        <compressBuildLog>false</compressBuildLog>
+        <replyTo>$DEFAULT_REPLYTO</replyTo>
+        <saveOutput>false</saveOutput>
+        <disabled>false</disabled>
+      </publisher>
+    </org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+  </templates>
+</org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl>

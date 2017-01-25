@@ -6,7 +6,7 @@ We are working on CentOS 6.8 and Red Hat Entrerprise Linux 6.8. Then the followi
 
 For install de framework you have to run the installJenkinsFramework.sh as root permissions. That's means go to install folder and execute:
 ```sh
-installJenkinsFramework.sh
+./installJenkinsFramework.sh
 ```
 
 ## Detectors Classes

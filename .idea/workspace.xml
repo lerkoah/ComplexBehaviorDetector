@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/install/editLinesJenkins.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/installJenkinsFramework.sh" afterPath="$PROJECT_DIR$/install/installJenkinsFramework.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

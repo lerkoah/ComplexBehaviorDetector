@@ -50,4 +50,5 @@ python lineEditorHandler.py /var/lib/jenkins/jobs/RaiseErrorTest/config.xml "pyt
 python lineEditorHandler.py /var/lib/jenkins/jobs/SilentTest/config.xml "python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py SilentDetector\n" "$PYTHON_FILE_DETECTOR_TEST SilentDetector\n"
 
 python lineEditorHandler.py /var/lib/jenkins/jobs/AlarmListener/config.xml "python /home/lerko/Desktop/ComplexBehaviorDetector/log/JobAlarmListener.py" "$PYTHON_FILE_DETECTOR_TEST SilentDetector\n"
+
 exit 0 
