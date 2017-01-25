@@ -1,6 +1,9 @@
 import sys
 
 def lineEditor(filePath, oldLine, newLine):
+    print '#####################################'
+    print 'Starting to edit lines from %s' %filePath
+
     backupFile = filePath+'.backup'
 
     print 'Reading lines...',
@@ -18,11 +21,15 @@ def lineEditor(filePath, oldLine, newLine):
         if oldLine in line:
             print 'Line found'
             data[i].replace(oldLine,newLine)
+            print data[i]
             break
     print 'Rewriting file...',
     with open(filePath, 'w') as file:
         file.writelines(data)
     print 'done.'
+    print '#####################################'
+
+
 
 if __name__ == '__main__':
     pathToEdit = sys.argv[1]
