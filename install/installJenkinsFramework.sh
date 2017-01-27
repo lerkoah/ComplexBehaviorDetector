@@ -12,6 +12,7 @@ echo '## Getting Jenkins repositories'
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
+yum install java
 yum install jenkins
 
 python lineEditorHandler.py /etc/sysconfig/jenkins JENKINS_USER="jenkins"\n JENKINS_USER="root"\n
@@ -21,6 +22,12 @@ chown -R root:root /var/lib/jenkins;
 chown -R root:root /var/cache/jenkins;
 chown -R root:root /var/log/jenkins;
 echo 'done.';
+
+echo -n "Host (e.g., localhost) > ";
+read JENKINS_HOST;
+
+echo "Setting Host..."
+python lineEditorHandler.py /etc/sysconfig/jenkins 'JENKINS_LISTEN_ADDRESS=""' 'JENKINS_LISTEN_ADDRESS="'$JENKINS_HOST'"'
 
 service jenkins start
 
@@ -39,7 +46,7 @@ read -s JENKINS_PASS;
 
 echo '## Installing Jenkins Plugins'
 for req in $(cat requirements.txt);
-do java -jar jenkins-cli.jar -s http://10.195.5.192:8080/ install-plugin $req --username $JENKINS_USER --password $JENKINS_PASS;
+do java -jar jenkins-cli.jar -s http://$JENKINS_HOST:8080/ install-plugin $req --username $JENKINS_USER --password $JENKINS_PASS;
 done
 
 cp -a jobs/* /var/lib/jenkins/jobs
