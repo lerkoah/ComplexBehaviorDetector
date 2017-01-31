@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import datetime
+import json
 
 class BaseDetector(object):
     def __init__(self,priority = 'DEBUG'):
@@ -20,12 +21,13 @@ class BaseDetector(object):
         elif self.params == 0:
             return 0
 
-    def sendAlarm(self, timestamp, uniqueID, name, priority, body):
+    def sendAlarm(self, timestamp, name, priority, description, detectionTime, body):
         self.lastError= '=== START ERROR: ' + priority + ' ===\n' \
-                        'timestamp: ' + timestamp + '\n' \
-                        'Unique ID: '+ uniqueID + '\n' \
+                        'Timestamp: ' + timestamp + '\n' + \
+                        'Detection Timestamp: '+ detectionTime + '\n' \
                         'Name: '+ name+ '\n' \
                         'Priority: '+ priority + '\n' \
+                        'Description: ' + description + '\n'\
                         'Body: '+ body + '\n' \
                         '=== END ERROR ===\n'
         ## Writting in editable file
@@ -34,11 +36,23 @@ class BaseDetector(object):
         handler.close()
 
         print self.lastError
+        #print self.__alarm2json(timestamp, name, priority, description, detectionTime, body)
 
     def executeTruePositive(self):
         self.params = 0
     def executeTrueNegative(self):
         self.params = 1
+
+    def __alarm2json(self, timestamp, name, priority, description, detectionTime, body):
+        jsonFormat = '{\n' \
+                     '\t"timestamp": %s,\n' \
+                     '\t"Name": %s,\n' \
+                     '\t"priority": %s,\n' \
+                     '\t"description": %s,\n' \
+                     '\t"detection_time": %s,\n' \
+                     '\t"Body": %s\n' \
+                     '}' %(timestamp, name, priority, description, detectionTime, body)
+        return jsonFormat
 
 # SilentTestDetector never detect
 class SilentTestDetector(BaseDetector):
@@ -57,12 +71,13 @@ class AlertingTestDetector(BaseDetector):
     def execute(self):
         BaseDetector.execute(self)
         timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
-        uniqueID = timestamp
+        detectionTime = timestamp
+        description = ''
         name = self.detectorName
         priority = self.priority
         body = ''
 
-        BaseDetector.sendAlarm(self,timestamp, uniqueID, name, priority,body)
+        BaseDetector.sendAlarm(self,timestamp, name, priority, description, detectionTime, body)
 
 # HaltingTestDetector never returns
 class HaltingTestDetector(BaseDetector):

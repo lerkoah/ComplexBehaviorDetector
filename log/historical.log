@@ -1,0 +1,113 @@
+=== START ERROR: CRITICAL ===
+timestamp: 2017-01-30 13:45:28.731
+Unique ID: 2017-01-30 13:45:28.731
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+timestamp: 2017-01-30 13:46:08.921
+Unique ID: 2017-01-30 13:46:08.921
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+timestamp: 2017-01-30 13:46:11.825
+Unique ID: 2017-01-30 13:46:11.825
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 13:54:16.076
+Unique ID: 2017-01-30 13:54:16.076
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 13:54:36.170
+Unique ID: 2017-01-30 13:54:36.170
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 13:54:51.881
+Unique ID: 2017-01-30 13:54:51.881
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 14:50:28.195
+Unique ID: 2017-01-30 14:50:28.195
+Name: AlertingDetector
+Priority: CRITICAL
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:39:12.360
+Timestamp detection: 2017-01-30 15:39:12.360
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:42:23.088
+Timestamp detection: 2017-01-30 15:42:23.088
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:48:19.506
+Timestamp detection: 2017-01-30 15:48:19.506
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:48:36.465
+Timestamp detection: 2017-01-30 15:48:36.465
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:50:21.198
+Timestamp detection: 2017-01-30 15:50:21.198
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:51:50.717
+Timestamp detection: 2017-01-30 15:51:50.717
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 15:52:54.605
+Timestamp detection: 2017-01-30 15:52:54.605
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2017-01-30 18:38:29.512
+Timestamp detection: 2017-01-30 18:38:29.512
+Name: AlertingDetector
+Priority: CRITICAL
+Description: 
+Body: 
+=== END ERROR ===
