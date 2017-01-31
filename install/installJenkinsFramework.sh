@@ -37,11 +37,10 @@ echo "After default configuration, enter your jenkins user and"
 echo "password here, we need them for the plugins configuration"
 echo "##########################################################"
 
-echo -n "Host (e.g., localhost) >";
-read JENKINS_HOST;
+
 echo -n "User > ";
 read JENKINS_USER;
-echo -n "Pass > ";
+echo "Pass > ";
 read -s JENKINS_PASS;
 
 
