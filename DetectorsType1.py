@@ -1,58 +1,7 @@
-import os
 import sys
 from datetime import datetime
-import json
+from BaseDetector import BaseDetector
 
-class BaseDetector(object):
-    def __init__(self,priority = 'DEBUG'):
-        self.dectectorName = None
-        self.params = None
-        self.report = 'Reporting alarm'
-        self.priority = priority
-        self.lastError = None
-        ## error log path
-        self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
-
-    def configure(self,params):
-        self.params = params
-    def execute(self):
-        if self.params == 1:
-            return 0
-        elif self.params == 0:
-            return 0
-
-    def sendAlarm(self, timestamp, name, priority, description, detectionTime, body):
-        self.lastError= '=== START ERROR: ' + priority + ' ===\n' \
-                        'Timestamp: ' + timestamp + '\n' + \
-                        'Detection Timestamp: '+ detectionTime + '\n' \
-                        'Name: '+ name+ '\n' \
-                        'Priority: '+ priority + '\n' \
-                        'Description: ' + description + '\n'\
-                        'Body: '+ body + '\n' \
-                        '=== END ERROR ===\n'
-        ## Writting in editable file
-        handler = open(self.errorLogPath, 'a')
-        handler.write(self.lastError)
-        handler.close()
-
-        print self.lastError
-        #print self.__alarm2json(timestamp, name, priority, description, detectionTime, body)
-
-    def executeTruePositive(self):
-        self.params = 0
-    def executeTrueNegative(self):
-        self.params = 1
-
-    def __alarm2json(self, timestamp, name, priority, description, detectionTime, body):
-        jsonFormat = '{\n' \
-                     '\t"timestamp": %s,\n' \
-                     '\t"Name": %s,\n' \
-                     '\t"priority": %s,\n' \
-                     '\t"description": %s,\n' \
-                     '\t"detection_time": %s,\n' \
-                     '\t"Body": %s\n' \
-                     '}' %(timestamp, name, priority, description, detectionTime, body)
-        return jsonFormat
 
 # SilentTestDetector never detect
 class SilentTestDetector(BaseDetector):

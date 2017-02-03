@@ -1,0 +1,53 @@
+LogQuery: Query abstraction for ALMA-ELK logs queries.
+======================================================
+This is the first public draft of a script to query ALMA-ELK (Kibana) from the command line. Any questions
+please send me an email to jgil@alma.cl
+
+
+Install
+-------
+This is a standalone script for Python 2 and 3. 
+
+1. Install elasticsearch-dsl with pip: 
+  pip install elasticsearch-dsl
+
+2. Checkout from https://svn.alma.cl/p2/trunk/ADC/SW/OFFLINE/ALMA-ELK/LogQuery/
+  svn co https://svn.alma.cl/p2/trunk/ADC/SW/OFFLINE/ALMA-ELK/LogQuery/
+
+3. Copy to bin: 
+  cp LogQuery.py ~/bin/LogQuery
+
+4. Check that everything by running
+
+  LogQuery --unittest
+
+
+Basic Usage
+-----------
+You need to be inside ALMA network, or from a friendly site (NAOJ, NRAO, ESO), or a through VPN.
+
+
+Start with the most updated source of help:
+  LogQuery --help
+  LogQuery --extrahelp
+
+Try any oh these:
+  LogQuery -f 2016-11-05T09:19:00.000 -t 2016-11-05T09:20:00.000 '*' --limit 10 -v
+  LogQuery -f 2016-11-05T09:19:00.000 -t 2016-11-05T09:20:00.000 '*' --limit 10 -g DEBUG
+
+  LogQuery -f 2016-11-05T09:19:00.000 -t 2016-11-05T09:20:00.000 -g DEBUG '*' --stat
+  LogQuery -f 2016-11-05T09:19:00.000 -t 2016-11-05T09:20:00.000 -g INFO '*' --stat
+  LogQuery -f 2016-11-05T09:19:00.000 -t 2016-11-05T09:20:00.000 -g ERROR '*' --stat
+
+  LogQuery 'CORR AND "lags processing timing"' -c TimeStamp,Process,text -g DEBUG -f 2016-11-05T09:19:21.849 -t 2016-11-06T09:24:21.849 -v --limit 10
+
+Try with ENV variables
+
+  export QK_FROMTIME=2016-11-05T09:00:00.000
+  export QK_TOTIME=2016-11-05T09:59:00.000
+  export QK_LOGLEVEL=DEBUG
+  export QK_COLUMNS=TimeStamp,Process,text
+
+  LogQuery 'CORR AND "lags processing timing"' -v 
+
+

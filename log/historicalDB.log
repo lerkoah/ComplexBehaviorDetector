@@ -1,14 +1,543 @@
 === START ERROR: CRITICAL ===
-timestamp: 2017-01-24 13:37:43.267
-Unique ID: 2017-01-24 13:37:43.267
-Name: AlertingDetector
+Timestamp: 2016-11-20T04:03:10.476Z
+Detection Timestamp: 2017-02-01T12:33:22.938Z
+Name: ICT-8579
 Priority: CRITICAL
+Description: 
+> 2016-11-20T04:03:10.173Z CONTROL/CM09/IFProc0 Voltage after setting attenuation to linear zone [0.21225 0.22213 0.200005 0.186691]
+> 2016-11-20T04:03:10.476Z CONTROL/CM09/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
 Body: 
 === END ERROR ===
 === START ERROR: CRITICAL ===
-timestamp: 2017-01-24 13:39:28.876
-Unique ID: 2017-01-24 13:39:28.876
-Name: AlertingDetector
+Timestamp: 2016-11-20T10:46:42.131Z
+Detection Timestamp: 2017-02-01T12:33:22.949Z
+Name: ICT-8579
 Priority: CRITICAL
+Description: 
+> 2016-11-20T10:46:41.828Z CONTROL/DV16/IFProc1 Voltage after setting attenuation to linear zone [0.20073 0.185089 0.376969 0.322457]
+> 2016-11-20T10:46:42.131Z CONTROL/DV16/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
 Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-20T15:18:24.357Z
+Detection Timestamp: 2017-02-01T12:33:22.951Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-20T15:18:24.055Z CONTROL/DV12/IFProc0 Voltage after setting attenuation to linear zone [0.202561 0.239411 0.1857 0.257645]
+> 2016-11-20T15:18:24.357Z CONTROL/DV12/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-21T09:26:24.065Z
+Detection Timestamp: 2017-02-01T12:33:22.966Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-21T09:26:23.763Z CONTROL/DA49/IFProc1 Voltage after setting attenuation to linear zone [0.200348 0.19146 0.236817 0.255203]
+> 2016-11-21T09:26:24.065Z CONTROL/DA49/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-21T12:29:24.720Z
+Detection Timestamp: 2017-02-01T12:33:22.968Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-21T12:29:24.417Z CONTROL/DA48/IFProc1 Voltage after setting attenuation to linear zone [0.21862 0.207253 0.209198 0.196343]
+> 2016-11-21T12:29:24.720Z CONTROL/DA48/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-21T20:41:02.230Z
+Detection Timestamp: 2017-02-01T12:33:22.969Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-21T20:41:01.926Z CONTROL/DA51/IFProc1 Voltage after setting attenuation to linear zone [0.19352 0.204926 0.176621 0.200081]
+> 2016-11-21T20:41:02.230Z CONTROL/DA51/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-21T23:47:21.023Z
+Detection Timestamp: 2017-02-01T12:33:22.980Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-21T23:47:20.720Z CONTROL/DV08/IFProc0 Voltage after setting attenuation to linear zone [0.219155 0.201035 0.210838 0.198364]
+> 2016-11-21T23:47:21.023Z CONTROL/DV08/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-22T04:17:51.861Z
+Detection Timestamp: 2017-02-01T12:33:22.996Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-22T04:17:51.559Z CONTROL/DA64/IFProc1 Voltage after setting attenuation to linear zone [0.203247 0.200272 0.173264 0.189629]
+> 2016-11-22T04:17:51.861Z CONTROL/DA64/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-22T07:07:59.812Z
+Detection Timestamp: 2017-02-01T12:33:23.002Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-22T07:07:59.505Z CONTROL/CM09/IFProc1 Voltage after setting attenuation to linear zone [0.20443 0.193443 0.200577 0.20237]
+> 2016-11-22T07:07:59.812Z CONTROL/CM09/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-22T18:38:39.028Z
+Detection Timestamp: 2017-02-01T12:33:23.007Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-22T18:38:38.720Z CONTROL/DV17/IFProc1 Voltage after setting attenuation to linear zone [0.200043 0.205383 0.120468 0.128594]
+> 2016-11-22T18:38:39.028Z CONTROL/DV17/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-24T03:50:36.739Z
+Detection Timestamp: 2017-02-01T12:33:23.013Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-24T03:50:36.436Z CONTROL/CM09/IFProc1 Voltage after setting attenuation to linear zone [0.313835 0.305481 0.179443 0.200119]
+> 2016-11-24T03:50:36.739Z CONTROL/CM09/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-24T08:54:54.080Z
+Detection Timestamp: 2017-02-01T12:33:23.014Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-24T08:54:53.770Z CONTROL/DA48/IFProc1 Voltage after setting attenuation to linear zone [0.356255 0.174141 0.201721 0.289116]
+> 2016-11-24T08:54:54.080Z CONTROL/DA48/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-24T09:58:07.828Z
+Detection Timestamp: 2017-02-01T12:33:23.015Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-24T09:58:07.522Z CONTROL/DV12/IFProc0 Voltage after setting attenuation to linear zone [0.314331 0.474663 0.179443 0.200005]
+> 2016-11-24T09:58:07.828Z CONTROL/DV12/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-25T20:02:36.719Z
+Detection Timestamp: 2017-02-01T12:33:23.032Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-25T20:02:36.416Z CONTROL/DV23/IFProc1 Voltage after setting attenuation to linear zone [0.151138 0.173798 0.190735 0.200768]
+> 2016-11-25T20:02:36.719Z CONTROL/DV23/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-26T05:24:14.158Z
+Detection Timestamp: 2017-02-01T12:33:23.047Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-26T05:24:13.855Z CONTROL/DA56/IFProc1 Voltage after setting attenuation to linear zone [0.0868226 0.108414 0.202866 0.25177]
+> 2016-11-26T05:24:14.158Z CONTROL/DA56/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-26T08:58:15.619Z
+Detection Timestamp: 2017-02-01T12:33:23.050Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-26T08:58:15.316Z CONTROL/DV12/IFProc0 Voltage after setting attenuation to linear zone [0.163612 0.200005 0.233612 0.254135]
+> 2016-11-26T08:58:15.619Z CONTROL/DV12/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-26T10:16:28.324Z
+Detection Timestamp: 2017-02-01T12:33:23.051Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-26T10:16:28.017Z CONTROL/DV17/IFProc1 Voltage after setting attenuation to linear zone [0.300255 0.23674 0.169296 0.200539]
+> 2016-11-26T10:16:28.324Z CONTROL/DV17/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-26T22:15:34.001Z
+Detection Timestamp: 2017-02-01T12:33:23.053Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-26T22:15:33.699Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.204888 0.200348 0.169716 0.158081]
+> 2016-11-26T22:15:34.001Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-27T00:31:52.932Z
+Detection Timestamp: 2017-02-01T12:33:23.062Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-27T00:31:52.629Z CONTROL/DA49/IFProc0 Voltage after setting attenuation to linear zone [0.206337 0.156822 0.156746 0.200577]
+> 2016-11-27T00:31:52.932Z CONTROL/DA49/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-27T17:05:38.231Z
+Detection Timestamp: 2017-02-01T12:33:23.085Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-27T17:05:37.927Z CONTROL/DA52/IFProc0 Voltage after setting attenuation to linear zone [0.192986 0.200768 0.173035 0.121269]
+> 2016-11-27T17:05:38.231Z CONTROL/DA52/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-28T02:14:06.531Z
+Detection Timestamp: 2017-02-01T12:33:23.107Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-28T02:14:06.226Z CONTROL/DV23/IFProc1 Voltage after setting attenuation to linear zone [0.151024 0.20073 0.200577 0.195961]
+> 2016-11-28T02:14:06.531Z CONTROL/DV23/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-28T06:46:36.402Z
+Detection Timestamp: 2017-02-01T12:33:23.111Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-28T06:46:36.095Z CONTROL/DA62/IFProc0 Voltage after setting attenuation to linear zone [0.137863 0.124359 0.200081 0.231781]
+> 2016-11-28T06:46:36.402Z CONTROL/DA62/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-28T08:52:05.104Z
+Detection Timestamp: 2017-02-01T12:33:23.114Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-28T08:52:04.800Z CONTROL/CM02/IFProc1 Voltage after setting attenuation to linear zone [0.200653 0.193024 0.227318 0.270043]
+> 2016-11-28T08:52:05.104Z CONTROL/CM02/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-28T11:06:54.924Z
+Detection Timestamp: 2017-02-01T12:33:23.114Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-28T11:06:54.622Z CONTROL/DV23/IFProc1 Voltage after setting attenuation to linear zone [0.249138 0.192299 0.200958 0.310898]
+> 2016-11-28T11:06:54.924Z CONTROL/DV23/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-28T20:43:25.711Z
+Detection Timestamp: 2017-02-01T12:33:23.122Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-28T20:43:25.401Z CONTROL/DV08/IFProc0 Voltage after setting attenuation to linear zone [0.22316 0.180512 0.20134 0.229263]
+> 2016-11-28T20:43:25.711Z CONTROL/DV08/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-11-30T05:05:07.476Z
+Detection Timestamp: 2017-02-01T12:33:23.141Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-11-30T05:05:07.174Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.236969 0.174637 0.176621 0.200768]
+> 2016-11-30T05:05:07.476Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-01T01:38:49.555Z
+Detection Timestamp: 2017-02-01T12:33:23.149Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-01T01:38:49.252Z CONTROL/CM09/IFProc1 Voltage after setting attenuation to linear zone [0.192566 0.195046 0.19207 0.200348]
+> 2016-12-01T01:38:49.555Z CONTROL/CM09/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-01T03:27:22.343Z
+Detection Timestamp: 2017-02-01T12:33:23.149Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-01T03:27:22.039Z CONTROL/CM09/IFProc0 Voltage after setting attenuation to linear zone [0.20073 0.217018 0.192909 0.182991]
+> 2016-12-01T03:27:22.343Z CONTROL/CM09/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-01T09:06:41.902Z
+Detection Timestamp: 2017-02-01T12:33:23.154Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-01T09:06:41.600Z CONTROL/CM01/IFProc1 Voltage after setting attenuation to linear zone [0.200272 0.180359 0.247078 0.186424]
+> 2016-12-01T09:06:41.902Z CONTROL/CM01/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-02T08:39:51.669Z
+Detection Timestamp: 2017-02-01T12:33:23.167Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-02T08:39:51.366Z CONTROL/CM09/IFProc1 Voltage after setting attenuation to linear zone [0.099907 0.108757 0.200157 0.197029]
+> 2016-12-02T08:39:51.669Z CONTROL/CM09/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-03T00:07:06.479Z
+Detection Timestamp: 2017-02-01T12:33:23.171Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-03T00:07:06.175Z CONTROL/DA47/IFProc0 Voltage after setting attenuation to linear zone [0.197792 0.200195 0.141449 0.207405]
+> 2016-12-03T00:07:06.479Z CONTROL/DA47/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-04T19:04:45.586Z
+Detection Timestamp: 2017-02-01T12:33:23.182Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-04T19:04:45.284Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.205345 0.200806 0.168839 0.157089]
+> 2016-12-04T19:04:45.586Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-04T22:30:36.004Z
+Detection Timestamp: 2017-02-01T12:33:23.187Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-04T22:30:35.701Z CONTROL/DV23/IFProc1 Voltage after setting attenuation to linear zone [0.151291 0.173302 0.190811 0.200157]
+> 2016-12-04T22:30:36.004Z CONTROL/DV23/IFProc1 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-05T04:42:28.467Z
+Detection Timestamp: 2017-02-01T12:33:23.190Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-05T04:42:28.164Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.242882 0.173111 0.20031 0.17437]
+> 2016-12-05T04:42:28.467Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-05T07:38:03.264Z
+Detection Timestamp: 2017-02-01T12:33:23.194Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-05T07:38:02.962Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.223274 0.19474 0.200272 0.170174]
+> 2016-12-05T07:38:03.264Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-06T04:11:12.308Z
+Detection Timestamp: 2017-02-01T12:33:23.205Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-06T04:11:12.006Z CONTROL/DA63/IFProc0 Voltage after setting attenuation to linear zone [0.192795 0.200958 0.331497 0.316887]
+> 2016-12-06T04:11:12.308Z CONTROL/DA63/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: CRITICAL ===
+Timestamp: 2016-12-08T07:09:13.567Z
+Detection Timestamp: 2017-02-01T12:33:23.220Z
+Name: ICT-8579
+Priority: CRITICAL
+Description: 
+> 2016-12-08T07:09:13.258Z CONTROL/DA62/IFProc0 Voltage after setting attenuation to linear zone [0.179176 0.200539 0.110016 0.139656]
+> 2016-12-08T07:09:13.567Z CONTROL/DA62/IFProc0 Failed to move all BBs to linear zone after 1 attempts. This IFP needs calibration.
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-01T14:38:11.251Z
+Name: ICT-6207
+Priority: INFO
+Description: > 2017-02-01T05:20:37.397Z ACACORR/CDPMIF/MASTER Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-01T14:38:11.561Z
+Name: ICT-4841
+Priority: INFO
+Description: > 2017-02-01T05:20:37.381Z ACACORR/CDPMIF/MASTER Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-01T15:03:18.034Z
+Name: ICT-4841
+Priority: INFO
+Description: > 2017-02-01T05:20:37.381Z ACACORR/CDPMIF/MASTER Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-01T15:03:29.862Z
+Name: ICT-4841
+Priority: INFO
+Description: > 2017-02-01T05:20:37.381Z ACACORR/CDPMIF/MASTER Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-01T15:26:55.176Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Description: > 2017-02-01T05:28:42.806Z ACACORR_MASTER_COMP shutDownSubsysPass1() method called.
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T10:51:41.392Z
+Detection Timestamp: 2017-02-01T15:26:55.176Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Description: > 2017-02-01T10:51:41.392Z CORR_MASTER_COMP shutDownSubsysPass1() method called.
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-01T15:26:57.638Z
+Name: ICT-4575
+Priority: INFO
+Description: > 2017-02-01T00:00:00.035Z CORR/CDPNode/N01/cppContainer-GL collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-01T15:27:03.443Z
+Name: ICT-7566
+Priority: INFO
+Description: > 2017-02-01T04:48:01.816Z CONTROL/DV20/cppContainer-GL CORBA Problem (type=10, code=13)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-01T15:27:04.282Z
+Name: NPE Scheduling
+Priority: INFO
+Description: > 2017-02-01T04:28:09.919Z SCHEDULING/Array025 java.lang.NullPointerException (type=9, code=-1)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Timestamp: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-01T15:27:04.941Z
+Name: ICT-5354
+Priority: INFO
+Description: > 2017-02-01T05:20:33.280Z ACACORR/CDPCIF/NODE_09 waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-02T17:30:37.295Z
+Name: ICT-6207
+Priority: INFO
+Description: > 2017-02-01T05:20:37.397Z ACACORR/CDPMIF/MASTER Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-02T17:30:38.045Z
+Name: ICT-4841
+Priority: INFO
+Description: > 2017-02-01T05:20:37.381Z ACACORR/CDPMIF/MASTER Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-02T17:30:38.712Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Description: > 2017-02-01T05:28:42.806Z ACACORR_MASTER_COMP shutDownSubsysPass1() method called.
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T10:51:41.392Z
+Detection Timestamp: 2017-02-02T17:30:38.713Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Description: > 2017-02-01T10:51:41.392Z CORR_MASTER_COMP shutDownSubsysPass1() method called.
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-02T17:30:45.508Z
+Name: ICT-4575
+Priority: INFO
+Description: > 2017-02-01T00:00:00.035Z CORR/CDPNode/N01/cppContainer-GL collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-02T17:30:49.752Z
+Name: ICT-7566
+Priority: INFO
+Description: > 2017-02-01T04:48:01.816Z CONTROL/DV20/cppContainer-GL CORBA Problem (type=10, code=13)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-02T17:30:50.241Z
+Name: NPE Scheduling
+Priority: INFO
+Description: > 2017-02-01T04:28:09.919Z SCHEDULING/Array025 java.lang.NullPointerException (type=9, code=-1)
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-02T17:30:50.803Z
+Name: ICT-5354
+Priority: INFO
+Description: > 2017-02-01T05:20:33.280Z ACACORR/CDPCIF/NODE_09 waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-02T19:10:18.408Z
+Name: ICT-6207
+Priority: INFO
+Description: > 2017-02-01T05:20:37.397Z ACACORR/CDPMIF/MASTER Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]
+Body: 
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-02T19:16:04.202Z
+Name: ICT-6207
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMSpectralDataProcThread.cpp", "Thread": "SPECTRAL_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]", "@timestamp": "2017-02-01T05:20:37.397Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "373"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-02T19:17:28.745Z
+Name: ICT-6207
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMSpectralDataProcThread.cpp", "Thread": "SPECTRAL_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]", "@timestamp": "2017-02-01T05:20:37.397Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "373"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-02T19:17:30.252Z
+Name: ICT-4841
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMChanAverDataProcThread.cpp", "Thread": "CHANAVER_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]", "@timestamp": "2017-02-01T05:20:37.381Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "357"}
 === END ERROR ===

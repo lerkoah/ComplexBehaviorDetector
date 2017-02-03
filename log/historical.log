@@ -1,113 +1,182 @@
-=== START ERROR: CRITICAL ===
-timestamp: 2017-01-30 13:45:28.731
-Unique ID: 2017-01-30 13:45:28.731
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-02T19:17:30.450Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-timestamp: 2017-01-30 13:46:08.921
-Unique ID: 2017-01-30 13:46:08.921
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-02T19:17:30.732Z
+Name: ICT-4575
+Priority: INFO
+Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-timestamp: 2017-01-30 13:46:11.825
-Unique ID: 2017-01-30 13:46:11.825
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-02T19:17:31.020Z
+Name: ICT-7566
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "CONTROL/DV20/cppContainer-GL", "File": "acsncSupplierImpl.cpp", "Thread": "CONTROL/DV20/MountReaderThread", "Process": "CONTROL/DV20/cppContainer", "text": "CORBA Problem (type=10, code=13)", "@timestamp": "2017-02-01T04:48:01.816Z", "LogLevel": "Error", "Host": "", "StackId": "9c85d332-e839-11e6-8000-002038042944", "Context": "", "Routine": "nc::SimpleSupplier::publishEvent", "Line": "224", "Data": [{"text": "system exception, ID 'IDL:omg.org/CORBA/OBJECT_NOT_EXIST:1.0'\nOMG minor code (2), described as 'Failed to create or locate Object Adapter.', completed = NO\n", "Name": "Info"}, {"text": "1", "Name": "CompletionStatus"}, {"text": "1330446338", "Name": "Minor"}]}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 13:54:16.076
-Unique ID: 2017-01-30 13:54:16.076
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-02T19:17:34.811Z
+Name: NPE Scheduling
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "SCHEDULING/Array025", "Thread": "NA", "Process": "SCHEDULING/ACC/javaContainer", "text": "java.lang.NullPointerException (type=9, code=-1)", "@timestamp": "2017-02-01T04:28:09.919Z", "LogId": "3296961", "LogLevel": "Error", "Host": "gas06", "StackId": "SCHEDULING/Array0291485923289920", "File": "ExecutionContext.java", "Routine": "getScanIntentsTime", "Line": "1122"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 13:54:36.170
-Unique ID: 2017-01-30 13:54:36.170
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-02T19:17:34.939Z
+Name: ICT-5354
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPCIF/NODE_09", "File": "ACACDPCPreIntegThread.cpp", "Thread": "ACACDPC_PRE_INTEG_THREAD", "Process": "ACACORR/CDPC_DATA_MGR/N09/cppContainer", "text": "waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]", "@timestamp": "2017-02-01T05:20:33.280Z", "LogLevel": "Error", "Host": "coj-cpn-009", "StackId": "", "Context": "", "Routine": "", "Line": "151"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 13:54:51.881
-Unique ID: 2017-01-30 13:54:51.881
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-02T19:20:53.468Z
+Name: ICT-6207
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMSpectralDataProcThread.cpp", "Thread": "SPECTRAL_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]", "@timestamp": "2017-02-01T05:20:37.397Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "373"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 14:50:28.195
-Unique ID: 2017-01-30 14:50:28.195
-Name: AlertingDetector
-Priority: CRITICAL
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-02T19:20:54.316Z
+Name: ICT-4841
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMChanAverDataProcThread.cpp", "Thread": "CHANAVER_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]", "@timestamp": "2017-02-01T05:20:37.381Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "357"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:39:12.360
-Timestamp detection: 2017-01-30 15:39:12.360
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-02T19:20:54.591Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:42:23.088
-Timestamp detection: 2017-01-30 15:42:23.088
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-02T19:20:54.748Z
+Name: ICT-4575
+Priority: INFO
+Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:48:19.506
-Timestamp detection: 2017-01-30 15:48:19.506
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-02T19:20:55.313Z
+Name: ICT-7566
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "CONTROL/DV20/cppContainer-GL", "File": "acsncSupplierImpl.cpp", "Thread": "CONTROL/DV20/MountReaderThread", "Process": "CONTROL/DV20/cppContainer", "text": "CORBA Problem (type=10, code=13)", "@timestamp": "2017-02-01T04:48:01.816Z", "LogLevel": "Error", "Host": "", "StackId": "9c85d332-e839-11e6-8000-002038042944", "Context": "", "Routine": "nc::SimpleSupplier::publishEvent", "Line": "224", "Data": [{"text": "system exception, ID 'IDL:omg.org/CORBA/OBJECT_NOT_EXIST:1.0'\nOMG minor code (2), described as 'Failed to create or locate Object Adapter.', completed = NO\n", "Name": "Info"}, {"text": "1", "Name": "CompletionStatus"}, {"text": "1330446338", "Name": "Minor"}]}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:48:36.465
-Timestamp detection: 2017-01-30 15:48:36.465
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-02T19:20:56.585Z
+Name: NPE Scheduling
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "SCHEDULING/Array025", "Thread": "NA", "Process": "SCHEDULING/ACC/javaContainer", "text": "java.lang.NullPointerException (type=9, code=-1)", "@timestamp": "2017-02-01T04:28:09.919Z", "LogId": "3296961", "LogLevel": "Error", "Host": "gas06", "StackId": "SCHEDULING/Array0291485923289920", "File": "ExecutionContext.java", "Routine": "getScanIntentsTime", "Line": "1122"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:50:21.198
-Timestamp detection: 2017-01-30 15:50:21.198
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-02T19:20:59.811Z
+Name: ICT-5354
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPCIF/NODE_09", "File": "ACACDPCPreIntegThread.cpp", "Thread": "ACACDPC_PRE_INTEG_THREAD", "Process": "ACACORR/CDPC_DATA_MGR/N09/cppContainer", "text": "waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]", "@timestamp": "2017-02-01T05:20:33.280Z", "LogLevel": "Error", "Host": "coj-cpn-009", "StackId": "", "Context": "", "Routine": "", "Line": "151"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:51:50.717
-Timestamp detection: 2017-01-30 15:51:50.717
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-03T17:51:27.387Z
+Name: ICT-6207
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMSpectralDataProcThread.cpp", "Thread": "SPECTRAL_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]", "@timestamp": "2017-02-01T05:20:37.397Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "373"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 15:52:54.605
-Timestamp detection: 2017-01-30 15:52:54.605
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-03T17:51:30.683Z
+Name: ICT-4841
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMChanAverDataProcThread.cpp", "Thread": "CHANAVER_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]", "@timestamp": "2017-02-01T05:20:37.381Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "357"}
 === END ERROR ===
-=== START ERROR: CRITICAL ===
-Timestamp: 2017-01-30 18:38:29.512
-Timestamp detection: 2017-01-30 18:38:29.512
-Name: AlertingDetector
-Priority: CRITICAL
-Description: 
-Body: 
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-03T17:51:31.933Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-03T17:51:37.078Z
+Name: ICT-4575
+Priority: INFO
+Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-03T17:51:39.937Z
+Name: ICT-7566
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "CONTROL/DV20/cppContainer-GL", "File": "acsncSupplierImpl.cpp", "Thread": "CONTROL/DV20/MountReaderThread", "Process": "CONTROL/DV20/cppContainer", "text": "CORBA Problem (type=10, code=13)", "@timestamp": "2017-02-01T04:48:01.816Z", "LogLevel": "Error", "Host": "", "StackId": "9c85d332-e839-11e6-8000-002038042944", "Context": "", "Routine": "nc::SimpleSupplier::publishEvent", "Line": "224", "Data": [{"text": "system exception, ID 'IDL:omg.org/CORBA/OBJECT_NOT_EXIST:1.0'\nOMG minor code (2), described as 'Failed to create or locate Object Adapter.', completed = NO\n", "Name": "Info"}, {"text": "1", "Name": "CompletionStatus"}, {"text": "1330446338", "Name": "Minor"}]}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-03T17:51:40.951Z
+Name: NPE Scheduling
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "SCHEDULING/Array025", "Thread": "NA", "Process": "SCHEDULING/ACC/javaContainer", "text": "java.lang.NullPointerException (type=9, code=-1)", "@timestamp": "2017-02-01T04:28:09.919Z", "LogId": "3296961", "LogLevel": "Error", "Host": "gas06", "StackId": "SCHEDULING/Array0291485923289920", "File": "ExecutionContext.java", "Routine": "getScanIntentsTime", "Line": "1122"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-03T17:51:42.289Z
+Name: ICT-5354
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPCIF/NODE_09", "File": "ACACDPCPreIntegThread.cpp", "Thread": "ACACDPC_PRE_INTEG_THREAD", "Process": "ACACORR/CDPC_DATA_MGR/N09/cppContainer", "text": "waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]", "@timestamp": "2017-02-01T05:20:33.280Z", "LogLevel": "Error", "Host": "coj-cpn-009", "StackId": "", "Context": "", "Routine": "", "Line": "151"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.397Z
+Detection Timestamp: 2017-02-03T17:53:22.362Z
+Name: ICT-6207
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMSpectralDataProcThread.cpp", "Thread": "SPECTRAL_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found spectral data!! KEY[OBS/0000001966/17/0] NID[1] FILE[ACACDPMSpectralDataProcThread.cpp] LINE[373]", "@timestamp": "2017-02-01T05:20:37.397Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "373"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:37.381Z
+Detection Timestamp: 2017-02-03T17:53:24.592Z
+Name: ICT-4841
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMChanAverDataProcThread.cpp", "Thread": "CHANAVER_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]", "@timestamp": "2017-02-01T05:20:37.381Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "357"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-03T17:53:25.035Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-03T17:53:27.678Z
+Name: ICT-4575
+Priority: INFO
+Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-03T17:53:28.685Z
+Name: ICT-7566
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "CONTROL/DV20/cppContainer-GL", "File": "acsncSupplierImpl.cpp", "Thread": "CONTROL/DV20/MountReaderThread", "Process": "CONTROL/DV20/cppContainer", "text": "CORBA Problem (type=10, code=13)", "@timestamp": "2017-02-01T04:48:01.816Z", "LogLevel": "Error", "Host": "", "StackId": "9c85d332-e839-11e6-8000-002038042944", "Context": "", "Routine": "nc::SimpleSupplier::publishEvent", "Line": "224", "Data": [{"text": "system exception, ID 'IDL:omg.org/CORBA/OBJECT_NOT_EXIST:1.0'\nOMG minor code (2), described as 'Failed to create or locate Object Adapter.', completed = NO\n", "Name": "Info"}, {"text": "1", "Name": "CompletionStatus"}, {"text": "1330446338", "Name": "Minor"}]}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-03T17:53:29.541Z
+Name: NPE Scheduling
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "SCHEDULING/Array025", "Thread": "NA", "Process": "SCHEDULING/ACC/javaContainer", "text": "java.lang.NullPointerException (type=9, code=-1)", "@timestamp": "2017-02-01T04:28:09.919Z", "LogId": "3296961", "LogLevel": "Error", "Host": "gas06", "StackId": "SCHEDULING/Array0291485923289920", "File": "ExecutionContext.java", "Routine": "getScanIntentsTime", "Line": "1122"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-03T17:53:30.811Z
+Name: ICT-5354
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPCIF/NODE_09", "File": "ACACDPCPreIntegThread.cpp", "Thread": "ACACDPC_PRE_INTEG_THREAD", "Process": "ACACORR/CDPC_DATA_MGR/N09/cppContainer", "text": "waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]", "@timestamp": "2017-02-01T05:20:33.280Z", "LogLevel": "Error", "Host": "coj-cpn-009", "StackId": "", "Context": "", "Routine": "", "Line": "151"}
 === END ERROR ===

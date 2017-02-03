@@ -1,0 +1,1 @@
+/home/lerko/Desktop/ComplexBehaviorDetector/LogQuery/src/LogQuery.py
