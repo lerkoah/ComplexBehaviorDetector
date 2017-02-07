@@ -9,7 +9,7 @@ class BaseDetector(object):
         self.params = None
         ## error log path
         # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
-        self.errorLogPath = '/home/lerko/Desktop/ComplexBehaviorDetector/log/historical.log'
+        self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/log/historical.log'
 
         self.host = 'ariadne.osf.alma.cl'
         self.port = 5001
@@ -36,7 +36,7 @@ class BaseDetector(object):
         handler.write(self.lastError)
         handler.close()
 
-        # self.__sendToElastic(self.logger,occurrence_time, name, priority, detectionTime, body)
+        self.__sendToElastic(self.logger,occurrence_time, name, priority, detectionTime, body)
 
         print self.lastError
         print self.__alarm2json(occurrence_time, name, priority, detectionTime, body)
