@@ -541,3 +541,10 @@ Name: ICT-4841
 Priority: INFO
 Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPMIF/MASTER", "File": "ACACDPMChanAverDataProcThread.cpp", "Thread": "CHANAVER_OBS/0000001966", "Process": "ACACORR/CDPMIF/cppContainer", "text": "Not found channel average data!! KEY[OBS/0000001966/17/1] NID[1] FILE[ACACDPMChanAverDataProcThread.cpp] LINE[357]", "@timestamp": "2017-02-01T05:20:37.381Z", "LogLevel": "Error", "Host": "coj-cpm-1", "StackId": "", "Context": "", "Routine": "", "Line": "357"}
 === END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-02T19:17:30.450Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
+=== END ERROR ===

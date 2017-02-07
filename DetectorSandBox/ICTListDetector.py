@@ -34,6 +34,7 @@ class ICTListDetector(BaseDetector):
 
         # fromTime="2016-12-07T00:00:00.000",
         # toTime="2016-12-07T23:59:59.000",
+        counter = 0
 
         for myname, myquery in one_line_db().getQueries():
             kibana = SearchAlmaELK(index="online",
@@ -47,18 +48,20 @@ class ICTListDetector(BaseDetector):
             # previousEvent = {"@timestamp": "1969-12-31T21:00:00"}
             kibanaHits = kibana.execute().hits
             print '- Searching for :' + myquery
-            print '   - Number of queries found: ' +str(len(kibanaHits))
+            print '  - Number of queries found: ' +str(len(kibanaHits))
 
             for j in range(len(kibanaHits)):
                 hit = kibanaHits[j]
                 event = hit.to_dict()
-
                 fullDetectionTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')
                 detectionTime = fullDetectionTime[0:23] + 'Z'
-                self.sendAlarm(event["@timestamp"], myname, self.priority, detectionTime,json.dumps(event))
+
+                self.sendAlarm(event["@timestamp"], myname, self.priority, detectionTime, event)
+                counter += 1
 
                 # print(bcolors.FAIL + "     - " + kibana.format(event) + bcolors.ENDC)
                 # previousEvent["@timestamp"] = event["@timestamp"]
+        print 'Total Errors: %i' % counter
 
 def main():
     myDetector = ICTListDetector()
