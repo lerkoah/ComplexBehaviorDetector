@@ -51,7 +51,7 @@ def main():
 
     ## while file is empty do nothing
     while os.stat(errorLogPath).st_size == 0:
-        pass
+        raise Exception('historical.log blank')
 
     ## Read all lines
     errorLog = open(errorLogPath,'r')

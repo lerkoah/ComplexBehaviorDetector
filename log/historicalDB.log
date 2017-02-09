@@ -555,3 +555,24 @@ Name: ICT-4575
 Priority: INFO
 Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
 === END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:48:01.816Z
+Detection Timestamp: 2017-02-02T19:17:31.020Z
+Name: ICT-7566
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "CONTROL/DV20/cppContainer-GL", "File": "acsncSupplierImpl.cpp", "Thread": "CONTROL/DV20/MountReaderThread", "Process": "CONTROL/DV20/cppContainer", "text": "CORBA Problem (type=10, code=13)", "@timestamp": "2017-02-01T04:48:01.816Z", "LogLevel": "Error", "Host": "", "StackId": "9c85d332-e839-11e6-8000-002038042944", "Context": "", "Routine": "nc::SimpleSupplier::publishEvent", "Line": "224", "Data": [{"text": "system exception, ID 'IDL:omg.org/CORBA/OBJECT_NOT_EXIST:1.0'\nOMG minor code (2), described as 'Failed to create or locate Object Adapter.', completed = NO\n", "Name": "Info"}, {"text": "1", "Name": "CompletionStatus"}, {"text": "1330446338", "Name": "Minor"}]}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T04:28:09.919Z
+Detection Timestamp: 2017-02-02T19:17:34.811Z
+Name: NPE Scheduling
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "SCHEDULING/Array025", "Thread": "NA", "Process": "SCHEDULING/ACC/javaContainer", "text": "java.lang.NullPointerException (type=9, code=-1)", "@timestamp": "2017-02-01T04:28:09.919Z", "LogId": "3296961", "LogLevel": "Error", "Host": "gas06", "StackId": "SCHEDULING/Array0291485923289920", "File": "ExecutionContext.java", "Routine": "getScanIntentsTime", "Line": "1122"}
+=== END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:20:33.280Z
+Detection Timestamp: 2017-02-02T19:17:34.939Z
+Name: ICT-5354
+Priority: INFO
+Body: {"origin": "APE1", "StackLevel": "0", "SourceObject": "ACACORR/CDPCIF/NODE_09", "File": "ACACDPCPreIntegThread.cpp", "Thread": "ACACDPC_PRE_INTEG_THREAD", "Process": "ACACORR/CDPC_DATA_MGR/N09/cppContainer", "text": "waiting for a dump timed out (last dump counter: 7708768) [ACACDPCPreIntegThread.cpp/151/virtual void ACACDPCPreIntegThread::run()]", "@timestamp": "2017-02-01T05:20:33.280Z", "LogLevel": "Error", "Host": "coj-cpn-009", "StackId": "", "Context": "", "Routine": "", "Line": "151"}
+=== END ERROR ===
