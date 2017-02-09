@@ -8,6 +8,36 @@ def getIDs(raisedIDsPath):
     raisedIDs.close()
     return IDlist
 
+def initializeLogger(host, port):
+    logger = logging.getLogger('python-logstash-logger')
+    logger.setLevel(logging.INFO)
+    # test_logger.addHandler(logstash.LogstashHandler(host, 5001, version=1))
+    logger.addHandler(logstash.TCPLogstashHandler(host, port, version=1))
+
+    return logger
+
+def sendToElastic(occurrence_time, name, priority, detectionTime, body):
+
+    host = 'ariadne.osf.alma.cl'
+    port = 5001
+    logger = initializeLogger(host,port)
+    print '  - Sending log to Elasticsearch.'
+
+    print '    - Initialization in %s:%s' % (self.host, self.port)
+    print '    - Creating data...',
+
+    mylog = {
+        "occurrence_time": occurrence_time,
+        "Name": name,
+        "priority": priority,
+        "detection_time": detectionTime,
+        "Body": body
+    }
+    print 'done.'
+    print '    - Sending data...',
+    logger.info(str(mylog), extra=mylog)
+    print 'done.'
+
 def main():
     current_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -43,6 +73,13 @@ def main():
     timestampLine = 1
     nameLine = 3
 
+    ## Alarm Parameters
+    occurrence_time = ''
+    detection_time = ''
+    name = ''
+    priority = ''
+    body = ''
+
     ## For each error
     for t in range(numberOfErrors):
         ## Compute the unique ID in unix format
@@ -62,6 +99,20 @@ def main():
                 line = lines[indexStart[t]+i]
                 print line[:-1]
                 errorRaised.write(line)
+
+                if 'Occurrence Time' in line:
+                    occurrence_time = line[17:]
+                elif 'Detection Timestamp' in line:
+                    detection_time = line[21:]
+                elif 'Name' in line:
+                    name = line[6:]
+                elif 'Priority' in line:
+                    priority = line[10:]
+                elif 'Body' in line:
+                    body = line[6:]
+            ## Send to Elasticsearch the alarm
+            sendToElastic(occurrence_time,name,priority,detection_time, body)
+
             raisedIDs.write(uniqueID + '\n')
 
 

@@ -11,9 +11,6 @@ class BaseDetector(object):
         # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
         self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/log/historical.log'
 
-        self.host = 'ariadne.osf.alma.cl'
-        self.port = 5001
-        self.logger = self.__initializeLogger(self.host, self.port)
 
     def configure(self,params):
         self.params = params
@@ -36,23 +33,14 @@ class BaseDetector(object):
         handler.write(self.lastError)
         handler.close()
 
-        self.__sendToElastic(self.logger,occurrence_time, name, priority, detectionTime, body)
-
         print self.lastError
-        print self.__alarm2json(occurrence_time, name, priority, detectionTime, body)
+        # print self.__alarm2json(occurrence_time, name, priority, detectionTime, body)
 
     def executeTruePositive(self):
         self.params = 0
     def executeTrueNegative(self):
         self.params = 1
 
-    def __initializeLogger(self, host, port):
-        logger = logging.getLogger('python-logstash-logger')
-        logger.setLevel(logging.INFO)
-        # test_logger.addHandler(logstash.LogstashHandler(host, 5001, version=1))
-        logger.addHandler(logstash.TCPLogstashHandler(host, port, version=1))
-
-        return logger
     def __alarm2json(self, occurrence_time, name, priority, detectionTime, body):
         jsonFormat = {
             "occurrence_time": occurrence_time,
@@ -62,21 +50,3 @@ class BaseDetector(object):
             "Body": body
         }
         return jsonFormat
-
-    def __sendToElastic(self, logger, occurrence_time, name, priority, detectionTime, body):
-        print '  - Sending log to Elasticsearch.'
-
-        print '    - Initialization in %s:%s' % (self.host, self.port)
-        print '    - Creating data...',
-
-        mylog = {
-            "occurrence_time": occurrence_time,
-            "Name": name,
-            "priority": priority,
-            "detection_time": detectionTime,
-            "Body": body
-        }
-        print 'done.'
-        print '    - Sending data...',
-        logger.info(str(mylog), extra=mylog)
-        print 'done.'
