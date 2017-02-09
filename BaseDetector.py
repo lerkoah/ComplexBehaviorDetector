@@ -1,6 +1,3 @@
-import logging
-import logstash
-
 class BaseDetector(object):
     def __init__(self,priority = 'DEBUG'):
         self.dectectorName = None

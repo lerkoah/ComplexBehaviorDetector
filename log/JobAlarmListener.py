@@ -1,6 +1,7 @@
 import os
-import time
-from datetime import datetime
+import logging
+import logstash
+
 
 def getIDs(raisedIDsPath):
     raisedIDs = open(raisedIDsPath, 'r')
