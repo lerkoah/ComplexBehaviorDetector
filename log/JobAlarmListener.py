@@ -1,7 +1,7 @@
 import os
 import logging
 import logstash
-
+import ast
 
 def getIDs(raisedIDsPath):
     raisedIDs = open(raisedIDsPath, 'r')
@@ -110,7 +110,7 @@ def main():
                 elif 'Priority' in line:
                     priority = line[10:-1]
                 elif 'Body' in line:
-                    body = line[6:-1]
+                    body = ast.literal_eval(line[6:-1])
             ## Send to Elasticsearch the alarm
             sendToElastic(occurrence_time,name,priority,detection_time, body)
             raisedIDs.write(uniqueID + '\n')
