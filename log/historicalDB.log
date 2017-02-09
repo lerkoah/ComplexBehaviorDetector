@@ -548,3 +548,10 @@ Name: Operation: BLCORR System Restarts
 Priority: INFO
 Body: {"origin": "APE1", "SourceObject": "ACACORR_MASTER_COMP", "Thread": "ACACORR_MASTER_COMP-11", "Process": "ACC/masterContainer", "text": "shutDownSubsysPass1() method called.", "@timestamp": "2017-02-01T05:28:42.806Z", "LogId": "7634", "LogLevel": "Info", "Host": "gas01", "File": "ACACorrelatorMasterComponentImpl.java", "Routine": "shutDownSubsysPass1", "Line": "502"}
 === END ERROR ===
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-02T19:17:30.732Z
+Name: ICT-4575
+Priority: INFO
+Body: {"origin": "TFINT", "SourceObject": "CORR/CDPNode/N01/cppContainer-GL", "File": "CollectorThread.cpp", "Thread": "", "Process": "CORR/CDPNode/N01/cppContainer", "text": "collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)", "@timestamp": "2017-02-01T00:00:00.035Z", "LogLevel": "Debug", "Host": "cob-cpn-01", "Context": "", "Routine": "", "Line": "598"}
+=== END ERROR ===

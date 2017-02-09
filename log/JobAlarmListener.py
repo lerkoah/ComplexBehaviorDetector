@@ -101,15 +101,15 @@ def main():
                 print line[:-1]
                 errorRaised.write(line)
 
-                if 'Occurrence Time' in line:
+                if 'Occurrence Time: ' in line:
                     occurrence_time = line[17:-1]
-                elif 'Detection Timestamp' in line:
+                elif 'Detection Timestamp: ' in line:
                     detection_time = line[21:-1]
-                elif 'Name' in line:
+                elif 'Name: ' in line:
                     name = line[6:-1]
-                elif 'Priority' in line:
+                elif 'Priority: ' in line:
                     priority = line[10:-1]
-                elif 'Body' in line:
+                elif 'Body: ' in line:
                     body = ast.literal_eval(line[6:-1])
             ## Send to Elasticsearch the alarm
             sendToElastic(occurrence_time,name,priority,detection_time, body)
