@@ -2,6 +2,7 @@ import os
 import logging
 import logstash
 import ast
+import sys
 
 def getIDs(raisedIDsPath):
     raisedIDs = open(raisedIDsPath, 'r')
@@ -50,7 +51,7 @@ def main():
 
     ## while file is empty do nothing
     while os.stat(errorLogPath).st_size == 0:
-        return
+        pass
 
     ## Read all lines
     errorLog = open(errorLogPath,'r')
