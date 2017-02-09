@@ -24,7 +24,7 @@ def sendToElastic(occurrence_time, name, priority, detectionTime, body):
     logger = initializeLogger(host,port)
     print '  - Sending log to Elasticsearch.'
 
-    print '    - Initialization in %s:%s' % (self.host, self.port)
+    print '    - Initialization in %s:%s' % (host, port)
     print '    - Creating data...',
 
     mylog = {
@@ -113,7 +113,6 @@ def main():
                     body = line[6:]
             ## Send to Elasticsearch the alarm
             sendToElastic(occurrence_time,name,priority,detection_time, body)
-
             raisedIDs.write(uniqueID + '\n')
 
 
