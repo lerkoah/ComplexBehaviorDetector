@@ -20,7 +20,7 @@ def initializeLogger(host, port):
 def sendToElastic(occurrence_time, name, priority, detectionTime, body):
 
     host = 'ariadne.osf.alma.cl'
-    port = 5002
+    port = 5001
     logger = initializeLogger(host,port)
     print '  - Sending log to Elasticsearch.'
 
