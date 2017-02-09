@@ -47,11 +47,10 @@ def main():
     errorLogDBPath = current_dir + '/historicalDB.log'
     raisedIDsPath = current_dir + '/raisedIDs.log'
     IDslist = getIDs(raisedIDsPath)
-    print len(IDslist)
 
     ## while file is empty do nothing
     while os.stat(errorLogPath).st_size == 0:
-        pass
+        return
 
     ## Read all lines
     errorLog = open(errorLogPath,'r')
