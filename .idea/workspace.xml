@@ -38,8 +38,8 @@
       <file leaf-file-name="JobAlarmListener.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/log/JobAlarmListener.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="560">
+              <caret line="119" column="23" lean-forward="true" selection-start-line="118" selection-start-column="20" selection-end-line="119" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -889,26 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install/lineEditorHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DetectorSandBox/BaseDetector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/historical.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17748">
-          <caret line="986" column="17" lean-forward="true" selection-start-line="986" selection-start-column="17" selection-end-line="1322" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -921,6 +905,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/install/lineEditorHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-6220-TP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -929,10 +921,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/historical.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17748">
+          <caret line="986" column="17" lean-forward="true" selection-start-line="986" selection-start-column="17" selection-end-line="1322" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/log/JobAlarmListener.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="560">
+          <caret line="119" column="23" lean-forward="true" selection-start-line="118" selection-start-column="20" selection-end-line="119" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
