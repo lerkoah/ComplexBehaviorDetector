@@ -1,1 +1,1 @@
-/home/lerko/Desktop/ComplexBehaviorDetector/BaseDetector.py
+../BaseDetector.py

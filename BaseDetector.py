@@ -1,3 +1,6 @@
+import pika
+import json
+
 class BaseDetector(object):
     def __init__(self,priority = 'DEBUG'):
         self.dectectorName = None
@@ -7,6 +10,21 @@ class BaseDetector(object):
         ## error log path
         # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
         self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/log/historical.log'
+
+        ## RabbitMQ Parameters
+
+        # Magic Numbers
+        credentials = pika.PlainCredentials('alma', 'guest')
+        host = 'ariadne.osf.alma.cl'
+        port = 5672
+        self.alarmQueue = 'alarm'
+
+        # Connecting
+        parameters = pika.ConnectionParameters(host, port, '/', credentials)
+        connection = pika.BlockingConnection(parameters)
+
+        self.channel = connection.channel()
+        self.channel.queue_declare(queue=self.alarmQueue)
 
 
     def configure(self,params):
@@ -25,13 +43,15 @@ class BaseDetector(object):
                         'Priority: '+ str(priority) + '\n' \
                         'Body: '+ str(body) + '\n' \
                         '=== END ERROR ===\n'
-        ## Writting in editable file
-        handler = open(self.errorLogPath, 'a')
-        handler.write(self.lastError)
-        handler.close()
-
+        ## Printing in stdout
         print self.lastError
-        # print self.__alarm2json(occurrence_time, name, priority, detectionTime, body)
+
+        ## Send to RabbitMQ
+        jsonAlarm = json.dumps(self.__alarm2json(occurrence_time, name, priority, detectionTime, body))
+
+        self.channel.basic_publish(exchange='',
+                              routing_key=self.alarmQueue,
+                              body=jsonAlarm)
 
     def executeTruePositive(self):
         self.params = 0
@@ -44,6 +64,6 @@ class BaseDetector(object):
             "Name": name,
             "priority": priority,
             "detection_time": detectionTime,
-            "Body": body
+            "body": body
         }
         return jsonFormat
