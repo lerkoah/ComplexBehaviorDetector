@@ -31,15 +31,10 @@ class ICTListDetector(BaseDetector):
 
         connections.create_connection(hosts=ALMAELKHOST, timeout=QUERY_TIMEOUT)
 
-        # fromTime="2016-11-20T00:00:00.000",
-        # toTime="2016-12-08T10:00:00.000",
-
-        # fromTime="2016-12-07T00:00:00.000",
-        # toTime="2016-12-07T23:59:59.000",
-        counter = 0
-
         # for myname, myquery in getKibanaQueries.getQueries():
-        for myname, myquery in one_line_db().getQueries():
+        kibanaHitsList = []
+        oneLineDB = one_line_db().getQueries()
+        for myname, myquery in oneLineDB:
             kibana = SearchAlmaELK(index="online",
                                    fromTime=self.fromTime,
                                    toTime=self.toTime,
@@ -48,32 +43,36 @@ class ICTListDetector(BaseDetector):
                                    columns="@timestamp,SourceObject,text",
                                    loglevel="DELOUSE"
                                    )
-            # previousEvent = {"@timestamp": "1969-12-31T21:00:00"}
+            kibanaHitsList.append(kibana.execute().hits)
 
-            kibanaHits = kibana.execute().hits
-            print '- Searching for : ' + myname + '; query: ' + myquery
-            print '  - Number of queries found: ' +str(len(kibanaHits))
+        for it in range(1667):
+            counter = 0
+            for ii in range(len(kibanaHitsList)):
+                kibanaHits = kibanaHitsList[ii]
+                myname = oneLineDB[ii][0]
+                myquery = oneLineDB[ii][1]
+                print '- Searching for : ' + myname + '; query: ' + myquery
+                print '  - Number of queries found: ' +str(len(kibanaHits))
 
-            for j in range(len(kibanaHits)):
-                hit = kibanaHits[j]
-                event = hit.to_dict()
-                fullDetectionTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')
-                detectionTime = fullDetectionTime[0:23] + 'Z'
+                for j in range(len(kibanaHits)):
+                    hit = kibanaHits[j]
+                    event = hit.to_dict()
+                    fullDetectionTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')
+                    detectionTime = fullDetectionTime[0:23] + 'Z'
 
-                self.sendAlarm(event["@timestamp"], self.prefix + myname, self.priority, detectionTime, event)
-                counter += 1
+                    self.sendAlarm(event["@timestamp"], self.prefix + myname, self.priority, detectionTime, event)
+                    counter += 1
 
-                # print(bcolors.FAIL + "     - " + kibana.format(event) + bcolors.ENDC)
-                # previousEvent["@timestamp"] = event["@timestamp"]
-        print 'Total Errors: %i' % counter
+                    # print(bcolors.FAIL + "     - " + kibana.format(event) + bcolors.ENDC)
+                    # previousEvent["@timestamp"] = event["@timestamp"]
+                print 'Total Errors: %i' % counter
 
 def main():
     myDetector = ICTListDetector()
     myDetector.configure("2017-02-01T00:00:00.000", "2017-02-01T23:59:59.000")
     # myDetector.configure("2017-01-21T00:00:00.000", "2017-01-21T03:00:00.000")
     tic = time.time()
-    for i in range(1230):
-        myDetector.execute()
+    myDetector.execute()
 
     toc = time.time() - tic
     print 'Elapse [seg]: %s' % toc

@@ -8,8 +8,8 @@ class BaseDetector(object):
         self.priority = priority
         self.params = None
         ## error log path
-        # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/historical.log'
-        self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/log/historical.log'
+        # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/raisedAlarms.log'
+        self.errorLogPath = '/home/lerko/Desktop/ComplexBehaviorDetectorRABBITMQ/log/raisedAlarms.log'
 
         ## RabbitMQ Parameters
 
@@ -51,7 +51,8 @@ class BaseDetector(object):
 
         self.channel.basic_publish(exchange='',
                               routing_key=self.alarmQueue,
-                              body=jsonAlarm)
+                              body=jsonAlarm,
+                              properties=pika.BasicProperties(delivery_mode=2))
 
     def executeTruePositive(self):
         self.params = 0

@@ -16,16 +16,21 @@ connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 channel.queue_declare(queue='alarm')
 
+# ## Only one log
+# method_frame, header_frame, body = channel.basic_get(queue='alarm')
+#
+# print(' [*] Waiting for messages. To exit press CTRL+C')
+# while method_frame == None:
+#     method_frame, header_frame, body = channel.basic_get(queue='alarm')
+#
+# if method_frame.NAME == 'Basic.GetEmpty':
+#     connection.close()
+# else:
+#     channel.basic_ack(delivery_tag=method_frame.delivery_tag)
+#     connection.close()
+#     print json.loads(body)
 
-method_frame, header_frame, body = channel.basic_get(queue='alarm')
 
-print(' [*] Waiting for messages. To exit press CTRL+C')
-while method_frame == None:
-    method_frame, header_frame, body = channel.basic_get(queue='alarm')
-
-if method_frame.NAME == 'Basic.GetEmpty':
-    connection.close()
-else:
-    channel.basic_ack(delivery_tag=method_frame.delivery_tag)
-    connection.close()
-    print json.loads(body)
+## Fast consume
+channel.basic_consume(callback, no_ack=True, queue='alarm')
+channel.start_consuming()
