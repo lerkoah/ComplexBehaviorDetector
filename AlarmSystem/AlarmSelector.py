@@ -75,6 +75,7 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
 
 
 def main():
+    options = args()
     config = get_conf(options['config_file'])
 
     ##RabbitMQ
