@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DetectorSandBox/ICTListDetector.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/JobAlarmListener.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/raisedAlarms.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseDetector.py" afterPath="$PROJECT_DIR$/BaseDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/AlarmGenerator.py" afterPath="$PROJECT_DIR$/DetectorSandBox/AlarmGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/FSMlog.py" afterPath="$PROJECT_DIR$/DetectorSandBox/FSMlog.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/ICTListDetectorIterator.py" afterPath="$PROJECT_DIR$/DetectorSandBox/ICTListDetectorIterator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/WCADetector.py" afterPath="$PROJECT_DIR$/DetectorSandBox/WCADetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/getKibanaQueries.py" afterPath="$PROJECT_DIR$/DetectorSandBox/getKibanaQueries.py" />
-    </list>
+    <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,8 +106,8 @@
       <file leaf-file-name="LogstashSender.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DetectorSandBox/LogstashSender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="393">
+              <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -958,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DetectorSandBox/LogstashSender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="393">
+          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding />
         </state>
       </provider>
