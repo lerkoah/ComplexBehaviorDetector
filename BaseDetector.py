@@ -9,7 +9,7 @@ class BaseDetector(object):
         self.params = None
         ## error log path
         # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/raisedAlarms.log'
-        self.errorLogPath = '/home/lerko/Desktop/ComplexBehaviorDetectorRABBITMQ/log/raisedAlarms.log'
+        self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/AlarmSystem/raisedAlarms.log'
 
         ## RabbitMQ Parameters
 
@@ -35,10 +35,9 @@ class BaseDetector(object):
         elif self.params == 0:
             return 0
 
-    def sendAlarm(self, occurrence_time, name, priority, detectionTime, body):
+    def sendAlarm(self, occurrence_time, name, priority, body):
         self.lastError= '=== START ERROR: ' + str(priority) + ' ===\n' \
-                        'Occurrence Time: ' + str(occurrence_time) + '\n' + \
-                        'Detection Timestamp: '+ str(detectionTime) + '\n' \
+                        '@timestamp: ' + str(occurrence_time) + '\n' + \
                         'Name: '+ str(name)+ '\n' \
                         'Priority: '+ str(priority) + '\n' \
                         'Body: '+ str(body) + '\n' \
@@ -47,7 +46,7 @@ class BaseDetector(object):
         print self.lastError
 
         ## Send to RabbitMQ
-        jsonAlarm = json.dumps(self.__alarm2json(occurrence_time, name, priority, detectionTime, body))
+        jsonAlarm = json.dumps(self.__alarm2json(occurrence_time, name, priority, body))
 
         self.channel.basic_publish(exchange='',
                               routing_key=self.alarmQueue,
@@ -59,12 +58,11 @@ class BaseDetector(object):
     def executeTrueNegative(self):
         self.params = 1
 
-    def __alarm2json(self, occurrence_time, name, priority, detectionTime, body):
+    def __alarm2json(self, occurrence_time, name, priority, body):
         jsonFormat = {
-            "occurrence_time": occurrence_time,
+            "@timestamp": occurrence_time,
             "Name": name,
             "priority": priority,
-            "detection_time": detectionTime,
             "body": body
         }
         return jsonFormat
