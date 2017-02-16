@@ -31,7 +31,7 @@ class RandomAlarmGenerator(BaseDetector):
         self.sendAlarm(occurrence_time, self.prefix + self.detectorName, self.priority, {'text': 'Test Alarm'})
 
 if __name__ == '__main__':
-    numberOfAlamrs = sys.argv[1]
+    numberOfAlamrs = int(sys.argv[1])
     for i in range(numberOfAlamrs):
         myDetector = RandomAlarmGenerator()
         myDetector.execute()
