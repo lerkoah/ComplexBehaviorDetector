@@ -49,7 +49,7 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
     data = json.loads(body)
     # print data
     ## Compute the unique ID in the appropriated format
-    uniqueID = str(data['name']) + '/'+ str(data['@timestamp'])
+    uniqueID = str(data['path']) + '/'+ str(data['@timestamp'])
 
     # print 'Raised IDs: '+str(IDslist)
     # print 'Current ID: '+uniqueID
@@ -61,9 +61,9 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
         sendToLogstash(logger, data)
 
         error = '=== START ERROR: ' + str(data['priority']) + ' ===\n' \
-                'Unique ID: ' + str(data['name'])+'/'+data['@timestamp'] + '\n' \
+                'Unique ID: ' + str(data['path'])+'/'+data['@timestamp'] + '\n' \
                 '@timestamp: ' + str(data['@timestamp']) + '\n' \
-                'Name: ' + data['name'] + '\n' \
+                'Name: ' + data['path'] + '\n' \
                 'Priority: ' + str(data['priority']) + '\n' \
                 'Body: ' + str(data['body']) + '\n' \
                 '=== END ERROR ===\n'

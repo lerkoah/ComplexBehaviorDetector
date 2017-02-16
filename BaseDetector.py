@@ -38,7 +38,7 @@ class BaseDetector(object):
     def sendAlarm(self, occurrence_time, name, priority, body):
         self.lastError= '=== START ERROR: ' + str(priority) + ' ===\n' \
                         '@timestamp: ' + str(occurrence_time) + '\n' + \
-                        'Name: '+ str(name)+ '\n' \
+                        'Path: '+ str(name)+ '\n' \
                         'Priority: '+ str(priority) + '\n' \
                         'Body: '+ str(body) + '\n' \
                         '=== END ERROR ===\n'
@@ -61,7 +61,7 @@ class BaseDetector(object):
     def __alarm2json(self, occurrence_time, name, priority, body):
         jsonFormat = {
             "@timestamp": occurrence_time,
-            "name": name,
+            "path": name,
             "priority": priority,
             "body": body
         }
