@@ -4,6 +4,9 @@ import logstash
 import pika
 import json
 import time
+from args import args
+from conf import get_conf
+
 
 global current_dir
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -72,16 +75,16 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
 
 
 def main():
+    config = get_conf(options['config_file'])
+
     ##RabbitMQ
     # Magic Numbers
     credentials = pika.PlainCredentials('alma', 'guest')
-    rabbitMQHost = 'ariadne.osf.alma.cl'
-    rabbitMQPort = 5672
+    rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'].split(':')
 
     ##Logstash
     #Magic Numbers
-    logstashHost = 'ariadne.osf.alma.cl'
-    logstashPort = 5003
+    logstashHost, logstashPort = config['logstash']['hosts'].split(':')
     logger = initializeLogger(logstashHost, logstashPort)
 
     ## Alarms control params
