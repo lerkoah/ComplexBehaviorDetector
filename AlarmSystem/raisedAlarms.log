@@ -1,0 +1,17 @@
+{
+  "elasticsearch": {
+    "hosts": [
+      "isara.osf.alma.cl:9200"
+    ]
+  },
+   "rabbitmq": {
+       "hosts": [
+         "ariadne.osf.alma.cl:5672"
+       ]
+  },
+   "logstash": {
+       "hosts": [
+         "ariadne.osf.alma.cl:5003"
+       ]
+  }
+}
