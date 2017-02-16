@@ -49,7 +49,7 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
     data = json.loads(body)
     # print data
     ## Compute the unique ID in the appropriated format
-    uniqueID = str(data['Name']) + '/'+ str(data['@timestamp'])
+    uniqueID = str(data['name']) + '/'+ str(data['@timestamp'])
 
     # print 'Raised IDs: '+str(IDslist)
     # print 'Current ID: '+uniqueID
