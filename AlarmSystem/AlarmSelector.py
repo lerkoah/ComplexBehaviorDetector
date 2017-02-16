@@ -83,6 +83,7 @@ def main():
     credentials = pika.PlainCredentials('alma', 'guest')
     rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'][0].split(':')
     rabbitMQPort = int(rabbitMQPort)
+    print rabbitMQHost + ':' + str(rabbitMQPort)
 
     ##Logstash
     #Magic Numbers

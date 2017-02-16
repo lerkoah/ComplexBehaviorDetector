@@ -25,6 +25,21 @@ def get_conf(file_path):
         if 'hosts' not in raw['elasticsearch']:
             raise ValueError('Config file must contain an elasticsearch.hosts field')
 
+        if 'rabbitmq' not in raw:
+            raise ValueError('Config file must contain an rabbitmq field')
+
+        if 'hosts' not in raw['rabbitmq']:
+            raise ValueError('Config file must contain an rabbitmq.hosts field')
+
+        if 'logstash' not in raw:
+            raise ValueError('Config file must contain an logstash field')
+
+        if 'hosts' not in raw['logstash']:
+            raise ValueError('Config file must contain an logstash.hosts field')
+
         conf['elasticsearch']['hosts'] = raw['elasticsearch']['hosts']
+        conf['rabbitmq']['hosts'] = raw['rabbitmq']['hosts']
+        conf['logstash']['hosts'] = raw['logstash']['hosts']
+
 
     return conf
