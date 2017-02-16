@@ -4,10 +4,10 @@ def get_conf(file_path):
     conf = {
         'elasticsearch': {
             'hosts': ['localhost:9200']
-        }
+        },
         'rabbitmq': {
             'hosts': ['localhost:5672']
-        }
+        },
         'logstash': {
             'hosts': ['localhost:5003']
         }
