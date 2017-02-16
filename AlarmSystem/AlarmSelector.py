@@ -58,9 +58,9 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
         sendToLogstash(logger, data)
 
         error = '=== START ERROR: ' + str(data['priority']) + ' ===\n' \
-                'Unique ID: ' + str(data['Name'])+'/'+data['@timestamp'] + '\n' \
+                'Unique ID: ' + str(data['name'])+'/'+data['@timestamp'] + '\n' \
                 '@timestamp: ' + str(data['@timestamp']) + '\n' \
-                'Name: ' + data['Name'] + '\n' \
+                'Name: ' + data['name'] + '\n' \
                 'Priority: ' + str(data['priority']) + '\n' \
                 'Body: ' + str(data['body']) + '\n' \
                 '=== END ERROR ===\n'

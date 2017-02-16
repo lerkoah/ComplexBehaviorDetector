@@ -61,7 +61,7 @@ class BaseDetector(object):
     def __alarm2json(self, occurrence_time, name, priority, body):
         jsonFormat = {
             "@timestamp": occurrence_time,
-            "Name": name,
+            "name": name,
             "priority": priority,
             "body": body
         }
