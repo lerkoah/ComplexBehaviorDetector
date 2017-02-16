@@ -21,7 +21,7 @@ class ICTListDetector(BaseDetector):
         BaseDetector.__init__(self)
         self.detectorName = None
         self.priority = 'INFO'
-        self.prefix = 'ONLINE/Issues/OneLiner/'
+        self.prefix = 'ONLINE/Issues/OneLiner/'.upper()
 
     def configure(self,fromTime,toTime):
         self.fromTime = fromTime
@@ -49,8 +49,8 @@ class ICTListDetector(BaseDetector):
             counter = 0
             for ii in range(len(kibanaHitsList)):
                 kibanaHits = kibanaHitsList[ii]
-                myname = oneLineDB[ii][0]
-                myquery = oneLineDB[ii][1]
+                myname = oneLineDB[ii][0].upper()
+                myquery = oneLineDB[ii][1].upper()
                 print '- Searching for : ' + myname + '; query: ' + myquery
                 print '  - Number of queries found: ' +str(len(kibanaHits))
 
@@ -58,9 +58,8 @@ class ICTListDetector(BaseDetector):
                     hit = kibanaHits[j]
                     event = hit.to_dict()
                     fullDetectionTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')
-                    detectionTime = fullDetectionTime[0:23] + 'Z'
 
-                    self.sendAlarm(event["@timestamp"], self.prefix + myname, self.priority, detectionTime, event)
+                    self.sendAlarm(event["@timestamp"], self.prefix + myname, self.priority, event)
                     counter += 1
 
                     # print(bcolors.FAIL + "     - " + kibana.format(event) + bcolors.ENDC)

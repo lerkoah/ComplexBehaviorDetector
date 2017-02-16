@@ -57,4 +57,4 @@ def getQueries():
     #     print 'Query   : ' + query
     return kibana_queries
 
-# print getQueries()
+print getQueries()

@@ -4,11 +4,8 @@ import sys
 
 class FSMLog:
 
-    # CASE ID, or name of the machine
-    getCaseId = "OVERWRITE THIS VARIABLE" # second word
-
     # Triggering FSM creation
-    triggerCreationSymbol = "OVERWRITE THIS VARIABLE"  
+    triggerCreationSymbol = "OVERWRITE THIS VARIABLE"
 
     # Symbols Dictionary
     symbols={}
@@ -16,19 +13,21 @@ class FSMLog:
     # This is the expected NORMAL flow.
     transitions = {
         "FOUND" : [], # Report and exit
-        "END" : [],   # Last State, no report at all.
-        "INIT": []
+        "END" : []   # Last State, no report at all.
     }
 
     def __init__(self):
         self.state = "INIT"
         self.events = []
+        if "INIT" not in self.transitions.keys():
+            self.transitions["INIT"] = [{ "symbol": self.triggerCreationSymbol, "nextState": self.startState }]
 
-    def parseSymbol(self,event):
+    def parseSymbol(self,rawevent):
+        event = self.preprocessEvent(rawevent)
         # check if event is in my grammar
         ALLOWED = False
         for symbol, func in self.symbols.iteritems():
-            ALLOWED = ALLOWED or func(event) 
+            ALLOWED = ALLOWED or func(event)
         if not ALLOWED: # then ignore this event
             # print ("WARNING!! Not allowed symbol: %s " % event)
             return
@@ -43,12 +42,12 @@ class FSMLog:
                     # print ("%s : symbol found = %s " % (self.streamName, t["symbol"]))
                     found = True
         if not found:
-            # any non recognized symbol MUST be an 
+            # any non recognized symbol MUST be an
             nextAllowSymbols = [t["symbol"] for t in self.transitions[ self.state ]]
-            print ("%s : from state %s, next expected event (%s) NOT FOUND " % (self.case_id, self.state, nextAllowSymbols ))
+            print ("[%s] : %s, I failed to receive one of (%s)" % (self.name, self.state, nextAllowSymbols ))
             self.setState( "ERROR", event )
 
-    def preProcess(self, event):
+    def preprocessEvent(self, event):
         """
         Add here more variables to the event, like array name, etc.
         """
@@ -62,11 +61,20 @@ class FSMLog:
         raise NotImplemented("Overwrite this method")
 
 
-def runFSM(FSM, eventLog):
+def processEvents(FSM, eventLog, verbose=False, formatLog=False, toDict=False):
+    if not formatLog:
+        formatLog = lambda e: e
+
+
     machines={}
 
-    for event in eventLog:
-        print("INPUT SYMBOL: %s" % event)
+    for revent in eventLog:
+        if toDict:
+            event = revent.to_dict()
+        else:
+            event = revent
+
+        if verbose: print("INPUT SYMBOL: %s" % event)
 
         destroy = []
 
@@ -74,60 +82,48 @@ def runFSM(FSM, eventLog):
         if FSM.symbols[FSM.triggerCreationSymbol](event):
 
             m = FSM()
-            name = FSM.getNameFromEvent(event)
+            name = m.getNameFromEvent(event)
             if name not in machines.keys():
-                print(".Creating new machine named '%s'" % name)
+                if verbose: print(".Creating new machine named '%s'" % name)
                 machines[name] = m
-                machines[case_id].name = name
+                machines[name].name = name
             else:
-                print(".Machine '%s' already exists" % name)
+                if verbose: print(".Machine '%s' already exists" % name)
                 del(m)
 
-
-            # case_id = FSM.getCaseId[0](event)
-
-            # if case_id not in machines.keys():
-            #     print(".Creating new machine named '%s'" % case_id)
-            #     machines[case_id] = FSM()
-            #     machines[case_id].case_id = case_id
-            # else:
-            #     print(".Machine '%s' already exists" % case_id)
-        # Process symbol
         for name, mach in machines.iteritems():
                 mach.parseSymbol(event)
-                print (".[%s].state : %s" % (name, mach.state))
+                if verbose: print (".[%s].state : %s" % (name, mach.state))
 
                 if mach.state == "END":
                     destroy.append(name)
                 elif mach.state == "ERROR":
-                    print 
-                    print ("-------- %s instance found, %s --------" % (mach.__class__.__name__, mach.case_id))
+                    print
+                    print ("-------- %s instance found, %s --------" % (mach.__class__.__name__, mach.name))
                     for ev in mach.events:
-                        print (ev)
-                    print 
+                        print ( formatLog(ev) )
+                    print
                     destroy.append(name)
+                elif mach.state == "FOUND":
+                    return mach.events[0]['@timestamp']
+
 
         for name in destroy:
             del( machines[name] )
-            print (".[%s] : Destroyed !" % name)
-
+            if verbose: print (".[%s] : Destroyed !" % name)
 
 if __name__ == '__main__':
 
     class Letters(FSMLog):
-        getCaseId = [ lambda e: e["text"].split()[1] ] # second word
+
         triggerCreationSymbol = "A"  # Triggering FSM creation
+        startState = "StateA"
         symbols={
-            "A": lambda e: "Letter A" in e["text"], 
+            "A": lambda e: "Letter A" in e["text"],
             "B": lambda e: "Letter B" in e["text"],
             "C": lambda e: "Letter C" in e["text"],
         }
         transitions = {
-            "FOUND" : [], # Report and exit
-            "END" : [],   # Last State, no report at all.
-            "INIT": [ 
-                {"symbol": "A", "nextState": "StateA"} 
-            ], 
             "StateA": [
                 {"symbol": "B", "nextState": "StateB"}  # Receive B then go to StateB
             ],
@@ -136,37 +132,37 @@ if __name__ == '__main__':
                 {"symbol": "C", "nextState": "END"},  # Receive C then END
             ]
         }
+        def getNameFromEvent(self, e):
+            return e["text"].split()[1]
+
+        def preprocessEvent(self, e):
+            e["lower"] = e["text"].lower()
+            return e
 
 
-    setValid=[ 
-        { "text": "A not recognized event" }, 
-        { "text": "A not recognized event" }, 
-        { "text": "Letter A" }, 
-        { "text": "Another Letter B" }, 
-        { "text": "A not recognized event" }, 
+    setValid=[
+        { "text": "A not recognized event" },
+        { "text": "A not recognized event" },
+        { "text": "Letter A" },
+        { "text": "Another Letter B" },
+        { "text": "A not recognized event" },
         { "text": "Another yet Letter C" }
     ]
-    setInvalid=[ 
-        { "text": "Letter A" }, 
-        { "text": "A not recognized event" }, 
-        { "text": "Another Letter B" }, 
-        { "text": "A not recognized event" }, 
-        { "text": "Letter A" }, 
-        { "text": "A not recognized event" }, 
+    setInvalid=[
+        { "text": "Letter A" },
+        { "text": "A not recognized event" },
+        { "text": "Another Letter B" },
+        { "text": "A not recognized event" },
+        { "text": "Letter A" },
+        { "text": "A not recognized event" },
         { "text": "Another yet Letter C" }
     ]
 
     print("---TESTING valid set")
-    runFSM(Letters, setValid)
+    processEvents(Letters, setValid, verbose=True)
 
     print("---TESTING invalid set")
-    runFSM(Letters, setInvalid)
+    processEvents(Letters, setInvalid, verbose=False)
 
     print("---TESTING failing class")
-    runFSM(FSMLog, setInvalid)
-
-
-
-
-
-
+    processEvents(Letters, setInvalid)
