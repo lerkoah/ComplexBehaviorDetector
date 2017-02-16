@@ -2,6 +2,7 @@ from BaseDetector import BaseDetector
 import string
 import random
 from datetime import datetime
+import sys
 
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
@@ -30,7 +31,7 @@ class RandomAlarmGenerator(BaseDetector):
         self.sendAlarm(occurrence_time, self.prefix + self.detectorName, self.priority, {'text': 'Test Alarm'})
 
 if __name__ == '__main__':
-    numberOfAlamrs = 50
+    numberOfAlamrs = sys.argv[1]
     for i in range(numberOfAlamrs):
         myDetector = RandomAlarmGenerator()
         myDetector.execute()

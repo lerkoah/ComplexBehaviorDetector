@@ -108,7 +108,7 @@ def main():
             break
         method, properties, body = msg
         processingAlarm(IDslist, raisedAlarms, logger, body)
-        print IDslist
+        # print IDslist
 
     ## Close connections
     connection.close()
