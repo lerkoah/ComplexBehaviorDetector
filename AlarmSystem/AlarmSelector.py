@@ -81,11 +81,11 @@ def main():
     ##RabbitMQ
     # Magic Numbers
     credentials = pika.PlainCredentials('alma', 'guest')
-    rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'].split(':')
+    rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'][0].split(':')
 
     ##Logstash
     #Magic Numbers
-    logstashHost, logstashPort = config['logstash']['hosts'].split(':')
+    logstashHost, logstashPort = config['logstash']['hosts'][0].split(':')
     logger = initializeLogger(logstashHost, logstashPort)
 
     ## Alarms control params
