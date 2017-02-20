@@ -7,7 +7,7 @@ date: "2017-02-17 14:23"
 This is the complete documentation about the Alarm System based on Jenkins. The main features of this system are the capacity for send alarms to elasticsearch using logstash and visualize them in a dashboard. Also, we use jenkins for send important mails.
 
 ## Overview
-The full system comprise the alarm notification and visualization, it is implies to send an alarm to elasticsearch using logstash and finally send a email with to alert the respective team. Also, we save an historical alarm file named ```raisedAlarms.log```.
+The full system comprise the alarm notification and visualization, it is implies to send an alarm to elasticsearch using logstash and finally send a email for alert to the respective team. Also, we save an historical alarm file named ```raisedAlarms.log```.
 
 The first module aim to send an alarm to elasticsearch and save the raised alarm in the historical file. This module named ```Alarm Selector```. Then, the second one attendant to send mails using Jenkins templates. This module named ```Alarm Summary Mail Sender```.
 
@@ -56,7 +56,8 @@ def main():
     logstashPort = int(logstashPort)
     logger = initializeLogger(logstashHost, logstashPort)
 ```
-Then, we load the raised IDs, this IDs are a combination of fields path and @timestamp. The function ```getIDs()``` was designed for load the corresponding IDs from the historical raised alarms file.
+Then, we load the raised IDs, this IDs are a combination of fields path and @timestamp. The function ```getIDs()``` was designed for load the corresponding IDs from the historical raised alarms file. Also, ```getIDs()``` use ```cleanOlderErrors()``` that returns the last 1000 alarms.
+
 ```python
     ## Alarms control params
     # Editable file path and obtain the IDs
