@@ -74,8 +74,7 @@ def processEvents(FSM, eventLog, verbose=False, formatLog=False, toDict=False):
         else:
             event = revent
 
-        if verbose:
-            print(".INPUT SYMBOL: %s" % formatLog(event))
+        if verbose: print("INPUT SYMBOL: %s" % event)
 
         destroy = []
 
@@ -105,11 +104,13 @@ def processEvents(FSM, eventLog, verbose=False, formatLog=False, toDict=False):
                         print ( formatLog(ev) )
                     print
                     destroy.append(name)
+                elif mach.state == "FOUND":
+                    return mach.events[0]['@timestamp']
+
 
         for name in destroy:
             del( machines[name] )
             if verbose: print (".[%s] : Destroyed !" % name)
-
 
 if __name__ == '__main__':
 
@@ -164,4 +165,4 @@ if __name__ == '__main__':
     processEvents(Letters, setInvalid, verbose=False)
 
     print("---TESTING failing class")
-    processEvents(FSMLog, setInvalid)
+    processEvents(Letters, setInvalid)
