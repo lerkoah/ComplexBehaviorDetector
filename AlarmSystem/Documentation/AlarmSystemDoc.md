@@ -46,7 +46,7 @@ def main():
 
     ##RabbitMQ
     # Magic Numbers
-    credentials = pika.PlainCredentials('alma', 'guest')
+    credentials = pika.PlainCredentials('myuser', 'mypass')
     rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'][0].split(':')
     rabbitMQPort = int(rabbitMQPort)
 
