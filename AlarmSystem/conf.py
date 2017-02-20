@@ -15,6 +15,7 @@ def get_conf(file_path):
         }
     }
 
+
     if file_path is None:
         return conf
 

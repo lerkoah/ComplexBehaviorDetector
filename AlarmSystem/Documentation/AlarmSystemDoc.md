@@ -38,7 +38,7 @@ For example:
 python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
 ```
 
-Then we Initialize credentials using the functions ```args()``` and ```get_conf()```.
+We Initialize credentials using the functions ```args()``` and ```get_conf()```.
 ```python
 def main():
     options = args()
@@ -46,7 +46,7 @@ def main():
 
     ##RabbitMQ
     # Magic Numbers
-    credentials = pika.PlainCredentials('myuser', 'mypass')
+    credentials = pika.PlainCredentials(config['rabbitmq']['user'], config['rabbitmq']['pass'])
     rabbitMQHost, rabbitMQPort = config['rabbitmq']['hosts'][0].split(':')
     rabbitMQPort = int(rabbitMQPort)
 
@@ -56,7 +56,7 @@ def main():
     logstashPort = int(logstashPort)
     logger = initializeLogger(logstashHost, logstashPort)
 ```
-Then, we load the raised IDs, this IDs are a combination of fields path and @timestamp. The function ```getIDs()``` was designed for load the corresponding IDs from the historical raised alarms file. Also, ```getIDs()``` use ```cleanOlderErrors()``` that returns the last 1000 alarms.
+Then, we load the raised IDs, this IDs are a combination of fields ```path``` and ```@timestamp```. The function ```getIDs()``` was designed for load the corresponding IDs from the historical raised alarms file. Also, ```getIDs()``` use ```cleanOlderErrors()``` that returns the last 1000 alarms.
 
 ```python
     ## Alarms control params
@@ -89,14 +89,14 @@ Finally, we want to pull the alarms from RabbitMQ.  For this work, we use the ``
         processingAlarm(IDslist, raisedAlarms, logger, body)
         # print IDslist
 ```
-For close the program, please do not forget close all connections and files.
+Before close the program, please do not forget close all connections and files.
 ```python
     ## Close connections
     connection.close()
     raisedAlarms.close()
   ```
 
-  The function ```processingAlarm()``` made all the work, that is mean: Received the log, decided if the alarm must be raised and send the alarm to logstash.
+  It is important to notice, that the function ```processingAlarm()``` made all the work, that is mean: Received the log, decided if the alarm must be raised and send the alarm to logstash.
 
   ```python
   def processingAlarm(IDslist, raisedAlarms, logger, body):
