@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="" />
+    <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AlarmSystem/AlarmSelector.py" afterPath="$PROJECT_DIR$/AlarmSystem/AlarmSelector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AlarmSystem/raisedAlarms.log" afterPath="$PROJECT_DIR$/AlarmSystem/raisedAlarms.log" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,18 +30,18 @@
       <file leaf-file-name="FSMlog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DetectorSandBox/FSMlog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2988">
+            <state relative-caret-position="2664">
               <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmSelector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AlarmSelector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AlarmSystem/AlarmSelector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-828">
-              <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="0">
+              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -45,10 +49,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="raisedAlarms.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlarmSystem/raisedAlarms.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="raisedAlarms.log.bk" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlarmSystem/raisedAlarms.log.bk">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="87004" column="28" lean-forward="true" selection-start-line="87004" selection-start-column="28" selection-end-line="87004" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlarmSystem/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
+            <state relative-caret-position="756">
               <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
               <folding />
             </state>
@@ -127,6 +151,8 @@
       <find>occurrence_time</find>
       <find>'Name'</find>
       <find>'name'</find>
+      <find>OFFLINE/ISSUES/ONELINER/UC2XEN</find>
+      <find>OFFLINE/ISSUES/ONELINER/UC2XEN/2017-02-20T00:15:01.103Z</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
@@ -161,12 +187,12 @@
         <option value="$PROJECT_DIR$/DetectorSandBox/AlarmGenerator.py" />
         <option value="$PROJECT_DIR$/AlarmSystem/args.py" />
         <option value="$PROJECT_DIR$/AlarmSystem/conf.py" />
-        <option value="$PROJECT_DIR$/AlarmSystem/raisedAlarms.log" />
         <option value="$PROJECT_DIR$/AlarmSystem/config.json" />
-        <option value="$PROJECT_DIR$/AlarmSystem/AlarmSelector.py" />
         <option value="$PROJECT_DIR$/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorSandBox/ProcessModel.py" />
         <option value="$PROJECT_DIR$/DetectorSandBox/FSMlog.py" />
+        <option value="$PROJECT_DIR$/AlarmSystem/AlarmSelector.py" />
+        <option value="$PROJECT_DIR$/AlarmSystem/raisedAlarms.log" />
       </list>
     </option>
   </component>
@@ -320,7 +346,7 @@
       <recent name="$PROJECT_DIR$/install" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ProcessModel">
+  <component name="RunManager" selected="Python.AlarmSelector">
     <configuration default="false" name="JobAlarmListener" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -561,8 +587,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ProcessModel" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AlarmSelector" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AlarmSelector" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ProcessModel" />
         <item index="2" class="java.lang.String" itemvalue="Python.JobAlarmListener" />
         <item index="3" class="java.lang.String" itemvalue="Python.AlarmGenerator" />
         <item index="4" class="java.lang.String" itemvalue="Python.WCADetector" />
@@ -600,10 +626,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328934" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38655463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960423" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33613446" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33613446" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -629,12 +655,11 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/log/historical.log" />
     <entry file="file://$PROJECT_DIR$/install/lineEditorHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -835,14 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlarmSystem/raisedAlarms.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DetectorSandBox/AlarmGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -879,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorSandBox/FSMlog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2988">
-          <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BaseDetector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -900,16 +909,6 @@
         <state relative-caret-position="933">
           <caret line="413" column="17" lean-forward="false" selection-start-line="413" selection-start-column="17" selection-end-line="413" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlarmSystem/AlarmSelector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-828">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,9 +930,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AlarmSystem/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
+        <state relative-caret-position="756">
           <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlarmSystem/raisedAlarms.log.bk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="87004" column="28" lean-forward="true" selection-start-line="87004" selection-start-column="28" selection-end-line="87004" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DetectorSandBox/FSMlog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2664">
+          <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlarmSystem/raisedAlarms.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlarmSystem/AlarmSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

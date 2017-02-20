@@ -11,18 +11,44 @@ from conf import get_conf
 global current_dir
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
+def cleanOlderErrors(raisedIDsPath, maxNumberOfError = 1000):
+    all_lines_arch = open(raisedIDsPath, 'r')
+    all_lines = all_lines_arch.readlines()
+    all_lines_arch.close()
+
+    new_lines = open(raisedIDsPath,'w')
+    clean_lines = []
+    numberOfErrors = len([i for i,line in enumerate(all_lines) if '=== END ERROR ===' in line])
+
+    if numberOfErrors > maxNumberOfError:
+        counter = 0
+        for line in reversed(all_lines):
+            if '=== END ERROR ===' in line:
+                counter += 1
+            if counter > maxNumberOfError:
+                new_lines.writelines(clean_lines)
+                new_lines.close()
+                return clean_lines
+            if not line[-1] == '\n':
+                line = line + '\n'
+            clean_lines.insert(0,line)
+
+    new_lines.writelines(all_lines)
+    new_lines.close()
+    return all_lines
+
+
+
 def getIDs(raisedIDsPath):
     '''Get the raised ID as a list'''
-    raisedIDs = open(raisedIDsPath, 'r')
     IDlist = []
-    lines = raisedIDs.readlines()
+    lines = cleanOlderErrors(raisedIDsPath)
 
     for line in lines:
         # print line
         if 'Unique ID: ' in line:
             IDlist.append(line[11:-1])
 
-    raisedIDs.close()
     return IDlist
 
 def initializeLogger(host, port):
