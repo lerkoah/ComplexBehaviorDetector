@@ -6,7 +6,9 @@ def get_conf(file_path):
             'hosts': ['localhost:9200']
         },
         'rabbitmq': {
-            'hosts': ['localhost:5672']
+            'hosts': ['localhost:5672'],
+            'user': 'guest',
+            'pass': 'guest'
         },
         'logstash': {
             'hosts': ['localhost:5003']
@@ -31,6 +33,12 @@ def get_conf(file_path):
         if 'hosts' not in raw['rabbitmq']:
             raise ValueError('Config file must contain an rabbitmq.hosts field')
 
+        if 'user' not in raw['rabbitmq']:
+            raise ValueError('Config file must contain an rabbitmq.user field')
+
+        if 'pass' not in raw['rabbitmq']:
+            raise ValueError('Config file must contain an rabbitmq.pass field')
+
         if 'logstash' not in raw:
             raise ValueError('Config file must contain an logstash field')
 
@@ -39,6 +47,8 @@ def get_conf(file_path):
 
         conf['elasticsearch']['hosts'] = raw['elasticsearch']['hosts']
         conf['rabbitmq']['hosts'] = raw['rabbitmq']['hosts']
+        conf['rabbitmq']['user'] = raw['rabbitmq']['user']
+        conf['rabbitmq']['pass'] = raw['rabbitmq']['pass']
         conf['logstash']['hosts'] = raw['logstash']['hosts']
 
 

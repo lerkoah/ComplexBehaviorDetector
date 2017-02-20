@@ -7,7 +7,9 @@
    "rabbitmq": {
        "hosts": [
          "ariadne.osf.alma.cl:5672"
-       ]
+       ],
+       "user": "alma",
+       "pass": "guest"
   },
    "logstash": {
        "hosts": [
