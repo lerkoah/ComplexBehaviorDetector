@@ -95,7 +95,7 @@ For close the program, please do not forget close all connections and files.
     raisedAlarms.close()
   ```
 
-  The function ```processingAlarm()``` made all the work, that is mean: Received the log, decided if the alarm must be raised and sen the alarm to logstash.
+  The function ```processingAlarm()``` made all the work, that is mean: Received the log, decided if the alarm must be raised and send the alarm to logstash.
 
   ```python
   def processingAlarm(IDslist, raisedAlarms, logger, body):
