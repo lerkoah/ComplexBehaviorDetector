@@ -89,7 +89,7 @@ def processingAlarm(IDslist, raisedAlarms, logger, body):
         error = '=== START ERROR: ' + str(data['priority']) + ' ===\n' \
                 'Unique ID: ' + str(data['path'])+'/'+data['@timestamp'] + '\n' \
                 '@timestamp: ' + str(data['@timestamp']) + '\n' \
-                'Name: ' + data['path'] + '\n' \
+                'Path: ' + data['path'] + '\n' \
                 'Priority: ' + str(data['priority']) + '\n' \
                 'Body: ' + str(data['body']) + '\n' \
                 '=== END ERROR ===\n'

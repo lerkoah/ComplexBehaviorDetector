@@ -55,18 +55,29 @@ class ProcessModel:
     symbols = None
     strictConformance = False
     discardUnkownSymbols = True
+    id = None
 
-    def __init__(self, id="A_PROC_WITH_NO_NAME"):
-        self.id = id
+    # Criteria for creation event. By default, it is True.
+    @staticmethod
+    def creationEvent(e):
+        return True
+
+    # Name for new process, possibly based on event
+    def idBasedOnEvent(self, event):
+        return repr(self.__class__.__name__)
+
+    def __init__(self, id=None, event=None):
+
         self._states = {}
         self._symbols = {}
         self._state = ""
         self._isStarted = False
         self._trace = []
 
-        # This logic fill the class with values from
-        # self.states
-        # self.symbols
+        if id is not None:
+            self.id = id
+        elif event is not None:
+            self.id = self.idBasedOnEvent(event)
 
         if self.symbols != None:
             self.addSymbols(self.symbols)
@@ -187,14 +198,21 @@ class ProcessModel:
         return recognized
 
     # Execution logic lies here
-    def read(self, inputSymbol, verbose=False):
-        self._trace.append(inputSymbol)
+    def read(self, rawInputSymbol, verbose=False):
 
+        inputSymbol = self.preprocessEvent(rawInputSymbol)
+
+        # Add for report
+        if self.isRecognizedSymbol(inputSymbol):
+            self._trace.append(rawInputSymbol)
+
+        # Strict symbols?
         if not self.discardUnkownSymbols:
             if not self.isRecognizedSymbol(inputSymbol):
                 raise RuntimeWarning("DiscardUnkownSymbols=False and '%s' is not any recognized symbol %s" % (
                 inputSymbol, self._symbols.keys()))
 
+        # Search transition if any
         found = False
         for t in self.getCurrentTransitions():
             if not found:
@@ -217,6 +235,10 @@ class ProcessModel:
     def getTrace(self):
         return self._trace
 
+    # Ancillary functions to alter input symbols
+    def preprocessEvent(self, symbol):
+        return symbol
+
     def testSymbol(self, functName, inputSymbol):
         """
         Tricky! A symbol is actually a function that returns True when feeded with inputSymbol
@@ -235,6 +257,111 @@ class ProcessModel:
 
     def getCurrentTransitions(self):
         return self._states[self.state()].transitions
+
+
+class LogIterator:
+    reportingStates = []
+
+    def __init__(self, model, verbose=False, verboseTransitions=False, reportingStates=None, reportingCallback=None,
+                 formatLog=None):
+        self.modelClass = model
+        self.verbose = verbose
+        self.verboseTransitions = verboseTransitions
+        if reportingStates is not None:
+            self.reportingStates = reportingStates
+
+        if reportingCallback is not None:
+            self.reportingCallback = reportingCallback
+        else:
+            def defaultCallback(modelInstance):
+                print("================ FOUND =======================")
+                print("Trace of %s(%s):" % (modelInstance.__class__.__name__, modelInstance.id))
+                print("----------------------------------------------")
+                for event in modelInstance.getTrace():
+                    print(self.formatLog(event))
+                print("==============================================")
+
+            self.reportingCallback = defaultCallback
+
+        if formatLog is not None:
+            self.formatLog = formatLog
+        else:
+            self.formatLog = lambda e: e
+
+    # Ensure event is kibana-friendly
+    def evToDict(self, event):
+        if hasattr(event, 'to_dict'):
+            return event.to_dict()
+        else:
+            return event
+
+    def process(self, dataset):
+        if not hasattr(dataset, '__iter__'):
+            raise ValueError("trace must be an iterable")
+
+        machines = {}
+        m_count = 0
+        f_count = 0
+
+        self.proc_logsize = len(dataset)
+
+        for event in dataset:
+            destroy = []
+            e = self.evToDict(event)
+
+            if self.verbose: print("event: %s" % e)
+
+            # Creation stage: does event means that a new machine is needed?
+            if self.modelClass.creationEvent(e):
+                newprocess = self.modelClass(event=e)
+
+                if newprocess.id not in machines.keys():
+                    if self.verbose: print("- Adding %s to existing machines" % newprocess.id)
+                    newprocess.start()
+                    machines[newprocess.id] = newprocess
+                    m_count = m_count + 1
+                    if self.verbose: print("[%s] Start state: '%s'" % (newprocess.id, newprocess.state()))
+
+            # Symbol read stage
+            for name, mach in machines.iteritems():
+                mach.read(e, verbose=self.verboseTransitions)
+                if self.verbose: print("[%s] state: '%s'" % (mach.id, mach.state()))
+
+                # Callback for specified states
+                if mach.state() in self.reportingStates:
+                    self.reportingCallback(mach)
+                    f_count = f_count + 1
+
+                if mach.end():
+                    if self.verbose: print("- End state for %s , sent to destroy." % name)
+                    destroy.append(name)
+
+            # Destruction Stage
+            for name in destroy:
+                if self.verbose: print("- Destroying %s" % name)
+                del (machines[name])
+
+        self.proc_count = m_count
+        self.proc_reported_count = f_count
+        self.proc_unfinished = len(machines)
+
+    def summary(self):
+        txt = "Process name: %s\n" % self.modelClass.__name__
+        txt += "Log Size    : %s\n" % self.proc_logsize
+        txt += "Analyzed    : %s\n" % self.proc_count
+        txt += "Found       : %s\n" % self.proc_reported_count
+        txt += "Unfinished  : %s\n" % self.proc_unfinished
+        return txt
+
+
+#
+#
+# From here, there are only testing functions.
+#
+#
+
+
+
 
 
 def test_model_construction():
@@ -343,31 +470,6 @@ def test_simple_iterations(PM):
 
 
 def test_json_initialization():
-    class PrefilledProcess(ProcessModel):
-        symbols = {
-            "A": "A",
-            "*B*": lambda e: "B" in e,
-            "notC": lambda e: "C" not in e
-        }
-        states = {
-            'START': {
-                'transitions': {'A': 'afterA', '*B*': 'afterB'},
-                'isStartState': True
-            },
-            'AnotherEND': {
-                'isEndState': True,
-                'transitions': []
-            },
-            # Note that this state has NOTHING, so it implies that isEndState.
-            'END': {},
-            'afterA': {
-                'transitions': {'*B*': 'afterB'}
-            },
-            'afterB': {
-                'transitions': {'A': 'afterA', '*B*': 'END', 'notC': 'END'}
-            }
-        }
-
     print("\n--- New Machine that should behave as test1")
     PM2 = PrefilledProcess(id="test2")
     print(PM2)
@@ -375,21 +477,6 @@ def test_json_initialization():
 
 
 def test_semaphore():
-    class Semaphore(ProcessModel):
-        symbols = ["toGreen", "toRed", "toYellow"]
-        states = {
-            'GREEN': {
-                "isStartState": True,
-                "transitions": {"toYellow": "YELLOW"}
-            },
-            'YELLOW': {
-                "transitions": {"toRed": "RED"}
-            },
-            'RED': {
-                "transitions": {"toGreen": "GREEN"}
-            },
-        }
-
     print("\n--- Excercising a semaphore, starts at GREEN")
 
     Sem = Semaphore(id="My First Semaphore")
@@ -434,7 +521,74 @@ def test_semaphore():
     print(Sem.getTrace())
 
 
+def test_LogIterator(model, dataset):
+    print("--- Test LogIterator")
+
+    log = LogIterator(model=model, verbose=True, verboseTransitions=False, reportingStates=["YELLOW"])
+    log.process(dataset=dataset)
+
+    print(log.summary())
+
+    try:
+        log.process(None)
+        raise UserWarning("There should have been an error here!!")
+    except ValueError as err:
+        print("Expected Ex: %s" % err)
+
+
+#
+#
+# Tests execution if this is class is invoked directly
+#
+# Success critera: a smile at the end
+#
+#
+
+
+
 if __name__ == '__main__':
+    class Semaphore(ProcessModel):
+        symbols = ["toGreen", "toRed", "toYellow"]
+        states = {
+            'GREEN': {
+                "isStartState": True,
+                "transitions": {"toYellow": "YELLOW"}
+            },
+            'YELLOW': {
+                "transitions": {"toRed": "RED"}
+            },
+            'RED': {
+                "transitions": {"toGreen": "GREEN"}
+            },
+        }
+
+
+    class PrefilledProcess(ProcessModel):
+        symbols = {
+            "A": "A",
+            "*B*": lambda e: "B" in e,
+            "notC": lambda e: "C" not in e
+        }
+        states = {
+            'START': {
+                'transitions': {'A': 'afterA', '*B*': 'afterB'},
+                'isStartState': True
+            },
+            'AnotherEND': {
+                'isEndState': True,
+                'transitions': []
+            },
+            # Note that this state has NOTHING, so it implies that isEndState.
+            'END': {},
+            'afterA': {
+                'transitions': {'*B*': 'afterB'}
+            },
+            'afterB': {
+                'transitions': {'A': 'afterA', '*B*': 'END', 'notC': 'END'}
+            }
+        }
+
+
     PM = test_model_construction()
     test_safeguards(PM)
     test_simple_iterations(PM)
@@ -452,5 +606,9 @@ if __name__ == '__main__':
     test_simple_iterations(PM2)
 
     test_semaphore()
+
+    dataset = ["toYellow", "toRed", "toGreen", "toYellow"]
+
+    test_LogIterator(Semaphore, dataset)
 
     print("\n************ Smile! If you read this then nothing failed.")
