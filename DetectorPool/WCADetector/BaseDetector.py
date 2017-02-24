@@ -90,9 +90,8 @@ class BaseDetector(object):
         self.report = 'Reporting alarm'
         self.priority = priority
         self.params = None
-        ## error log path
-        # self.errorLogPath = os.path.dirname(os.path.realpath(__file__)) + '/log/raisedAlarms.log'
-        self.errorLogPath = '/home/lerko/ComplexBehaviorDetector/AlarmSystem/raisedAlarms.log'
+        ## error counter
+        self.errorCounter = 0
 
         ## RabbitMQ Parameters
 
@@ -135,6 +134,8 @@ class BaseDetector(object):
                               routing_key=self.alarmQueue,
                               body=jsonAlarm,
                               properties=pika.BasicProperties(delivery_mode=2))
+
+        self.errorCounter += 1
 
     def executeTruePositive(self):
         self.params = 0
