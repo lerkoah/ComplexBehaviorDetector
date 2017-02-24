@@ -4,30 +4,25 @@ from ProcessModel import *
 import time
 
 
-class WCALockFail(ProcessModel):
+class ICT9048FSM(ProcessModel):
 
     # Each declared symbol will be added in trace. Even if it is not part of any transition.
-    # Trick!!! e['name'] in e['Process']  is to filter out events from other antennas
     symbols={
-        'tuning': lambda e: 'Tuning Values'  in e['text'] and e['name'] in e['Process'],
-        'lock':   lambda e: 'WCA Locked'     in e['text'] and e['name'] in e['Process'],
-        'fail':   lambda e: 'Lock FAILED'    in e['text'] and e['name'] in e['Process'],
-        'retry':  lambda e: 'Re-trying lock' in e['text'] and e['name'] in e['Process']
+        'sub-array': lambda e: 'antennas in sub-array' in e['text'],
+        'started':   lambda e: 'bdf started' in e['text'],
+        'splitting': lambda e: 'while splitting off imhs ran into invalid start time' in e['text']
     }
 
     # Try to keep this as simple as possible
     states = {
         'INIT': {
-            'transitions' : { 'tuning': 'START_TUNING' }, 'isStartState': True
+            'transitions' : { 'sub-array': 'SUB-ARRAY' }, 'isStartState': True
         },
-        'START_TUNING': {
-            'transitions' : { 'lock': 'END', 'retry': 'FAIL_1' }
+        'SUB-ARRAY': {
+            'transitions' : { 'started': 'BDF' }
         },
-        'FAIL_1': {
-            'transitions' : { 'tuning': 'TUNE_2' }
-        },
-        'TUNE_2': {
-            'transitions' : { 'lock': 'END', 'fail': 'FOUND' }
+        'BDF': {
+            'transitions' : { 'splitting': 'FOUND', 'sub-array': 'END' }
         },
         'END':   {},
         'FOUND': {}
@@ -38,11 +33,11 @@ class WCALockFail(ProcessModel):
     @staticmethod
     def creationEvent(e):
         try:
-            return 'Tuning Values' in e['text']
+            return 'antennas in sub-array' in e['text']
         except:
             return False
 
-    # Name for new process, CM11 in CONTROL/CM11/...
+    # Name for new process
     def idBasedOnEvent(self, e):
         return e["Process"].split("/")[1]
 
@@ -62,7 +57,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-class WCADetector(BaseDetector):
+class ICT9048Detector(BaseDetector):
     def __init__(self):
         BaseDetector.__init__(self)
         self.detectorName = 'WCA'
@@ -77,19 +72,13 @@ class WCADetector(BaseDetector):
         fromTime = self.fromTime
         toTime = self.toTime
 
-        # Know timeframe where this issue happens
-        # fromTime = "2017-02-01T05:00:50.463"
-        # toTime = "2017-02-01T05:20:22.184"
-
-
         # a single line should be enough, but splitted is more clear
         query = []
-        query.append('Tuning Values')
-        query.append('Lock FAILED')
-        query.append('WCA Locked')
-        query.append('Re-trying lock')
+        query.append('antennas in sub-array')
+        query.append('bdf started')
+        query.append('while splitting off imhs ran into invalid start time')
 
-        queryString = "FrontEnd AND (" + " OR ".join([" \"%s\" " % q for q in query]) + ")"
+        queryString = "("+" OR ".join([" \"%s\" " % q for q in query]) + ")"
 
         print ("Searching on Kibana with query: %s\n" % queryString)
 
@@ -102,35 +91,46 @@ class WCADetector(BaseDetector):
                                limit=10000,
                                columns="@timestamp,origin,SourceObject,text",
                                )
-
+        kibanaHits = kibana.execute().hits
+        sequence = []
+        for j in range(2,len(kibanaHits)):
+            hit = kibanaHits[j]
+            event = hit.to_dict()
+            if 'while splitting off imhs ran into invalid start time' in event["text"]:
+                if kibanaHits[j - 2] not in sequence:
+                    sequence.append(kibanaHits[j - 2])
+                if kibanaHits[j - 1] not in sequence:
+                    sequence.append(kibanaHits[j - 1])
+                sequence.append(kibanaHits[j])
 
         def sendAlarmHandler(modelInstance):
 
             eventSequence = modelInstance.getTrace()
             firstEvent = eventSequence[0]
-            antenna = firstEvent['SourceObject'].split('/')[1]
-            path = self.prefix + 'WCA/' + antenna
+            path = self.prefix + 'ICT-9048'
 
-            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, {antenna: eventSequence})
+            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, eventSequence)
 
         # The magic is here!
-        log = LogIterator(model=WCALockFail, verbose=False, reportingStates=['FOUND'], formatLog=kibana.format, reportingCallback=sendAlarmHandler)
-        log.process(dataset=kibana.execute().hits)
+        log = LogIterator(model=ICT9048FSM, verbose=False, reportingStates=['FOUND'], formatLog=kibana.format, reportingCallback=sendAlarmHandler)
+        log.process(dataset=sequence)
 
 
 
     def executeTruePositive(self):
-        self.configure('2017-01-11T00:00:00.000','2017-01-12T00:00:00.000')
+        # self.configure('2017-01-07T20:13:35.322','2017-01-07T20:14:37.967')
+        self.configure('2017-01-07T20:12:35.322','2017-01-07T20:15:37.967')
         self.execute()
 
 if __name__ == '__main__':
     options = args()
 
-    myDetector = WCADetector()
-    # myDetector.executeTruePositive()
-    myDetector.configure(options['from'], options['to'])
+    myDetector = ICT9048Detector()
+
+    # myDetector.configure(options['from'], options['to'])
 
     tic = time.time()
-    myDetector.execute()
+    myDetector.executeTruePositive()
+    # myDetector.execute()
     toc = time.time() - tic
     print 'Elapse [seg]: %s' % toc
