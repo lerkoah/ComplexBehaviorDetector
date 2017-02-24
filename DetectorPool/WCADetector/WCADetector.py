@@ -127,7 +127,7 @@ if __name__ == '__main__':
     options = args()
 
     myDetector = WCADetector()
-    myDetector.executeTruePositive()
+    # myDetector.executeTruePositive()
     myDetector.configure(options['from'], options['to'])
 
     tic = time.time()
