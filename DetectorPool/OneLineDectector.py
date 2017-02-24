@@ -1,9 +1,11 @@
-from BaseDetector import BaseDetector
+from BaseDetector import *
 from LogQuery import SearchAlmaELK, TimeUtils, ALMAELKHOST, QUERY_TIMEOUT
 from elasticsearch_dsl.connections import connections
-from datetime import datetime
 from one_line_db import one_line_db
-import json
+import getKibanaQueries
+import time
+from datetime import datetime, timedelta
+
 
 class bcolors:
     HEADER = '\033[95m'
@@ -15,11 +17,16 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-class ICTListDetector(BaseDetector):
-    def __init__(self):
+
+class OneLineDetector(BaseDetector):
+    def __init__(self, priority = 'INFO'):
         BaseDetector.__init__(self)
         self.detectorName = None
-        self.priority = 'INFO'
+
+        # Priority IDs: CRITICAL = 0; WARNING = 1,2; INFO = 3
+        self.priority = ['CRITICAL', 'WARNING', 'WARNING', 'INFO']
+
+        self.prefix = 'ONLINE/Issues/OneLiner/'.upper()
 
     def configure(self,fromTime,toTime):
         self.fromTime = fromTime
@@ -29,14 +36,10 @@ class ICTListDetector(BaseDetector):
 
         connections.create_connection(hosts=ALMAELKHOST, timeout=QUERY_TIMEOUT)
 
-        # fromTime="2016-11-20T00:00:00.000",
-        # toTime="2016-12-08T10:00:00.000",
-
-        # fromTime="2016-12-07T00:00:00.000",
-        # toTime="2016-12-07T23:59:59.000",
         counter = 0
-
-        for myname, myquery in one_line_db().getQueries():
+        for myname, myquery, priorityID in getKibanaQueries.getQueries():
+        # for myname, myquery, priorityID in one_line_db().getQueries():
+            myname = myname.upper()
             kibana = SearchAlmaELK(index="online",
                                    fromTime=self.fromTime,
                                    toTime=self.toTime,
@@ -46,8 +49,9 @@ class ICTListDetector(BaseDetector):
                                    loglevel="DELOUSE"
                                    )
             # previousEvent = {"@timestamp": "1969-12-31T21:00:00"}
+
             kibanaHits = kibana.execute().hits
-            print '- Searching for :' + myquery
+            print '- Searching for : ' + myname + '; query: ' + myquery
             print '  - Number of queries found: ' +str(len(kibanaHits))
 
             for j in range(len(kibanaHits)):
@@ -56,7 +60,9 @@ class ICTListDetector(BaseDetector):
                 fullDetectionTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')
                 detectionTime = fullDetectionTime[0:23] + 'Z'
 
-                self.sendAlarm(event["@timestamp"], myname, self.priority, detectionTime, event)
+                priority = self.priority[priorityID]
+
+                self.sendAlarm(event["@timestamp"], self.prefix + myname, priority, event)
                 counter += 1
 
                 # print(bcolors.FAIL + "     - " + kibana.format(event) + bcolors.ENDC)
@@ -64,9 +70,18 @@ class ICTListDetector(BaseDetector):
         print 'Total Errors: %i' % counter
 
 def main():
-    myDetector = ICTListDetector()
-    myDetector.configure("2017-02-01T00:00:00.000", "2017-02-01T23:59:59.000")
+    options = args()
+    myDetector = OneLineDetector()
+    ## Some True Positive examples
+    # myDetector.configure("2017-02-01T00:00:00.000", "2017-02-01T23:59:59.000")
+    # myDetector.configure("2017-01-21T00:00:00.000", "2017-01-21T03:00:00.000")
+
+    myDetector.configure(options['from'], options['to'])
+    tic = time.time()
     myDetector.execute()
+
+    toc = time.time() - tic
+    print 'Elapse [seg]: %s' % toc
 
 
 if __name__ == '__main__':
