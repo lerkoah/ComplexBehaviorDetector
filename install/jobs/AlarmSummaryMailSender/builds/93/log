@@ -1,0 +1,14 @@
+Started by timer
+Building in workspace /var/lib/jenkins/workspace/AlarmSummaryMailSender
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+[AlarmSummaryMailSender] $ /bin/sh -xe /tmp/hudson659981835759347948.sh
++ python /home/lerko/alma-buckets/src/main.py -l 15m -p WARNING '*' -c /home/lerko/alma-buckets/buckets.json
+Request time range: 2017-02-18T11:23:01.061935 to now
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+Finished: SUCCESS

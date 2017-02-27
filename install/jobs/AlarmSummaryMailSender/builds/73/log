@@ -1,0 +1,61 @@
+Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSi3ODUnNTkkvwifQAaCKXFyAAAAA==[0mAlarmSelector" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSi3ODUnNTkkvwifUtLAJ6VBD7KAAAA[0m99
+originally caused by:
+ Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSummaryMailSender
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+[AlarmSummaryMailSender] $ /bin/sh -xe /tmp/hudson7230274904447120874.sh
++ python /home/lerko/alma-buckets/src/main.py -l 15m -p WARNING '*' -c /home/lerko/alma-buckets/buckets.json
+Request time range: 2017-02-17T17:57:31.365221 to now
+==== BEGIN OVERVIEW ====
+CRITICAL: 14
+WARNING: 17
+==== END OVERVIEW ====
+==== BEGIN PREFIX 'ONLINE' ====
+2017-02-17T18:00:00.987Z CRITICAL ONLINE/DOCKER/ONELINER/ZBAXH6 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.039Z WARNING ONLINE/ISSUES/MULTILINER/CQ0YOG :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.062Z WARNING ONLINE/DOCKER/MULTILINER/0DJJ7F :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.069Z CRITICAL ONLINE/DOCKER/MULTILINER/WXS18K :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.075Z WARNING ONLINE/DOCKER/MULTILINER/PYI4TJ :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.088Z WARNING ONLINE/ISSUES/ONELINER/623177 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.095Z CRITICAL ONLINE/DOCKER/ONELINER/9XAEID :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.108Z WARNING ONLINE/ISSUES/ONELINER/QJDVZF :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.122Z CRITICAL ONLINE/ISSUES/ONELINER/1F0UK2 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.128Z WARNING ONLINE/DOCKER/ONELINER/9THPOG :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.139Z CRITICAL ONLINE/DOCKER/ONELINER/C6SIP6 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.181Z WARNING ONLINE/ISSUES/ONELINER/DS5RU2 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.187Z WARNING ONLINE/ISSUES/ONELINER/QL6EW8 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.204Z CRITICAL ONLINE/DOCKER/MULTILINER/L90ROK :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.209Z CRITICAL ONLINE/DOCKER/ONELINER/T52H7N :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.214Z CRITICAL ONLINE/DOCKER/MULTILINER/2QIKG0 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.220Z CRITICAL ONLINE/DOCKER/ONELINER/CM4AU4 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.238Z CRITICAL ONLINE/ISSUES/ONELINER/RQLU3X :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.243Z WARNING ONLINE/DOCKER/MULTILINER/WLLJPA :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.259Z CRITICAL ONLINE/DOCKER/MULTILINER/OKL9I5 :: {"text": "Test Alarm"}
+==== END PREFIX 'ONLINE' ====
+==== BEGIN PREFIX 'OFFLINE' ====
+2017-02-17T18:00:00.999Z WARNING OFFLINE/ISSUES/MULTILINER/76RED7 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.022Z WARNING OFFLINE/ISSUES/ONELINER/SEJ62W :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.044Z WARNING OFFLINE/ISSUES/MULTILINER/34NRIL :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.050Z WARNING OFFLINE/ISSUES/MULTILINER/YJTEBA :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.101Z CRITICAL OFFLINE/ISSUES/MULTILINER/384S7F :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.116Z WARNING OFFLINE/ISSUES/ONELINER/JQ4CS0 :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.145Z WARNING OFFLINE/ISSUES/ONELINER/0CTJIB :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.156Z CRITICAL OFFLINE/ISSUES/ONELINER/BO7UVT :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.169Z WARNING OFFLINE/ISSUES/ONELINER/NN8R4T :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.176Z WARNING OFFLINE/ISSUES/MULTILINER/7EIHCH :: {"text": "Test Alarm"}
+2017-02-17T18:00:01.192Z CRITICAL OFFLINE/ISSUES/MULTILINER/ZR9ROE :: {"text": "Test Alarm"}
+==== END PREFIX 'OFFLINE' ====
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com shelo.spm@gmail.com
+No emails were triggered.
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com shelo.spm@gmail.com
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com shelo.spm@gmail.com
+Finished: SUCCESS

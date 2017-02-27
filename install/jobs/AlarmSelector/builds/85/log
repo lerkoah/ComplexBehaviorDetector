@@ -1,0 +1,11 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson1744616249700458402.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py
+Traceback (most recent call last):
+  File "/home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py", line 4, in <module>
+    import pika
+ImportError: No module named pika
+Build step 'Run with timeout' marked build as failure
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Finished: FAILURE

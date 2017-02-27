@@ -1,0 +1,19 @@
+Started by timer
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson8079294973433930995.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/ISSUES/MULTILINER/WCA/DA55/2017-02-25T03:49:14.456Z
+@timestamp: 2017-02-25T03:49:14.456Z
+Path: ONLINE/ISSUES/MULTILINER/WCA/DA55
+Priority: WARNING
+Body: {u'DA55': [{u'origin': u'APE1', u'SourceObject': u'CONTROL/DA55/FrontEnd/WCA8', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CONTROL/DA55/cppContainer', u'text': u'Tuning Values: VDP0=0.613015 VDP1=0.603609VGP0=-0.45 VGP1-0.4', u'@timestamp': u'2017-02-25T03:49:14.456Z', u'Host': u'da55-abm', u'LogLevel': u'Debug', u'Audience': u' ', u'File': u'WCAImpl.cpp', u'Routine': u'setLOPowerAmps', u'Line': u'1019', u'name': u'DA55'}, {u'origin': u'APE1', u'SourceObject': u'CONTROL/DA55/FrontEnd', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CONTROL/DA55/cppContainer', u'text': u'Lock FAILED', u'@timestamp': u'2017-02-25T03:49:17.902Z', u'Host': u'da55-abm', u'LogLevel': u'Notice', u'Audience': u'FrontEnd', u'File': u'FrontEndImpl.cpp', u'Routine': u'void FrontEndImpl::lockFrontEndInternal(Control::FrontEnd::SubscanInformation, bool, bool)', u'Line': u'1544', u'name': u'DA55'}, {u'origin': u'APE1', u'SourceObject': u'CONTROL/DA55/FrontEnd', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CONTROL/DA55/cppContainer', u'text': u'Re-trying lock', u'@timestamp': u'2017-02-25T03:49:17.902Z', u'Host': u'da55-abm', u'LogLevel': u'Notice', u'Audience': u'FrontEnd', u'File': u'FrontEndExternal.cpp', u'Routine': u'virtual void FrontEndImpl::lockFrontEnd()', u'Line': u'616', u'name': u'DA55'}, {u'origin': u'APE1', u'SourceObject': u'CONTROL/DA55/FrontEnd/WCA8', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CONTROL/DA55/cppContainer', u'text': u'Tuning Values: VDP0=0.60875 VDP1=0.60625VGP0=-0.45 VGP1-0.4', u'@timestamp': u'2017-02-25T03:49:17.905Z', u'Host': u'da55-abm', u'LogLevel': u'Debug', u'Audience': u' ', u'File': u'WCAImpl.cpp', u'Routine': u'setLOPowerAmps', u'Line': u'1019', u'name': u'DA55'}, {u'origin': u'APE1', u'SourceObject': u'CONTROL/DA55/FrontEnd', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CONTROL/DA55/cppContainer', u'text': u'Lock FAILED', u'@timestamp': u'2017-02-25T03:49:21.347Z', u'Host': u'da55-abm', u'LogLevel': u'Notice', u'Audience': u'FrontEnd', u'File': u'FrontEndImpl.cpp', u'Routine': u'void FrontEndImpl::lockFrontEndInternal(Control::FrontEnd::SubscanInformation, bool, bool)', u'Line': u'1544', u'name': u'DA55'}]}
+=== END ERROR ===
+
+Elapse: 1.02562093735
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JH3HnMSi3ODS3NzEokrfxMyc4NS8lNQifQC/XKGL0QAAAA==[0mAlarmSummaryMailSender
+Finished: SUCCESS

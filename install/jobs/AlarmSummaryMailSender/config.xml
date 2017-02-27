@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This Job make summary for the last N minutes of alarms.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <quietPeriod>0</quietPeriod>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.build__timeout.BuildStepWithTimeout plugin="build-timeout@1.18">
+      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+        <timeoutMinutes>3</timeoutMinutes>
+      </strategy>
+      <buildStep class="hudson.tasks.Shell">
+        <command>python /home/lerko/alma-buckets/src/main.py -l 6m -p WARNING &quot;*&quot; -c /home/lerko/alma-buckets/buckets.json</command>
+      </buildStep>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.FailOperation/>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildStepWithTimeout>
+  </builders>
+  <publishers>
+    <org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher plugin="emailext-template@1.0">
+      <templateIds>
+        <org.jenkinsci.plugins.emailext__template.TemplateId>
+          <templateId>emailext-template-1487251631722</templateId>
+        </org.jenkinsci.plugins.emailext__template.TemplateId>
+        <org.jenkinsci.plugins.emailext__template.TemplateId>
+          <templateId>emailext-template-1487251898219</templateId>
+        </org.jenkinsci.plugins.emailext__template.TemplateId>
+        <org.jenkinsci.plugins.emailext__template.TemplateId>
+          <templateId>emailext-template-1487263862540</templateId>
+        </org.jenkinsci.plugins.emailext__template.TemplateId>
+        <org.jenkinsci.plugins.emailext__template.TemplateId>
+          <templateId>emailext-template-1487264031109</templateId>
+        </org.jenkinsci.plugins.emailext__template.TemplateId>
+      </templateIds>
+    </org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

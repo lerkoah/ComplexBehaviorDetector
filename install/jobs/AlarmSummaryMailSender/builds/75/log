@@ -1,0 +1,26 @@
+Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSi3ODUnNTkkvwifQAaCKXFyAAAAA==[0mAlarmSelector" build number [8mha:AAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgYx/az8JH3HnMSi3ODUnNTkkvwifUMDQwA6IHzaywAAAA==[0m101
+originally caused by:
+ Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSummaryMailSender
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+[AlarmSummaryMailSender] $ /bin/sh -xe /tmp/hudson569512950946896422.sh
++ python /home/lerko/alma-buckets/src/main.py -l 15m -p WARNING '*' -c /home/lerko/alma-buckets/buckets.json
+Request time range: 2017-02-17T18:05:27.155991 to now
+==== BEGIN OVERVIEW ====
+WARNING: 1
+==== END OVERVIEW ====
+==== BEGIN PREFIX 'OFFLINE' ====
+2017-02-17T18:17:57.652Z WARNING OFFLINE/DOCKER/nginx/cpu :: {"message": "Max 5.00% CPU exceeded: [nginx] {17 Feb 17 18:17:57 UTC} CPU: 23.79%, MEM: 0.44% [9273344 B] Tx/Rx: 41142105/8886276"}
+==== END PREFIX 'OFFLINE' ====
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com shelo.spm@gmail.com
+No emails were triggered.
+No emails were triggered.
+Email was triggered for: Script - After Build
+Sending email for trigger: Script - After Build
+Sending email to: aheit.s.a@gmail.com shelo.spm@gmail.com
+Finished: SUCCESS

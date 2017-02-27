@@ -1,0 +1,43 @@
+Started by upstream project "[8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz+EgZR/az8JH3/vFSfzLxUl9SS1OSS/CJ9AEGHdOTKAAAA[0mOneLineDetector" build number [8mha:AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZx/az8JH3/vFSfzLxUl9SS1OSS/CJ9Y3MA8jTFg8wAAAA=[0m37
+originally caused by:
+ Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson4199666557083399054.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/ICT-7934/2017-01-21T00:35:34.098Z
+@timestamp: 2017-01-21T00:35:34.098Z
+Path: ONLINE/ISSUES/ONELINER/ICT-7934
+Priority: CRITICAL
+Body: {u'origin': u'APE1', u'StackLevel': u'0', u'SourceObject': u'ACACORR/CDPMIF/MASTER', u'Context': u'', u'Thread': u'ID=139984436565760', u'Process': u'ACACORR/CDPMIF/cppContainer', u'text': u'The total number of senders is 62 which should be 64. And gave up eventually. FILE[ACACDPMIFImpl.cpp] LINE[352]', u'@timestamp': u'2017-01-21T00:35:34.098Z', u'LogLevel': u'Error', u'Host': u'coj-cpm-1', u'StackId': u'', u'File': u'ACACDPMIFImpl.cpp', u'Routine': u'', u'Line': u'352'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/ICT-5343/2017-01-21T00:35:34.098Z
+@timestamp: 2017-01-21T00:35:34.098Z
+Path: ONLINE/ISSUES/ONELINER/ICT-5343
+Priority: CRITICAL
+Body: {u'origin': u'APE1', u'StackLevel': u'0', u'SourceObject': u'ACACORR/CDPMIF/MASTER', u'Context': u'', u'Thread': u'ID=139984436565760', u'Process': u'ACACORR/CDPMIF/cppContainer', u'text': u'The total number of senders is 62 which should be 64. And gave up eventually. FILE[ACACDPMIFImpl.cpp] LINE[352]', u'@timestamp': u'2017-01-21T00:35:34.098Z', u'LogLevel': u'Error', u'Host': u'coj-cpm-1', u'StackId': u'', u'File': u'ACACDPMIFImpl.cpp', u'Routine': u'', u'Line': u'352'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/OPERATION: BLCORR SYSTEM RESTARTS/2017-01-21T01:06:12.313Z
+@timestamp: 2017-01-21T01:06:12.313Z
+Path: ONLINE/ISSUES/ONELINER/OPERATION: BLCORR SYSTEM RESTARTS
+Priority: CRITICAL
+Body: {u'origin': u'APE1', u'SourceObject': u'ACACORR_MASTER_COMP', u'Thread': u'ACACORR_MASTER_COMP-11', u'Process': u'ACC/masterContainer', u'text': u'shutDownSubsysPass1() method called.', u'@timestamp': u'2017-01-21T01:06:12.313Z', u'LogId': u'1756', u'LogLevel': u'Info', u'Host': u'gas01', u'File': u'ACACorrelatorMasterComponentImpl.java', u'Routine': u'shutDownSubsysPass1', u'Line': u'502'}
+=== END ERROR ===
+
+Elapse: 1.02239394188
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JH3HnMSi3ODS3NzEokrfxMyc4NS8lNQifQC/XKGL0QAAAA==[0mAlarmSummaryMailSender
+Finished: SUCCESS

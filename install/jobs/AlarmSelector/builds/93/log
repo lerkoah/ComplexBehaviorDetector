@@ -1,0 +1,558 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson704378451216227596.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/T6T4D6/2017-02-16T16:39:55.857Z
+@timestamp: 2017-02-16T16:39:55.857Z
+Name: OFFLINE/ISSUES/MULTILINER/T6T4D6
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/GBGUR9/2017-02-16T16:39:55.863Z
+@timestamp: 2017-02-16T16:39:55.863Z
+Name: OFFLINE/ISSUES/MULTILINER/GBGUR9
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/MULTILINER/P2UHTO/2017-02-16T16:39:55.869Z
+@timestamp: 2017-02-16T16:39:55.869Z
+Name: ONLINE/ISSUES/MULTILINER/P2UHTO
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/EU28TW/2017-02-16T16:39:55.874Z
+@timestamp: 2017-02-16T16:39:55.874Z
+Name: OFFLINE/ISSUES/MULTILINER/EU28TW
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/EV4UHG/2017-02-16T16:39:55.879Z
+@timestamp: 2017-02-16T16:39:55.879Z
+Name: ONLINE/DOCKER/ONELINER/EV4UHG
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/TOC9DB/2017-02-16T16:39:55.884Z
+@timestamp: 2017-02-16T16:39:55.884Z
+Name: OFFLINE/ISSUES/MULTILINER/TOC9DB
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/DOCKER/ONELINER/8WB3LU/2017-02-16T16:39:55.889Z
+@timestamp: 2017-02-16T16:39:55.889Z
+Name: ONLINE/DOCKER/ONELINER/8WB3LU
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/ISSUES/MULTILINER/0M5G1R/2017-02-16T16:39:55.893Z
+@timestamp: 2017-02-16T16:39:55.893Z
+Name: ONLINE/ISSUES/MULTILINER/0M5G1R
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/DOCKER/MULTILINER/7HZQA1/2017-02-16T16:39:55.898Z
+@timestamp: 2017-02-16T16:39:55.898Z
+Name: ONLINE/DOCKER/MULTILINER/7HZQA1
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/ISSUES/MULTILINER/0CIWKN/2017-02-16T16:39:55.903Z
+@timestamp: 2017-02-16T16:39:55.903Z
+Name: ONLINE/ISSUES/MULTILINER/0CIWKN
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/ONELINER/X57OAG/2017-02-16T16:39:55.908Z
+@timestamp: 2017-02-16T16:39:55.908Z
+Name: OFFLINE/ISSUES/ONELINER/X57OAG
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/MULTILINER/7YLTG1/2017-02-16T16:39:55.913Z
+@timestamp: 2017-02-16T16:39:55.913Z
+Name: ONLINE/DOCKER/MULTILINER/7YLTG1
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/ISSUES/ONELINER/BAXF4X/2017-02-16T16:39:55.917Z
+@timestamp: 2017-02-16T16:39:55.917Z
+Name: ONLINE/ISSUES/ONELINER/BAXF4X
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/SBE8TE/2017-02-16T16:39:55.922Z
+@timestamp: 2017-02-16T16:39:55.922Z
+Name: ONLINE/DOCKER/ONELINER/SBE8TE
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: OFFLINE/ISSUES/ONELINER/G8H41X/2017-02-16T16:39:55.928Z
+@timestamp: 2017-02-16T16:39:55.928Z
+Name: OFFLINE/ISSUES/ONELINER/G8H41X
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/MULTILINER/KSSEEC/2017-02-16T16:39:55.933Z
+@timestamp: 2017-02-16T16:39:55.933Z
+Name: ONLINE/DOCKER/MULTILINER/KSSEEC
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/ONELINER/YDAEW6/2017-02-16T16:39:55.938Z
+@timestamp: 2017-02-16T16:39:55.938Z
+Name: OFFLINE/ISSUES/ONELINER/YDAEW6
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/GUFDB8/2017-02-16T16:39:55.944Z
+@timestamp: 2017-02-16T16:39:55.944Z
+Name: ONLINE/ISSUES/ONELINER/GUFDB8
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/0WBGJ9/2017-02-16T16:39:55.949Z
+@timestamp: 2017-02-16T16:39:55.949Z
+Name: ONLINE/ISSUES/ONELINER/0WBGJ9
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/HJE1KY/2017-02-16T16:39:55.955Z
+@timestamp: 2017-02-16T16:39:55.955Z
+Name: ONLINE/ISSUES/ONELINER/HJE1KY
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: OFFLINE/ISSUES/ONELINER/2MBRQ2/2017-02-16T16:39:55.961Z
+@timestamp: 2017-02-16T16:39:55.961Z
+Name: OFFLINE/ISSUES/ONELINER/2MBRQ2
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/ISSUES/ONELINER/6JL1GV/2017-02-16T16:39:55.966Z
+@timestamp: 2017-02-16T16:39:55.966Z
+Name: ONLINE/ISSUES/ONELINER/6JL1GV
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/MULTILINER/016N4G/2017-02-16T16:39:55.972Z
+@timestamp: 2017-02-16T16:39:55.972Z
+Name: ONLINE/ISSUES/MULTILINER/016N4G
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/DOCKER/MULTILINER/HL22EJ/2017-02-16T16:39:55.978Z
+@timestamp: 2017-02-16T16:39:55.978Z
+Name: ONLINE/DOCKER/MULTILINER/HL22EJ
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/P7I78E/2017-02-16T16:39:55.983Z
+@timestamp: 2017-02-16T16:39:55.983Z
+Name: OFFLINE/ISSUES/MULTILINER/P7I78E
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/ONELINER/GBTX7T/2017-02-16T16:39:55.991Z
+@timestamp: 2017-02-16T16:39:55.991Z
+Name: OFFLINE/ISSUES/ONELINER/GBTX7T
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/DOCKER/ONELINER/7B38PT/2017-02-16T16:39:55.999Z
+@timestamp: 2017-02-16T16:39:55.999Z
+Name: ONLINE/DOCKER/ONELINER/7B38PT
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/MULTILINER/CD5MUQ/2017-02-16T16:39:56.005Z
+@timestamp: 2017-02-16T16:39:56.005Z
+Name: ONLINE/ISSUES/MULTILINER/CD5MUQ
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/UFYUSU/2017-02-16T16:39:56.011Z
+@timestamp: 2017-02-16T16:39:56.011Z
+Name: ONLINE/DOCKER/ONELINER/UFYUSU
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/5FRKNQ/2017-02-16T16:39:56.017Z
+@timestamp: 2017-02-16T16:39:56.017Z
+Name: ONLINE/DOCKER/ONELINER/5FRKNQ
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/TQZQBA/2017-02-16T16:39:56.023Z
+@timestamp: 2017-02-16T16:39:56.023Z
+Name: OFFLINE/ISSUES/MULTILINER/TQZQBA
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/TZVOJG/2017-02-16T16:39:56.029Z
+@timestamp: 2017-02-16T16:39:56.029Z
+Name: ONLINE/DOCKER/ONELINER/TZVOJG
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/8N9HN9/2017-02-16T16:39:56.034Z
+@timestamp: 2017-02-16T16:39:56.034Z
+Name: OFFLINE/ISSUES/MULTILINER/8N9HN9
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/8LPLBA/2017-02-16T16:39:56.040Z
+@timestamp: 2017-02-16T16:39:56.040Z
+Name: OFFLINE/ISSUES/MULTILINER/8LPLBA
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/ISSUES/ONELINER/13C142/2017-02-16T16:39:56.045Z
+@timestamp: 2017-02-16T16:39:56.045Z
+Name: ONLINE/ISSUES/ONELINER/13C142
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/DOCKER/ONELINER/C03SI6/2017-02-16T16:39:56.050Z
+@timestamp: 2017-02-16T16:39:56.050Z
+Name: ONLINE/DOCKER/ONELINER/C03SI6
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/ONELINER/RTA0SY/2017-02-16T16:39:56.055Z
+@timestamp: 2017-02-16T16:39:56.055Z
+Name: OFFLINE/ISSUES/ONELINER/RTA0SY
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/DOCKER/MULTILINER/USW727/2017-02-16T16:39:56.060Z
+@timestamp: 2017-02-16T16:39:56.060Z
+Name: ONLINE/DOCKER/MULTILINER/USW727
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/DTHVHK/2017-02-16T16:39:56.066Z
+@timestamp: 2017-02-16T16:39:56.066Z
+Name: ONLINE/DOCKER/ONELINER/DTHVHK
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/DOCKER/ONELINER/06N2CK/2017-02-16T16:39:56.071Z
+@timestamp: 2017-02-16T16:39:56.071Z
+Name: ONLINE/DOCKER/ONELINER/06N2CK
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/9NXRMI/2017-02-16T16:39:56.077Z
+@timestamp: 2017-02-16T16:39:56.077Z
+Name: ONLINE/ISSUES/ONELINER/9NXRMI
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/ONELINER/L7C66L/2017-02-16T16:39:56.082Z
+@timestamp: 2017-02-16T16:39:56.082Z
+Name: OFFLINE/ISSUES/ONELINER/L7C66L
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: OFFLINE/ISSUES/ONELINER/818UZ7/2017-02-16T16:39:56.087Z
+@timestamp: 2017-02-16T16:39:56.087Z
+Name: OFFLINE/ISSUES/ONELINER/818UZ7
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/ISSUES/ONELINER/O2Q9D4/2017-02-16T16:39:56.093Z
+@timestamp: 2017-02-16T16:39:56.093Z
+Name: ONLINE/ISSUES/ONELINER/O2Q9D4
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/ISSUES/ONELINER/KF6XTW/2017-02-16T16:39:56.098Z
+@timestamp: 2017-02-16T16:39:56.098Z
+Name: ONLINE/ISSUES/ONELINER/KF6XTW
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/ISSUES/ONELINER/2IMTVJ/2017-02-16T16:39:56.103Z
+@timestamp: 2017-02-16T16:39:56.103Z
+Name: ONLINE/ISSUES/ONELINER/2IMTVJ
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: OFFLINE/ISSUES/MULTILINER/0IL98I/2017-02-16T16:39:56.108Z
+@timestamp: 2017-02-16T16:39:56.108Z
+Name: OFFLINE/ISSUES/MULTILINER/0IL98I
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/DOCKER/MULTILINER/M58YE5/2017-02-16T16:39:56.114Z
+@timestamp: 2017-02-16T16:39:56.114Z
+Name: ONLINE/DOCKER/MULTILINER/M58YE5
+Priority: WARNING
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: INFO ===
+Unique ID: ONLINE/DOCKER/ONELINER/4HXBIA/2017-02-16T16:39:56.119Z
+@timestamp: 2017-02-16T16:39:56.119Z
+Name: ONLINE/DOCKER/ONELINER/4HXBIA
+Priority: INFO
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: CRITICAL ===
+Unique ID: ONLINE/DOCKER/MULTILINER/0JCP9G/2017-02-16T16:39:56.124Z
+@timestamp: 2017-02-16T16:39:56.124Z
+Name: ONLINE/DOCKER/MULTILINER/0JCP9G
+Priority: CRITICAL
+Body: {u'text': u'Test Alarm'}
+=== END ERROR ===
+
+Elapse: 1.06956887245
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JH3HnMSi3ODS3NzEokrfxMyc4NS8lNQifQC/XKGL0QAAAA==[0mAlarmSummaryMailSender
+Finished: SUCCESS

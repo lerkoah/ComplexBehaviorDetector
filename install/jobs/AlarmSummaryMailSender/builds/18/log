@@ -1,0 +1,10 @@
+Started by timer
+Building in workspace /var/lib/jenkins/workspace/AlarmSummaryMailSender
+No emails were triggered.
+No emails were triggered.
+[AlarmSummaryMailSender] $ /bin/sh -xe /tmp/hudson4798957748898952020.sh
++ python /home/lerko/alma-buckets/src/main.py -l 15m '*' -c /home/lerko/alma-buckets/buckets.json
+Expecting , delimiter: line 7 column 1 (char 86)
+No emails were triggered.
+No emails were triggered.
+Finished: SUCCESS

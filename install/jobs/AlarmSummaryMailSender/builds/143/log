@@ -1,0 +1,18 @@
+Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSi3ODUnNTkkvwifQAaCKXFyAAAAA==[0mAlarmSelector" build number [8mha:AAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgYx/az8JH3HnMSi3ODUnNTkkvwifUMDIwCAcXVDywAAAA==[0m102
+originally caused by:
+ Started by upstream project "[8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz+EgZR/az8JH3/vFSfzLxUl9SS1OSS/CJ9AEGHdOTKAAAA[0mOneLineDetector" build number [8mha:AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZx/az8JH3/vFSfzLxUl9SS1OSS/CJ9Y3MA8jTFg8wAAAA=[0m37
+ originally caused by:
+  Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSummaryMailSender
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+[AlarmSummaryMailSender] $ /bin/sh -xe /tmp/hudson7069192268662636885.sh
++ python /home/lerko/alma-buckets/src/main.py -l 15m -p WARNING '*' -c /home/lerko/alma-buckets/buckets.json
+Request time range: 2017-02-21T14:12:24.935261 to now
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+No emails were triggered.
+Finished: SUCCESS

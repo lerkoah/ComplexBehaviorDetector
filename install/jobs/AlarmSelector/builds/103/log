@@ -1,0 +1,19 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson4097672290171383903.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data... done.
+=== START ERROR: WARNING ===
+Unique ID: ONLINE/ISSUES/MULTILINER/ICT-9048/2017-01-07T20:14:31.047Z
+@timestamp: 2017-01-07T20:14:31.047Z
+Path: ONLINE/ISSUES/MULTILINER/ICT-9048
+Priority: WARNING
+Body: [{u'origin': u'AOS64', u'SourceObject': u'CORR/CDPMaster/cppContainer-GL', u'Context': u'', u'Thread': u'ORBTask', u'Process': u'CORR/CDPMaster/cppContainer', u'text': u'antennas in sub-array (sa/sai/n=Array007/1/20 DA42/8 DV02/54 DV04/18 DV06/28 DV07/26 DV08/11 DV09/55 DV10/21 DV11/48 DV12/58 DV13/12 DV14/35 DV15/37 DV16/25 DV18/0 DV19/24 DV20/10 DV23/16 DV24/47 DV25/53)', u'@timestamp': u'2017-01-07T20:14:31.047Z', u'LogLevel': u'Debug', u'Host': u'cob-cdpm-b', u'File': u'ArrayThread.cpp', u'Routine': u'', u'Line': u'995', u'name': u'CDPMaster'}, {u'origin': u'AOS64', u'SourceObject': u'CORR/CDPMaster/cppContainer-GL', u'Context': u'', u'Thread': u'', u'Process': u'CORR/CDPMaster/cppContainer', u'text': u'bdf started (sa/sai/idx/iid/st/setup/dur/ints/bytes=Array007/1/0/1/2017-01-07T20:14:36.768/50400000/307200000/32/55133451)', u'@timestamp': u'2017-01-07T20:14:37.966Z', u'LogLevel': u'Info', u'Host': u'cob-cdpm-b', u'File': u'ArrayThread.cpp', u'Routine': u'', u'Line': u'4181', u'name': u'CDPMaster'}, {u'origin': u'AOS64', u'SourceObject': u'CORR/CDPMaster/cppContainer-GL', u'Context': u'', u'Thread': u'', u'Process': u'CORR/CDPMaster/cppContainer', u'text': u'Exception thrown at ArrayThread.cpp:3930 - while splitting off imhs ran into invalid start time (st/bptr/bsize/size=2017-01-07T20:13:39.107/0x7fac64052608/56952/2)', u'@timestamp': u'2017-01-07T20:14:37.967Z', u'LogLevel': u'Debug', u'Host': u'cob-cdpm-b', u'File': u'ArrayThread.cpp', u'Routine': u'', u'Line': u'3930', u'name': u'CDPMaster'}]
+=== END ERROR ===
+
+Elapse: 1.03099107742
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JH3HnMSi3ODS3NzEokrfxMyc4NS8lNQifQC/XKGL0QAAAA==[0mAlarmSummaryMailSender
+Finished: SUCCESS

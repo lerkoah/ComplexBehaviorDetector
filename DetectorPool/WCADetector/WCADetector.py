@@ -123,14 +123,23 @@ class WCADetector(BaseDetector):
         self.configure('2017-01-11T00:00:00.000','2017-01-12T00:00:00.000')
         self.execute()
 
+    def executeFalseNegative(self):
+        self.configure('2017-02-13T03:47:40.565','2017-02-13T15:47:40.566')
+        self.execute()
+
+
 if __name__ == '__main__':
     options = args()
 
     myDetector = WCADetector()
-    # myDetector.executeTruePositive()
     myDetector.configure(options['from'], options['to'])
 
     tic = time.time()
-    myDetector.execute()
+    if options['tp']:
+        myDetector.executeTruePositive()
+    elif options['fn']:
+        myDetector.executeFalseNegative()
+    else:
+        myDetector.execute()
     toc = time.time() - tic
     print 'Elapse [seg]: %s' % toc

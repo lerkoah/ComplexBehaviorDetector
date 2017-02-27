@@ -2,6 +2,7 @@ import pika
 import json
 import argparse
 from datetime import datetime, timedelta
+import sys
 
 SECONDS_PER_UNIT = {
     "s": 1,
@@ -68,6 +69,12 @@ def args():
     parser.add_argument('-t', '--to-time', type=str,
                         help='Time upper limit in UTC')
 
+    parser.add_argument('-tp', '--true-positive', action='store_true',
+                        help='Execute True Positive for this detector')
+    parser.add_argument('-fn', '--false-negative',action='store_true',
+                        help='Execute False Negative for this detector')
+
+
     opts = parser.parse_args()
 
     if opts.last is not None:
@@ -78,10 +85,22 @@ def args():
         toTime = opts.to_time if opts.to_time is not None else 'now'
         fromTime = opts.from_time
 
+    # print opts.true_positive
+    if opts.true_positive:
+        tp = True
+    else:
+        tp = False
+    # print opts.false_negative
+    if opts.false_negative:
+        fn = True
+    else:
+        fn = False
 
     return {
         'from': fromTime,
-        'to': toTime
+        'to': toTime,
+        'tp': tp,
+        'fn': fn
     }
 
 class BaseDetector(object):
@@ -127,13 +146,14 @@ class BaseDetector(object):
         ## Printing in stdout
         print self.lastError
 
-        ## Send to RabbitMQ
-        jsonAlarm = json.dumps(self.__alarm2json(occurrence_time, name, priority, body))
+        if '--test' not in sys.argv:
+            ## Send to RabbitMQ
+            jsonAlarm = json.dumps(self.__alarm2json(occurrence_time, name, priority, body))
 
-        self.channel.basic_publish(exchange='',
-                              routing_key=self.alarmQueue,
-                              body=jsonAlarm,
-                              properties=pika.BasicProperties(delivery_mode=2))
+            self.channel.basic_publish(exchange='',
+                                  routing_key=self.alarmQueue,
+                                  body=jsonAlarm,
+                                  properties=pika.BasicProperties(delivery_mode=2))
 
         self.errorCounter += 1
 

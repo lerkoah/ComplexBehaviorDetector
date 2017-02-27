@@ -1,0 +1,30 @@
+Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSiXJ/M4pLUvNQifXNDANJQK8HKAAAA[0m71
+originally caused by:
+ Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSiXJ/M4pLUvNQifXMDAERgLLbKAAAA[0m70
+ originally caused by:
+  Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSiXJ/M4pLUvNQifTNLAKHp69bKAAAA[0m69
+  originally caused by:
+   Started by upstream project "[8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz+EgZR/az8JH1P5xCfzOISl9SS1OSS/CJ9AO9k+VjKAAAA[0mICTListDetector" build number [8mha:AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZx/az8JH1P5xCfzOISl9SS1OSS/CJ9Y2MAw24vjcwAAAA=[0m33
+   originally caused by:
+    Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmListener
+No emails were triggered.
+No emails were triggered.
+[AlarmListener] $ /bin/sh -xe /tmp/hudson6370427222490332520.sh
++ python /home/lerko/ComplexBehaviorDetector/log/JobAlarmListener.py
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T00:00:00.035Z
+Detection Timestamp: 2017-02-09T18:37:05.006Z
+Name: ICT-4575
+Priority: INFO
+Body: {u'origin': u'TFINT', u'SourceObject': u'CORR/CDPNode/N01/cppContainer-GL', u'File': u'CollectorThread.cpp', u'Thread': u'', u'Process': u'CORR/CDPNode/N01/cppContainer', u'text': u'collector failed on unexpected hardware time stamp (tid/idx/expected/received=4105/13/6652736/7833752)', u'@timestamp': u'2017-02-01T00:00:00.035Z', u'LogLevel': u'Debug', u'Host': u'cob-cpn-01', u'Context': u'', u'Routine': u'', u'Line': u'598'}
+=== END ERROR ===
+  - Sending log to Elasticsearch.
+    - Initialization in ariadne.osf.alma.cl:5003
+    - Creating data... done.
+    - Sending data... done.
+No emails were triggered.
+No emails were triggered.
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener
+Finished: SUCCESS
