@@ -2,165 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/1/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/1/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/1/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/10/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/10/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/10/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/11/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/11/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/11/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/12/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/12/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/12/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/13/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/13/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/13/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/14/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/14/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/14/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/15/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/15/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/15/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/16/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/16/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/16/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/17/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/17/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/17/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/18/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/18/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/18/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/19/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/19/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/19/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/2/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/2/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/2/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/20/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/20/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/20/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/21/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/21/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/21/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/22/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/22/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/22/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/23/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/23/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/23/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/24/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/24/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/24/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/25/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/25/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/25/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/26/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/26/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/26/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/27/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/27/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/27/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/28/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/28/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/28/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/29/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/29/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/29/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/3/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/3/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/3/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/30/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/30/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/30/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/31/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/31/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/31/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/32/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/32/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/32/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/33/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/33/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/33/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/34/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/34/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/34/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/35/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/35/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/35/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/36/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/36/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/36/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/37/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/37/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/37/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/38/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/38/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/38/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/39/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/39/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/39/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/4/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/4/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/4/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/40/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/40/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/40/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/41/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/41/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/41/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/42/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/42/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/42/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/43/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/43/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/43/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/44/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/44/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/44/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/45/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/45/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/45/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/46/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/46/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/46/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/47/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/47/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/47/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/48/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/48/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/48/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/5/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/5/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/5/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/6/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/6/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/6/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/7/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/7/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/7/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/8/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/8/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/8/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/9/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/9/changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/9/log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/lastFailedBuild" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/lastStableBuild" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/lastSuccessfulBuild" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/lastUnstableBuild" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/lastUnsuccessfulBuild" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/builds/legacyIds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/lastStable" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/lastSuccessful" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/install/jobs/AlarmListener/nextBuildNumber" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AlarmSystem/config.json" afterPath="$PROJECT_DIR$/AlarmSystem/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseDetector.py" afterPath="$PROJECT_DIR$/BaseDetector.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" afterPath="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py" afterPath="$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" afterPath="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -195,14 +39,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WCADetector.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WCADetector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="144" selection-end-column="34" />
+            <state relative-caret-position="1332">
+              <caret line="125" column="4" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="127" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICT-9048Detector.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -232,8 +86,8 @@
       <file leaf-file-name="BaseDetector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-723">
-              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="58" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -241,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDetector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseDetector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-867">
-              <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+            <state relative-caret-position="627">
+              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -328,12 +182,12 @@
         <option value="$PROJECT_DIR$/DetectorPool/OneLineDectector.py" />
         <option value="$PROJECT_DIR$/DetectorSandBox/WCADetector.py" />
         <option value="$PROJECT_DIR$/AlarmSystem/raisedAlarms.log" />
-        <option value="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
         <option value="$PROJECT_DIR$/DetectorPool/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorSandBox/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py" />
-        <option value="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" />
+        <option value="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
         <option value="$PROJECT_DIR$/BaseDetector.py" />
+        <option value="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" />
       </list>
     </option>
   </component>
@@ -435,24 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DetectorPool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComplexBehaviorDetectorRABBITMQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComplexBehaviorDetectorRABBITMQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DetectorPool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WCADetector" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,7 +583,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25724828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -755,7 +591,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328934" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960423" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28731343" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28731343" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1041,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DetectorSandBox/ProcessModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1098,22 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-6220-TP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogQuery/src/LogQuery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7203">
-          <caret line="119" column="52" lean-forward="true" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AlarmSystem/AlarmSelector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
@@ -1121,6 +934,14 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-6220-TP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,10 +955,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LogQuery/src/LogQuery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7203">
+          <caret line="119" column="52" lean-forward="true" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1332">
+          <caret line="125" column="4" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="127" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BaseDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-723">
-          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="58" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -1146,20 +993,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+        <state relative-caret-position="627">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="144" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
