@@ -1,7 +1,8 @@
 {
   "elasticsearch": {
     "hosts": [
-      "isara.osf.alma.cl:9200"
+      "elk-master.osf.alma.cl:9200",
+      "elk-master2.osf.alma.cl:9200"
     ]
   },
    "rabbitmq": {

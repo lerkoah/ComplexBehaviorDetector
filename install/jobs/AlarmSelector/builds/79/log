@@ -1,0 +1,28 @@
+Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSiXJ/M4pLUvNQifXMLAHbo97jKAAAA[0m78
+originally caused by:
+ Started by upstream project "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener" build number [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3HnMSiXJ/M4pLUvNQifXNzAOf1SCjKAAAA[0m77
+ originally caused by:
+  Started by upstream project "[8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz+EgZR/az8JH1P5xCfzOISl9SS1OSS/CJ9AO9k+VjKAAAA[0mICTListDetector" build number [8mha:AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZx/az8JH1P5xCfzOISl9SS1OSS/CJ9YxMAYPtLE8wAAAA=[0m34
+  originally caused by:
+   Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmListener
+No emails were triggered.
+No emails were triggered.
+[AlarmListener] $ /bin/sh -xe /tmp/hudson2565163104495393094.sh
++ python /home/lerko/ComplexBehaviorDetector/log/JobAlarmListener.py
+=== START ERROR: INFO ===
+Occurrence Time: 2017-02-01T05:28:42.806Z
+Detection Timestamp: 2017-02-09T18:37:59.215Z
+Name: Operation: BLCORR System Restarts
+Priority: INFO
+Body: {u'origin': u'APE1', u'SourceObject': u'ACACORR_MASTER_COMP', u'Thread': u'ACACORR_MASTER_COMP-11', u'Process': u'ACC/masterContainer', u'text': u'shutDownSubsysPass1() method called.', u'@timestamp': u'2017-02-01T05:28:42.806Z', u'LogId': u'7634', u'LogLevel': u'Info', u'Host': u'gas01', u'File': u'ACACorrelatorMasterComponentImpl.java', u'Routine': u'shutDownSubsysPass1', u'Line': u'502'}
+=== END ERROR ===
+  - Sending log to Elasticsearch.
+    - Initialization in ariadne.osf.alma.cl:5003
+    - Creating data... done.
+    - Sending data... done.
+No emails were triggered.
+No emails were triggered.
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3HnMSiXJ/M4pLUvNQifQBhahwFyAAAAA==[0mAlarmListener
+Finished: SUCCESS

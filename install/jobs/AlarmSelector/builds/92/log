@@ -1,0 +1,26 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZe/dLi1CL9pPy8/LzMRAAgtO4EwgAAAA==[0mLerko Araya Hernandez
+Building in workspace /var/lib/jenkins/workspace/AlarmSelector
+[AlarmSelector] $ /bin/sh -xe /tmp/hudson1094946194887907101.sh
++ python /home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py -c /home/lerko/ComplexBehaviorDetector/AlarmSystem/config.json
+  - Sending log to Logstash.
+    - Creating data... done.
+    - Sending data...
+Traceback (most recent call last):
+  File "/home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py", line 125, in <module>
+    main()
+  File "/home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py", line 116, in main
+    processingAlarm(IDslist, raisedAlarms, logger, body)
+  File "/home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py", line 61, in processingAlarm
+    sendToLogstash(logger, data)
+  File "/home/lerko/ComplexBehaviorDetector/AlarmSystem/AlarmSelector.py", line 43, in sendToLogstash
+    logger.info(str(data), extra=data)
+  File "/usr/lib64/python2.6/logging/__init__.py", line 1064, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/usr/lib64/python2.6/logging/__init__.py", line 1180, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args, exc_info, func, extra)
+  File "/usr/lib64/python2.6/logging/__init__.py", line 1159, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite u'name' in LogRecord"
+Build step 'Run with timeout' marked build as failure
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Finished: FAILURE
