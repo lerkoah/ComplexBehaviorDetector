@@ -73,6 +73,8 @@ def args():
                         help='Execute True Positive for this detector')
     parser.add_argument('-fn', '--false-negative',action='store_true',
                         help='Execute False Negative for this detector')
+    parser.add_argument('--test', action='store_true',
+                        help='Use this if you do not want to send an alarm')
 
 
     opts = parser.parse_args()

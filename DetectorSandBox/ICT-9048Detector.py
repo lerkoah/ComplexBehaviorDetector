@@ -122,6 +122,10 @@ class ICT9048Detector(BaseDetector):
         self.configure('2017-01-07T20:12:35.322','2017-01-07T20:15:37.967')
         self.execute()
 
+    def executeFalseNegative(self):
+        self.configure('2017-02-13T03:47:40.565','2017-02-13T15:47:40.566')
+        self.execute()
+
 if __name__ == '__main__':
     options = args()
 
