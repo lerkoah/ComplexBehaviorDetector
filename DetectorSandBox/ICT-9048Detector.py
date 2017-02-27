@@ -130,11 +130,14 @@ if __name__ == '__main__':
     options = args()
 
     myDetector = ICT9048Detector()
-
-    # myDetector.configure(options['from'], options['to'])
+    myDetector.configure(options['from'], options['to'])
 
     tic = time.time()
-    myDetector.executeTruePositive()
-    # myDetector.execute()
+    if options['tp']:
+        myDetector.executeTruePositive()
+    elif options['fn']:
+        myDetector.executeFalseNegative()
+    else:
+        myDetector.execute()
     toc = time.time() - tic
     print 'Elapse [seg]: %s' % toc

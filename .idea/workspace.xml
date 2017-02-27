@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48c771e7-1e9c-410c-bfe0-6bd8025f3567" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseDetector.py" afterPath="$PROJECT_DIR$/BaseDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" afterPath="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" afterPath="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="WCADetector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1332">
-              <caret line="125" column="4" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="127" selection-end-column="22" />
+            <state relative-caret-position="450">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="144" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -51,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ICT-9048Detector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ICT-9048Detector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="73" />
+            <state relative-caret-position="108">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -95,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDetector.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseDetector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
@@ -185,9 +183,9 @@
         <option value="$PROJECT_DIR$/DetectorPool/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorSandBox/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py" />
-        <option value="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
         <option value="$PROJECT_DIR$/BaseDetector.py" />
         <option value="$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py" />
+        <option value="$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py" />
       </list>
     </option>
   </component>
@@ -945,16 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorsType1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LogQuery/src/LogQuery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7203">
@@ -963,20 +951,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
+    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="627">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
+    <entry file="file://$PROJECT_DIR$/DetectorsType1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="125" column="4" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="127" selection-end-column="22" />
+        <state relative-caret-position="537">
+          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -991,13 +981,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/BaseDetector.py">
+    <entry file="file://$PROJECT_DIR$/DetectorPool/WCADetector/WCADetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="144" selection-end-column="34" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DetectorSandBox/ICT-9048Detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
