@@ -11,31 +11,43 @@ Given a model M=(S,T)
 """
 
 import sys
+from LogQuery import TimeUtils
 
 
 class State:
-    def __init__(self, name="", isStartState=False, isEndState=False, transitions=None):
+    def __init__(self, name="", isStartState=False, isEndState=True, transitions=None, ands=None):
         self.name = name
         self.isStartState = isStartState
         self.isEndState = isEndState
         self.transitions = []
+        self.ands = {}
+        if ands is not None:
+            if type(ands) == type({}):
+                self.addANDtransitions(symbols=ands["symbols"], nextState=ands["nextState"])
+            else:
+                raise ValueError("Check ANDS in your state %s. Now thy are %s" % (name, ands))
         if transitions is not None:
             if type(transitions) == type({}):
                 for symbol, nextState in transitions.iteritems():
                     self.addTransition(symbol=symbol, nextState=nextState)
+            elif type(transitions) == type([]):
+                self.transitions = transitions
+                self.isEndState = False
+            else:
+                raise ValueError("Check transitions in your state %s. Now thy are %s" % (name, transitions))
 
-                    # if type(transitions) != type([]):
-                    #     transitions = [transitions]
-                    # for t in transitions:
-                    #     # CHECK TRANSITION INTEGRITY!!!!
-                    #     self.transitions.append(t)
-                    #     # print ("I should add %s here" % t)
+                # if type(transitions) != type([]):
+                #     transitions = [transitions]
+                # for t in transitions:
+                #     # CHECK TRANSITION INTEGRITY!!!!
+                #     self.transitions.append(t)
+                #     # print ("I should add %s here" % t)
 
     def __repr__(self):
         return repr(self.toDict())
 
     def toDict(self):
-        obj = {"transitions": self.transitions}
+        obj = {"transitions": self.transitions, "AND": self.ands}
         if self.isStartState:
             obj["isStartState"] = True
         if self.isEndState:
@@ -44,6 +56,12 @@ class State:
 
     def addTransition(self, symbol="", nextState=""):
         self.transitions.append({"symbol": symbol, "nextState": nextState})
+        self.isEndState = False
+
+    def addANDtransitions(self, symbols=[], nextState=""):
+        self.ands["symbols"] = symbols
+        self.ands["nextState"] = nextState
+        self.isEndState = False
 
 
 class ProcessModel:
@@ -55,6 +73,7 @@ class ProcessModel:
     symbols = None
     strictConformance = False
     discardUnkownSymbols = True
+
     id = None
 
     # Criteria for creation event. By default, it is True.
@@ -73,6 +92,9 @@ class ProcessModel:
         self._state = ""
         self._isStarted = False
         self._trace = []
+        self._tu = None
+        self._oldEvent = None
+        self._ands = []
 
         if id is not None:
             self.id = id
@@ -108,9 +130,18 @@ class ProcessModel:
             if "transitions" in s.keys():
                 transitions = s["transitions"]
             else:
-                transitions = {}
-            S = State(name=name, isStartState=trueIfExists(s, "isStartState"), isEndState=trueIfExists(s, "isEndState"),
-                      transitions=transitions)
+                transitions = []
+
+            if "AND" in s.keys():
+                ands = s["AND"]
+                # print ("AND found! : %s" % ands)
+            else:
+                ands = None
+            S = State(name=name,
+                      isStartState=trueIfExists(s, "isStartState"),
+                      isEndState=trueIfExists(s, "isEndState"),
+                      transitions=transitions,
+                      ands=ands)
             # if "transitions" in s.keys():
             #     for t in s["transitions"]:
             #         S.addTransition(symbol=t["symbol"], nextState=t["nextState"])
@@ -134,7 +165,8 @@ class ProcessModel:
         return repr(self.toDict())
 
     def toDict(self):
-        return {"id": self.id, "states": self._states, "symbols": self._symbols.keys()}
+        obj = {"id": self.id, "states": self._states, "symbols": self._symbols.keys()}
+        return obj
 
     def addState(self, stateObj):
         # Check dups
@@ -146,7 +178,7 @@ class ProcessModel:
         if stateObj.isEndState and stateObj.transitions != []:
             raise ValueError("end state '%s' cannot have transitions" % stateObj.name)
 
-        if len(stateObj.transitions) == 0:
+        if len(stateObj.transitions) == 0 and len(stateObj.ands) == 0:
             stateObj.isEndState = True
 
         # Check valid symbols
@@ -182,7 +214,7 @@ class ProcessModel:
 
     def start(self):
         try:
-            self._state = [name for name, state in self._states.iteritems() if state.isStartState][0]
+            self.setState([name for name, state in self._states.iteritems() if state.isStartState][0])
         except IndexError:
             raise RuntimeWarning("This machine has no start state. I refuse to start.")
         self._isStarted = True
@@ -212,25 +244,58 @@ class ProcessModel:
                 raise RuntimeWarning("DiscardUnkownSymbols=False and '%s' is not any recognized symbol %s" % (
                 inputSymbol, self._symbols.keys()))
 
-        # Search transition if any
         found = False
+
+        # Search transition if any
         for t in self.getCurrentTransitions():
             if not found:
                 if verbose:
                     print("%s : ...testing symbol '%s' against '%s'" % (self.id, t["symbol"], inputSymbol))
 
                 if self.testSymbol(t["symbol"], inputSymbol):
-                    self._state = t["nextState"]
+                    self.setState(t["nextState"])
                     found = True
                     if verbose:
                         print ("%s : symbol found = %s " % (self.id, t["symbol"]))
                         if self.end():
                             print ("%s : Reached and END state" % (self.id))
+
+        # Search and complete AND transitions
+        # The logic of this if that if I've a list of symbols
+        # then ALL of them must be met to go to the new state
+        for symbol in self.getANDsymbols():
+            if not found:
+                if verbose:
+                    print("%s : ...testing symbol '%s' against '%s'" % (self.id, symbol, inputSymbol))
+
+                if self.testSymbol(symbol, inputSymbol):
+                    self._ands.append(symbol)
+
+                    if verbose:
+                        print ("%s : partial list of symbols found = %s " % (self.id, symbol))
+
+                    allFound = True
+                    for required in self.getANDsymbols():
+                        if required not in self._ands:
+                            allFound = False
+
+                    if allFound:
+                        if verbose:
+                            print ("%s : ALL list of symbols found = %s " % (self.id, symbol))
+                        self.setState(self.getANDnextState())
+                        found = True
+                        #
+
         if not found and self.strictConformance:
             raise RuntimeWarning(
                 "'%s' is recognized as symbol, however it don't belong to any allowed symbol for current state" % inputSymbol)
         if verbose:
             print ("%s : State: %s" % (self.id, self.state()))
+
+    def setState(self, newState):
+        # Is state among allowed states?
+        self._state = newState
+        self._ands = []
 
     def getTrace(self):
         return self._trace
@@ -238,6 +303,17 @@ class ProcessModel:
     # Ancillary functions to alter input symbols
     def preprocessEvent(self, symbol):
         return symbol
+
+    # TODO!!! Test me
+    def addElapsedSeconds(self, e):
+        if self._tu is None:
+            self._tu = TimeUtils()
+        if self._oldEvent is None:
+            elapsed = 0.0
+        else:
+            elapsed = (self._tu.toMillis(e["@timestamp"]) - self._tu.toMillis(self._oldEvent["@timestamp"])) / 1000.0
+        self._oldEvent = e
+        return elapsed
 
     def testSymbol(self, functName, inputSymbol):
         """
@@ -257,6 +333,16 @@ class ProcessModel:
 
     def getCurrentTransitions(self):
         return self._states[self.state()].transitions
+
+    def getANDsymbols(self):
+        ands = self._states[self.state()].ands
+        if "symbols" in ands.keys():
+            return ands["symbols"]
+        else:
+            return []
+
+    def getANDnextState(self):
+        return self._states[self.state()].ands["nextState"]
 
 
 class LogIterator:
@@ -279,7 +365,6 @@ class LogIterator:
                 print("----------------------------------------------")
                 for event in modelInstance.getTrace():
                     print(self.formatLog(event))
-                print("==============================================")
 
             self.reportingCallback = defaultCallback
 
@@ -434,13 +519,13 @@ def test_safeguards(PM):
     except ValueError as err:
         print("Expected Ex: %s" % err)
 
-    try:
-        S = State(name="Failing", isEndState=True)
-        S.addTransition(symbol="A", nextState="END")
-        PM.addState(S)
-        raise UserWarning("There should have been an error here!!")
-    except ValueError as err:
-        print("Expected Ex: %s" % err)
+    # try:
+    #     S = State(name="Failing", isEndState=True)
+    #     S.addTransition(symbol="A", nextState="END")
+    #     PM.addState( S )
+    #     raise UserWarning("There should have been an error here!!")
+    # except ValueError as err:
+    #     print( "Expected Ex: %s" % err)
 
     try:
         PM.state()
@@ -536,6 +621,38 @@ def test_LogIterator(model, dataset):
         print("Expected Ex: %s" % err)
 
 
+def test_AND_symbols(trace):
+    print("--- Test AND symbols")
+
+    class AllClapping(ProcessModel):
+        symbols = ["John claps", "Mary claps", "Gabriel claps", "say bye"]
+        states = {
+            'INIT': {
+                'isStartState': True,
+                'AND': {
+                    'symbols': ["John claps", "Mary claps", "Gabriel claps"],
+                    'nextState': 'ALL_CLAPPING'
+                }
+            },
+            'ALL_CLAPPING': {
+                'say bye': 'END'
+            },
+            'END': {}
+        }
+
+    claps = AllClapping('clap machine')
+    print (claps)
+
+    print("-- Display saved trace")
+    claps.start()
+    for symbol in trace:
+        claps.read(symbol, verbose=True)
+    print(claps.getTrace())
+
+    if claps.end() != True:
+        raise UserWarning("End State of %s should be True but is %s" % (claps.id, claps.end()))
+
+
 #
 #
 # Tests execution if this is class is invoked directly
@@ -610,5 +727,9 @@ if __name__ == '__main__':
     dataset = ["toYellow", "toRed", "toGreen", "toYellow"]
 
     test_LogIterator(Semaphore, dataset)
+
+    test_AND_symbols(["John claps", "Mary claps", "Gabriel claps", "say bye"])
+    test_AND_symbols(["Gabriel claps", "John claps", "Mary claps", "say bye"])
+    test_AND_symbols(["Mary claps", "John claps", "Gabriel claps", "say bye"])
 
     print("\n************ Smile! If you read this then nothing failed.")
