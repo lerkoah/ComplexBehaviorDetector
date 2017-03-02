@@ -26,11 +26,10 @@ python -u /home/lerko/Desktop/ComplexBehaviorDetector/DetectorsType1.py Alerting
 
 The possible alarms levels are:
 
-* DEBUG
 * INFO
 * WARNING
 * CRITICAL
 
-### Detector Type 2
+### *Finite State Machine* Detector
 
-### Detector Type 3
+These detectors have based on *Finite State Machines* (FSM), that means, we have to model the problem as FSM, and this is an input for the Detector. We define the model of the process using the library ProcessModel. For creating new machines you have to define the *symbols* and the *states*. A *symbol* is a simplification of a log for making it tratable. A *state* is defined by the *state name* and the *transitions*. We can defined ```AND``` transitions if we have no sequential transitions, i.e. the logs have the same timestamp.

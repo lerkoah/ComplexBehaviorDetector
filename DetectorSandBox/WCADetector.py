@@ -9,10 +9,10 @@ class WCALockFail(ProcessModel):
     # Each declared symbol will be added in trace. Even if it is not part of any transition.
     # Trick!!! e['name'] in e['Process']  is to filter out events from other antennas
     symbols={
-        'tuning': lambda e: 'Tuning Values'  in e['text'] and e['name'] in e['Process'],
-        'lock':   lambda e: 'WCA Locked'     in e['text'] and e['name'] in e['Process'],
-        'fail':   lambda e: 'Lock FAILED'    in e['text'] and e['name'] in e['Process'],
-        'retry':  lambda e: 'Re-trying lock' in e['text'] and e['name'] in e['Process']
+        'tuning': lambda e: 'Tuning Values'  in e['text'] and e['antenna_name'] in e['Process'],
+        'lock':   lambda e: 'WCA Locked'     in e['text'] and e['antenna_name'] in e['Process'],
+        'fail':   lambda e: 'Lock FAILED'    in e['text'] and e['antenna_name'] in e['Process'],
+        'retry':  lambda e: 'Re-trying lock' in e['text'] and e['antenna_name'] in e['Process']
     }
 
     # Try to keep this as simple as possible
@@ -48,7 +48,7 @@ class WCALockFail(ProcessModel):
 
     # Add more fields to events
     def preprocessEvent(self, e):
-        e["name"] = self.id
+        e["antenna_name"] = self.id
         return e
 
 
@@ -77,10 +77,6 @@ class WCADetector(BaseDetector):
         fromTime = self.fromTime
         toTime = self.toTime
 
-        # Know timeframe where this issue happens
-        # fromTime = "2017-02-01T05:00:50.463"
-        # toTime = "2017-02-01T05:20:22.184"
-
 
         # a single line should be enough, but splitted is more clear
         query = []
@@ -108,29 +104,38 @@ class WCADetector(BaseDetector):
 
             eventSequence = modelInstance.getTrace()
             firstEvent = eventSequence[0]
-            antenna = firstEvent['SourceObject'].split('/')[1]
+            antenna = modelInstance.id
             path = self.prefix + 'WCA/' + antenna
 
-            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, {antenna: eventSequence})
+            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, eventSequence)
 
         # The magic is here!
         log = LogIterator(model=WCALockFail, verbose=False, reportingStates=['FOUND'], formatLog=kibana.format, reportingCallback=sendAlarmHandler)
         log.process(dataset=kibana.execute().hits)
 
-
+        print 'Total number of errors: %i' % self.errorCounter
 
     def executeTruePositive(self):
         self.configure('2017-01-11T00:00:00.000','2017-01-12T00:00:00.000')
         self.execute()
 
+    def executeFalseNegative(self):
+        self.configure('2017-02-13T03:47:40.565','2017-02-13T15:47:40.566')
+        self.execute()
+
+
 if __name__ == '__main__':
     options = args()
 
     myDetector = WCADetector()
-    # myDetector.executeTruePositive()
     myDetector.configure(options['from'], options['to'])
 
     tic = time.time()
-    myDetector.execute()
+    if options['tp']:
+        myDetector.executeTruePositive()
+    elif options['fn']:
+        myDetector.executeFalseNegative()
+    else:
+        myDetector.execute()
     toc = time.time() - tic
     print 'Elapse [seg]: %s' % toc
