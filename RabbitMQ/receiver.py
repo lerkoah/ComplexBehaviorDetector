@@ -14,6 +14,7 @@ connection = pika.BlockingConnection(parameters)
 
 
 channel = connection.channel()
+# channel.queue_delete(queue='alarms')
 channel.queue_declare(queue='alarm')
 
 # ## Only one log
@@ -34,3 +35,5 @@ channel.queue_declare(queue='alarm')
 ## Fast consume
 channel.basic_consume(callback, no_ack=True, queue='alarm')
 channel.start_consuming()
+
+connection.close()

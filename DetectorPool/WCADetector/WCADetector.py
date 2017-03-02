@@ -77,9 +77,8 @@ class WCADetector(BaseDetector):
         fromTime = self.fromTime
         toTime = self.toTime
 
-        # Know timeframe where this issue happens
-        # fromTime = "2017-02-01T05:00:50.463"
-        # toTime = "2017-02-01T05:20:22.184"
+        print fromTime
+        print toTime
 
 
         # a single line should be enough, but splitted is more clear
@@ -111,7 +110,7 @@ class WCADetector(BaseDetector):
             antenna = modelInstance.id
             path = self.prefix + 'WCA/' + antenna
 
-            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, {antenna: eventSequence})
+            self.sendAlarm(firstEvent['@timestamp'], path, self.priority, eventSequence)
 
         # The magic is here!
         log = LogIterator(model=WCALockFail, verbose=False, reportingStates=['FOUND'], formatLog=kibana.format, reportingCallback=sendAlarmHandler)

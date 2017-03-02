@@ -15,12 +15,11 @@ class BDFrameAckStartSend(ProcessModel):
         'startSend' :  lambda e: 'startSend error'                   in e['text'],
         'generalErr':  lambda e: 'General bulkdata error'            in e['text'],
         'err-caught':  lambda e: 'bulk data error caught!'           in e['text'],
-        'wrong-sender':lambda e: 'Wrong sender command order'        in e['text'],
         'failed-flow': lambda e: 'failed to start flow transference' in e['text'],
         '(event too old to live)': lambda e:   e['seconds'] > 1.0
     }
 
-    # Try to keep this as siple as possible
+    # Try to keep this as simple as possible
     states = {
         'INIT': {
             'transitions' : { '(event too old to live)': 'END_SILENTLY' },
@@ -124,7 +123,7 @@ class ICT7311Detector(BaseDetector):
         print(log.summary())
 
     def executeTruePositive(self):
-        # self.configure('2017-01-07T20:13:35.322','2017-01-07T20:14:37.967')
+        # self.configure('2016-12-12T23:15:45.170','2016-12-12T23:16:41.453')
         self.configure('2017-01-25T00:00:00.000','2017-01-25T23:59:59.540')
         self.execute()
 
