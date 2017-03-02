@@ -1,8 +1,7 @@
 {
   "elasticsearch": {
     "hosts": [
-      "elk-master.osf.alma.cl:9200",
-      "elk-master2.osf.alma.cl:9200"
+      "isara.osf.alma.cl:9200"
     ]
   },
    "rabbitmq": {
@@ -16,5 +15,9 @@
        "hosts": [
          "ariadne.osf.alma.cl:5003"
        ]
+  },
+  "kibana": {
+    "host": "ariadne.osf.alma.cl:5601",
+    "secure": false
   }
 }
