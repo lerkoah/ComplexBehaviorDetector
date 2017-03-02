@@ -37,7 +37,7 @@ These detectors have based on *Finite State Machines* (FSM), that means, we have
 As a result that we use inherit for create a FSM detector, we can use the detector with the following syntax:
 
 
-```bash
+``'text
 usage: myDetector.py [-h] [-l LAST] [-f FROM_TIME] [-t TO_TIME] [-tp] [-fn]
                       [--test]
 
