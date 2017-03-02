@@ -1,23 +1,24 @@
+
 {
   "elasticsearch": {
     "hosts": [
-      "isara.osf.alma.cl:9200"
+      "example.com:9200"
     ]
   },
    "rabbitmq": {
        "hosts": [
-         "ariadne.osf.alma.cl:5672"
+         "example.com:5672"
        ],
-       "user": "alma",
+       "user": "guest",
        "pass": "guest"
   },
    "logstash": {
        "hosts": [
-         "ariadne.osf.alma.cl:5003"
+         "example.com:5003"
        ]
   },
   "kibana": {
-    "host": "ariadne.osf.alma.cl:5601",
+    "host": "example.com:5601",
     "secure": false
   }
 }
