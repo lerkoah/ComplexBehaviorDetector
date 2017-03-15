@@ -29,7 +29,7 @@ class emailSender():
     def disconnect(self):
         self.serverObj.quit()
 def main():
-    sender = emailSender("smtp.gmail.com",587,"lerko.araya@ug.uchile.cl","pqDVZMbN7")
+    sender = emailSender("smtp.gmail.com",587,"mymail","mypass")
     sender.connect()
     sender.send("aheit.s.a@gmail.com","Test Mail from python","This is a example mail")
     sender.disconnect()
