@@ -10,8 +10,8 @@ def sendEmailThread(receivedMessage):
         # Email sender server information
         smtp = "smtp.gmail.com"
         smtpPort = 587
-        fromAddr = "complex.behavior.mailer@gmail.com"
-        passw = "new2menew2me"
+        fromAddr = "myadd"
+        passw = "mypass"
 
         # Addres to send the email
         toAddr = "aheit.s.a@gmail.com"
